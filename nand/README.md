@@ -3,12 +3,10 @@
 EBAZ4205 nand flash memory layout
 Nand chip is W29N01HVSINA 128Mx8 1Gb
 
-Note the board these files were saved from does not have the PHI 25MHz crystal installed, the PHI clock is fed from the FPGA from pin U18 via R??
-To use these files with a crystal then I suggest removing R??
+Note the board these files were saved from does not have the PHI 25MHz crystal installed, the PHI clock is fed from the FPGA from pin U18 via R1485, To use these files with a crystal then I suggest removing R1485 and adding the two 22pF capacators C377 and C380
 
 The file in this directory 'nand' are copies of the original nand memory contents saved from within an SD version of linux using the following shell commands to an attached sdcard. Some of the saved files appear to be all blank, noted in list below.
 
-[Link text](URL)
 
 # source
 | Nand saved files                                        |
