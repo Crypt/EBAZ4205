@@ -8,7 +8,7 @@ Note the board these files were saved from does not have the PHI 25MHz crystal i
 The file in this directory 'nand' are copies of the original nand memory contents saved from within an SD version of linux using the following shell commands to an attached sdcard. Some of the saved files appear to be all blank, noted in list below.
 
 
-# source
+## source
 | Nand saved files                                        |
 |---------------------------------------------------------|
 | [dd if=/dev/mtd0ro of=/home/root/mtd0ro.bin](mtd0ro.bin)|
@@ -22,17 +22,30 @@ The file in this directory 'nand' are copies of the original nand memory content
 | [dd if=/dev/mtd8ro of=/home/root/mtd8ro.bin](mtd8ro.bin)|
 
 
-# layout
-|dev: |   size  | erasesize|  name|filesaze|used?|
-|-----|-----|-----|-----|-----|------------------|
-|mtd0:| 00300000| 00020000| "nand-fsbl-uboot"	   |3.1 MB||
-|mtd1:| 00500000| 00020000| "nand-linux"		   |5.2 MB||
-|mtd2:| 00020000| 00020000| "nand-device-tree"  |131.1 kB||
-|mtd3:| 00a00000| 00020000| "nand-rootfs"	   |10.5 MB	|	-all 0xff|
-|mtd4:| 01000000| 00020000| "nand-jffs2"		   |16.8 MB||
-|mtd5:| 00800000| 00020000| "nand-bitstream"	   |8.4 MB	|	-all 0xff|
-|mtd6:| 04000000| 00020000| "nand-allrootfs"	   |67.1 MB||
-|mtd7:| 013e0000| 00020000| "nand-release"	   |20.8 MB	|	-all 0xff|
-|mtd8:| 00200000| 00020000| "nand-reserve"	   |2.1 MB	|	-all 0xff|
+## layout
+
+
+|dev: | address range               |  size    | erasesize| name              |filesize|used |
+|-----|-----------------------------|----------|----------|-------------------|--------|-----|
+|mtd0:|0x000000000000-0x000000300000|  00300000| 00020000 |"nand-fsbl-uboot"	 | 3.1 MB |     |
+|mtd1:|0x000000300000-0x000000800000| 00500000| 00020000| "nand-linux"        |5.2 MB  ||
+|mtd2:|0x000000800000-0x000000820000| 00020000| 00020000| "nand-device-tree"  |131.1 kB||
+|mtd3:|0x000000820000-0x000001220000| 00a00000| 00020000| "nand-rootfs"       |10.5 MB |-all 0xff|
+|mtd4:|0x000001220000-0x000002220000| 01000000| 00020000| "nand-jffs2"        |16.8 MB ||
+|mtd5:|0x000002220000-0x000002a20000| 00800000| 00020000| "nand-bitstream"    |8.4 MB	 |-all 0xff|
+|mtd6:|0x000002a20000-0x000006a20000| 04000000| 00020000| "nand-allrootfs"    |67.1 MB ||
+|mtd7:|0x000006a20000-0x000007e00000| 013e0000| 00020000| "nand-release"      |20.8 MB |-all 0xff|
+|mtd8:|0x000007e00000-0x000008000000| 00200000| 00020000| "nand-reserve"      |2.1 MB	 |-all 0xff|
+|     |                             |          |          |                   |        |     |
+|     |                             |          |          |                   |        |     |
+|     |                             |          |          |                   |        |     |
+|     |                             |          |          |                   |        |     |
+|     |                             |          |          |                   |        |     |
+|     |                             |          |          |                   |        |     |
+|     |                             |          |          |                   |        |     |
+|     |                             |          |          |                   |        |     |
+
+
+
 
 ![PCB-V2](../image/08-PCB-V2-TL.jpg)
