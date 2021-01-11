@@ -37,6 +37,13 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source design_1_script.tcl
 
+
+# The design that will be created by this Tcl script contains the following 
+# module references:
+# led_flasher
+
+# Please add the sources of those modules before sourcing this Tcl script.
+
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -170,6 +177,7 @@ proc create_root_design { parentCell } {
   set clk_out1_0 [ create_bd_port -dir O -type clk clk_out1_0 ]
   set enet0_gmii_rxd [ create_bd_port -dir I -from 3 -to 0 enet0_gmii_rxd ]
   set enet_gmii_txd [ create_bd_port -dir O -from 3 -to 0 enet_gmii_txd ]
+  set led [ create_bd_port -dir O -from 1 -to 0 led ]
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
@@ -192,6 +200,17 @@ proc create_root_design { parentCell } {
    CONFIG.USE_RESET {false} \
  ] $clk_wiz_0
 
+  # Create instance: led_flasher_0, and set properties
+  set block_name led_flasher
+  set block_cell_name led_flasher_0
+  if { [catch {set led_flasher_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $led_flasher_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
@@ -412,14 +431,6 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_UIPARAM_DDR_T_RP {7} \
  ] $processing_system7_0
 
-  # Create instance: xlconcat_0, and set properties
-  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
-  set_property -dict [ list \
-   CONFIG.IN0_WIDTH {4} \
-   CONFIG.IN1_WIDTH {4} \
-   CONFIG.NUM_PORTS {1} \
- ] $xlconcat_0
-
   # Create instance: xlconcat_1, and set properties
   set xlconcat_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_1 ]
   set_property -dict [ list \
@@ -434,6 +445,14 @@ proc create_root_design { parentCell } {
    CONFIG.CONST_WIDTH {4} \
  ] $xlconstant_0
 
+  # Create instance: xlslice_0, and set properties
+  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {3} \
+   CONFIG.DIN_WIDTH {8} \
+   CONFIG.DOUT_WIDTH {3} \
+ ] $xlslice_0
+
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
@@ -445,12 +464,13 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ENET0_GMII_TX_CLK_0_1 [get_bd_ports ENET0_GMII_TX_CLK_0] [get_bd_pins processing_system7_0/ENET0_GMII_TX_CLK]
   connect_bd_net -net In0_0_1 [get_bd_ports enet0_gmii_rxd] [get_bd_pins xlconcat_1/In0]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports clk_out1_0] [get_bd_pins clk_wiz_0/clk_out1]
-  connect_bd_net -net processing_system7_0_ENET0_GMII_TXD [get_bd_pins processing_system7_0/ENET0_GMII_TXD] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net led_flasher_0_led [get_bd_ports led] [get_bd_pins led_flasher_0/led]
+  connect_bd_net -net processing_system7_0_ENET0_GMII_TXD [get_bd_pins processing_system7_0/ENET0_GMII_TXD] [get_bd_pins xlslice_0/Din]
   connect_bd_net -net processing_system7_0_ENET0_GMII_TX_EN [get_bd_ports ENET0_GMII_TX_EN_0] [get_bd_pins processing_system7_0/ENET0_GMII_TX_EN]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
-  connect_bd_net -net xlconcat_0_dout [get_bd_ports enet_gmii_txd] [get_bd_pins xlconcat_0/dout]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins led_flasher_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
   connect_bd_net -net xlconcat_1_dout [get_bd_pins processing_system7_0/ENET0_GMII_RXD] [get_bd_pins xlconcat_1/dout]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins xlconcat_1/In1] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlslice_0_Dout [get_bd_ports enet_gmii_txd] [get_bd_pins xlslice_0/Dout]
 
   # Create address segments
 

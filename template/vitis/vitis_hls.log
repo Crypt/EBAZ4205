@@ -1,0 +1,48 @@
+INFO: [HLS 200-10] Running '/home/david/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'david' on host 'I7MINT' (Linux_x86_64 version 5.4.0-60-generic) on Mon Jan 11 16:55:34 GMT 2021
+INFO: [HLS 200-10] On os Linux Mint 20.1
+INFO: [HLS 200-10] In directory '/home/david/Documents/GitHub/djrm-EBAZ4205/template/vitis'
+Sourcing Tcl script '/home/david/Documents/GitHub/djrm-EBAZ4205/template/vitis/template2/Network/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project template2 
+INFO: [HLS 200-10] Opening project '/home/david/Documents/GitHub/djrm-EBAZ4205/template/vitis/template2'.
+INFO: [HLS 200-1510] Running: set_top main 
+INFO: [HLS 200-1510] Running: add_files ../template.sdk/NetWork/src/main.c 
+INFO: [HLS 200-10] Adding design file '../template.sdk/NetWork/src/main.c' to the project
+INFO: [HLS 200-1510] Running: open_solution Network -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/david/Documents/GitHub/djrm-EBAZ4205/template/vitis/template2/Network'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z010clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 99.537 MB.
+INFO: [HLS 200-10] Analyzing design file '../template.sdk/NetWork/src/main.c' ... 
+ERROR: [HLS 214-124] use of undeclared identifier 'ip_addr_t': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:124
+ERROR: [HLS 214-124] use of undeclared identifier 'ipaddr': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:124
+ERROR: [HLS 214-124] use of undeclared identifier 'netmask': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:124
+ERROR: [HLS 214-124] use of undeclared identifier 'gw': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:124
+ERROR: [HLS 214-124] use of undeclared identifier 'ipaddr': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:156
+ERROR: [HLS 214-124] use of undeclared identifier 'netmask': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:157
+ERROR: [HLS 214-124] use of undeclared identifier 'gw': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:158
+ERROR: [HLS 214-124] use of undeclared identifier 'ipaddr': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:167
+ERROR: [HLS 214-124] use of undeclared identifier 'netmask': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:167
+ERROR: [HLS 214-124] use of undeclared identifier 'gw': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:168
+ERROR: [HLS 214-124] use of undeclared identifier 'XPAR_XEMACPS_0_BASEADDR': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:169
+ERROR: [HLS 214-124] use of undeclared identifier 'ipaddr': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:223
+ERROR: [HLS 214-124] use of undeclared identifier 'netmask': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:223
+ERROR: [HLS 214-124] use of undeclared identifier 'gw': /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:223
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.49 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.35 seconds; current allocated memory: 100.677 MB.
+Syntax check failed in clang-tidy
+    while executing
+"source /home/david/Documents/GitHub/djrm-EBAZ4205/template/vitis/template2/Network/csynth.tcl"
+    invoked from within
+"hls::main /home/david/Documents/GitHub/djrm-EBAZ4205/template/vitis/template2/Network/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 2.82 seconds. Total CPU system time: 0.49 seconds. Total elapsed time: 2.17 seconds; peak allocated memory: 100.332 MB.

@@ -28,9 +28,9 @@
 
 #include <stdio.h>
 
-#include "xparameters.h"
+//#include "xparameters.h"
 
-#include "netif/xadapter.h"
+//#include "netif/xadapter.h"
 
 #include "platform.h"
 #include "platform_config.h"
@@ -38,8 +38,8 @@
 #include "xil_printf.h"
 #endif
 
-#include "lwip/tcp.h"
-#include "xil_cache.h"
+//#include "lwip/tcp.h"
+//#include "xil_cache.h"
 
 #if LWIP_IPV6==1
 #include "lwip/ip.h"

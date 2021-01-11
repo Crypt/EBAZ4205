@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/david/Documents/GitHub/LE-TOM-EBAZ4205/Template/Template.runs/impl_1'
+HD_PWD='/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 99.537 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../template.sdk/NetWork/src/main.c&apos; ..." resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;ip_addr_t&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:124" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;ipaddr&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:124" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;netmask&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:124" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;gw&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:124" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;ipaddr&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:156" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;netmask&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:157" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;gw&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:158" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;ipaddr&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:167" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;netmask&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:167" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;gw&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:168" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;XPAR_XEMACPS_0_BASEADDR&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:169" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;ipaddr&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:223" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;netmask&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:223" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 214-124]" key="HLS 214-124" tag="" content="use of undeclared identifier &apos;gw&apos;: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.sdk/NetWork/src/main.c:223" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 0.49 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.35 seconds; current allocated memory: 100.677 MB." resolution=""/>
+</Messages>

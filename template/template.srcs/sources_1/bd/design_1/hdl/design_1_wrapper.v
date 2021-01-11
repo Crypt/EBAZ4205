@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Mon Jan 11 14:19:57 2021
+//Date        : Mon Jan 11 21:12:47 2021
 //Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -39,7 +39,8 @@ module design_1_wrapper
     MDIO_ETHERNET_0_0_mdio_io,
     clk_out1_0,
     enet0_gmii_rxd,
-    enet_gmii_txd);
+    enet_gmii_txd,
+    led);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -70,6 +71,7 @@ module design_1_wrapper
   output clk_out1_0;
   input [3:0]enet0_gmii_rxd;
   output [3:0]enet_gmii_txd;
+  output [1:0]led;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -104,6 +106,7 @@ module design_1_wrapper
   wire clk_out1_0;
   wire [3:0]enet0_gmii_rxd;
   wire [3:0]enet_gmii_txd;
+  wire [1:0]led;
 
   IOBUF MDIO_ETHERNET_0_0_mdio_iobuf
        (.I(MDIO_ETHERNET_0_0_mdio_o),
@@ -142,5 +145,6 @@ module design_1_wrapper
         .MDIO_ETHERNET_0_0_mdio_t(MDIO_ETHERNET_0_0_mdio_t),
         .clk_out1_0(clk_out1_0),
         .enet0_gmii_rxd(enet0_gmii_rxd),
-        .enet_gmii_txd(enet_gmii_txd));
+        .enet_gmii_txd(enet_gmii_txd),
+        .led(led));
 endmodule

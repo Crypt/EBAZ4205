@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Mon Jan 11 14:30:08 2021
+| Date         : Mon Jan 11 21:14:19 2021
 | Host         : I7MINT running 64-bit Linux Mint 20.1
 | Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
 | Design       : design_1_wrapper
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     2 |
-|    Minimum number of control sets                        |     2 |
+| Total control sets                                       |     3 |
+|    Minimum number of control sets                        |     3 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     5 |
+| Unused register locations in slices containing registers |    10 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     2 |
+| Total control sets |     3 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     1 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     0 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,7 +58,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              11 |            5 |
+| No           | No                    | No                     |              38 |           12 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -70,11 +70,12 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------+---------------+------------------+------------------+----------------+--------------+
-|        Clock Signal       | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+---------------------------+---------------+------------------+------------------+----------------+--------------+
-|  ENET0_GMII_TX_CLK_0_IBUF |               |                  |                2 |              5 |         2.50 |
-|  ENET0_GMII_RX_CLK_0_IBUF |               |                  |                3 |              6 |         2.00 |
-+---------------------------+---------------+------------------+------------------+----------------+--------------+
++-------------------------------------------------+---------------+------------------+------------------+----------------+--------------+
+|                   Clock Signal                  | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------------+---------------+------------------+------------------+----------------+--------------+
+|  ENET0_GMII_TX_CLK_0_IBUF                       |               |                  |                2 |              5 |         2.50 |
+|  ENET0_GMII_RX_CLK_0_IBUF                       |               |                  |                3 |              6 |         2.00 |
+|  design_1_i/processing_system7_0/inst/FCLK_CLK0 |               |                  |                7 |             27 |         3.86 |
++-------------------------------------------------+---------------+------------------+------------------+----------------+--------------+
 
 

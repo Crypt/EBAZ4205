@@ -1,15 +1,15 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Sun Jan  3 21:44:55 2021
-//Host        : I7MINT running 64-bit Linux Mint 20
+//Date        : Mon Jan 11 20:20:01 2021
+//Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -40,8 +40,10 @@ module design_1
     MDIO_ETHERNET_0_0_mdio_i,
     MDIO_ETHERNET_0_0_mdio_o,
     MDIO_ETHERNET_0_0_mdio_t,
+    clk_out1_0,
     enet0_gmii_rxd,
-    enet_gmii_txd);
+    enet_gmii_txd,
+    led_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -71,13 +73,17 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_ETHERNET_0_0 MDIO_I" *) input MDIO_ETHERNET_0_0_mdio_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_ETHERNET_0_0 MDIO_O" *) output MDIO_ETHERNET_0_0_mdio_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_ETHERNET_0_0 MDIO_T" *) output MDIO_ETHERNET_0_0_mdio_t;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_OUT1_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_OUT1_0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output clk_out1_0;
   input [3:0]enet0_gmii_rxd;
   output [3:0]enet_gmii_txd;
+  output [1:0]led_0;
 
   wire ENET0_GMII_RX_CLK_0_1;
   wire ENET0_GMII_RX_DV_0_1;
   wire ENET0_GMII_TX_CLK_0_1;
   wire [3:0]In0_0_1;
+  wire clk_wiz_0_clk_out1;
+  wire [1:0]led_flash_0_led;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -108,6 +114,7 @@ module design_1
   wire processing_system7_0_MDIO_ETHERNET_0_MDIO_T;
   wire [3:0]xlconcat_0_dout;
   wire [7:0]xlconcat_1_dout;
+  wire [3:0]xlconstant_0_dout;
 
   assign ENET0_GMII_RX_CLK_0_1 = ENET0_GMII_RX_CLK_0;
   assign ENET0_GMII_RX_DV_0_1 = ENET0_GMII_RX_DV_0;
@@ -117,8 +124,16 @@ module design_1
   assign MDIO_ETHERNET_0_0_mdc = processing_system7_0_MDIO_ETHERNET_0_MDC;
   assign MDIO_ETHERNET_0_0_mdio_o = processing_system7_0_MDIO_ETHERNET_0_MDIO_O;
   assign MDIO_ETHERNET_0_0_mdio_t = processing_system7_0_MDIO_ETHERNET_0_MDIO_T;
+  assign clk_out1_0 = clk_wiz_0_clk_out1;
   assign enet_gmii_txd[3:0] = xlconcat_0_dout;
+  assign led_0[1:0] = led_flash_0_led;
   assign processing_system7_0_MDIO_ETHERNET_0_MDIO_I = MDIO_ETHERNET_0_0_mdio_i;
+  design_1_clk_wiz_0_0 clk_wiz_0
+       (.clk_in1(processing_system7_0_FCLK_CLK0),
+        .clk_out1(clk_wiz_0_clk_out1));
+  design_1_led_flash_0_0 led_flash_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .led(led_flash_0_led));
   design_1_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -173,6 +188,8 @@ module design_1
         .dout(xlconcat_0_dout));
   design_1_xlconcat_0_1 xlconcat_1
        (.In0(In0_0_1),
-        .In1({1'b0,1'b0,1'b0,1'b0}),
+        .In1(xlconstant_0_dout),
         .dout(xlconcat_1_dout));
+  design_1_xlconstant_0_0 xlconstant_0
+       (.dout(xlconstant_0_dout));
 endmodule
