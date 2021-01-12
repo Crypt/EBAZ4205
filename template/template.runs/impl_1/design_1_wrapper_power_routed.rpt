@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date             : Mon Jan 11 21:14:31 2021
+| Date             : Mon Jan 11 22:59:54 2021
 | Host             : I7MINT running 64-bit Linux Mint 20.1
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.502        |
+| Total On-Chip Power (W)  | 1.514        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.385        |
+| Dynamic (W)              | 1.397        |
 | Device Static (W)        | 0.117        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 67.7         |
-| Junction Temperature (C) | 42.3         |
+| Max Ambient (C)          | 67.5         |
+| Junction Temperature (C) | 42.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -59,11 +59,11 @@ Table of Contents
 |   LUT as Logic |    <0.001 |        2 |     17600 |            0.01 |
 |   Others       |     0.000 |      139 |       --- |             --- |
 | Signals        |    <0.001 |       61 |       --- |             --- |
-| MMCM           |     0.105 |        1 |         2 |           50.00 |
-| I/O            |     0.004 |       17 |       100 |           17.00 |
+| MMCM           |     0.115 |        1 |         2 |           50.00 |
+| I/O            |     0.006 |       17 |       100 |           17.00 |
 | PS7            |     1.275 |        1 |       --- |             --- |
 | Static Power   |     0.117 |          |           |                 |
-| Total          |     1.502 |          |           |                 |
+| Total          |     1.514 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.007 |       0.001 |      0.006 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.066 |       0.058 |      0.008 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.007 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.072 |       0.064 |      0.008 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -138,7 +138,7 @@ Table of Contents
 +-------------------------------+-------------------------------------------------------------+-----------------+
 | clk_fpga_0                    | design_1_i/processing_system7_0/inst/FCLK_CLK0              |            20.0 |
 | clk_fpga_0                    | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            20.0 |
-| clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0     |           100.0 |
+| clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0     |            40.0 |
 | clkfbout_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0     |            20.0 |
 +-------------------------------+-------------------------------------------------------------+-----------------+
 
@@ -152,10 +152,10 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.385 |
-|   design_1_i             |     1.380 |
-|     clk_wiz_0            |     0.105 |
-|       inst               |     0.105 |
+| design_1_wrapper         |     1.397 |
+|   design_1_i             |     1.391 |
+|     clk_wiz_0            |     0.116 |
+|       inst               |     0.116 |
 |     processing_system7_0 |     1.275 |
 |       inst               |     1.275 |
 +--------------------------+-----------+

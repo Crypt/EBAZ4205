@@ -47,14 +47,14 @@
 
 #include <stdio.h>
 #include "platform.h"
-#include "xil_printf.h"
+//#include "xil_printf.h"
 
 
 int main()
 {
-    init_platform();
-    print("Hello World\n\r");
-    print("FSBL_NETWORD_TEMP\r\n");
-    cleanup_platform();
+//    init_platform();
+    printf("Hello World\n\r");
+    printf("FSBL_NETWORD_TEMP\r\n");
+//    cleanup_platform();
     return 0;
 }

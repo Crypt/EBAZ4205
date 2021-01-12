@@ -1,0 +1,454 @@
+David@I7MINT:~/petalinux$ petalinux-create -t project -n template -s avnet-digilent-zedboard-v2020.2-final.bsp
+INFO: Create project: template
+INFO: New project successfully created in /home/david/petalinux/template
+====================================================================================================================================
+
+david@I7MINT:~/petalinux$ cd template/
+david@I7MINT:~/petalinux/template$ petalinux-config --get-hw-description=/home/david/Documents/GitHub/djrm-EBAZ4205/template  # xsa folder path
+INFO: Sourcing build tools
+INFO: Getting hardware description...
+INFO: Rename design_1_wrapper.xsa to system.xsa
+[INFO] Generating Kconfig for project
+[INFO] Menuconfig project
+*** End of the configuration.
+*** Execute 'make' to start the build or try 'make help'.
+[INFO] Extracting yocto SDK to components/yocto
+[INFO] Sourcing build environment
+[INFO] Generating kconfig for Rootfs
+[INFO] Silentconfig rootfs
+[INFO] Generating plnxtool conf
+[INFO] Adding user layers
+[INFO] Generating workspace directory
+====================================================================================================================================
+
+david@I7MINT:~/petalinux/template$ petalinux-build
+INFO: Sourcing build tools
+[INFO] Building project
+[INFO] Sourcing build environment
+[INFO] Generating workspace directory
+INFO: bitbake petalinux-image-minimal
+WARNING: Host distribution "linuxmint-20.1" has not been validated with this version of the build system; you may possibly experience unexpected failures. It is recommended that you use a tested distribution.
+Parsing recipes: 100% |##################################################################################################################| Time: 0:02:03
+Parsing of 2995 .bb files complete (0 cached, 2995 parsed). 4265 targets, 204 skipped, 0 masked, 0 errors.
+NOTE: Resolving any missing task queue dependencies
+NOTE: Fetching uninative binary shim from file:///home/david/petalinux/template/components/yocto/downloads/uninative/9498d8bba047499999a7310ac2576d0796461184965351a56f6d32c888a1f216/x86_64-nativesdk-libc.tar.xz;sha256sum=9498d8bba047499999a7310ac2576d0796461184965351a56f6d32c888a1f216
+WARNING: Your host glibc verson (2.31) is newer than that in uninative (2.30). Disabling uninative so that sstate is not corrupted.
+Initialising tasks: 100% |###############################################################################################################| Time: 0:00:03
+Checking sstate mirror object availability: 100% |#######################################################################################| Time: 0:00:16
+Sstate summary: Wanted 976 Found 679 Missed 297 Current 0 (69% match, 0% complete)
+NOTE: Executing Tasks
+NOTE: Setscene tasks completed
+ERROR: acl-native-2.2.52-r0 do_install: oe_runmake failed
+ERROR: acl-native-2.2.52-r0 do_install: Execution of '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/temp/run.do_install.997766' failed with exit code 1:
+/usr/bin/gmake -C include install
+/usr/bin/gmake -C libmisc install
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/include'
+/usr/bin/gmake -C libacl install
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libmisc'
+/usr/bin/gmake -C getfacl install
+gmake[1]: Nothing to be done for 'install'.
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/include'
+gmake[1]: Nothing to be done for 'install'.
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libmisc'
+/usr/bin/gmake -C setfacl install
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/getfacl'
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libacl'
+/usr/bin/gmake -C chacl install
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/setfacl'
+gmake[1]: Nothing to be done for 'install'.
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libacl'
+../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+/usr/bin/gmake -C m4 install
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/chacl'
+../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+/usr/bin/gmake -C man install
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/m4'
+/usr/bin/gmake -C doc install
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man'
+../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+gmake[1]: Nothing to be done for 'install'.
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/m4'
+/usr/bin/gmake -C po install
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/doc'
+/usr/bin/gmake -C man1 install
+/usr/bin/gmake -C test install
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/po'
+/usr/bin/gmake -C man3 install
+gmake[2]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man1'
+gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/test'
+../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/doc/acl
+gmake[2]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man3'
+gmake[1]: Nothing to be done for 'install'.
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/test'
+/usr/bin/gmake -C man5 install
+make: *** read jobs pipe: Resource temporarily unavailable.  Stop.
+make: *** Waiting for unfinished jobs....
+o de.mo de.po
+gmake[1]: o: Command not found
+gmake[1]: [../include/buildrules:66: de.mo] Error 127 (ignored)
+o es.mo es.po
+gmake[2]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man5'
+gmake[1]: o: Command not found
+gmake[1]: [../include/buildrules:66: es.mo] Error 127 (ignored)
+o fr.mo fr.po
+gmake[1]: o: Command not found
+gmake[1]: [../include/buildrules:66: fr.mo] Error 127 (ignored)
+o gl.mo gl.po
+gmake[1]: o: Command not found
+gmake[1]: [../include/buildrules:66: gl.mo] Error 127 (ignored)
+o pl.mo pl.po
+gmake[2]: Nothing to be done for 'install'.
+gmake[2]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man3'
+gmake[1]: o: Command not found
+o sv.mo sv.po
+gmake[1]: o: Command not found
+gmake[1]: [../include/buildrules:66: pl.mo] Error 127 (ignored)
+gmake[1]: [../include/buildrules:66: sv.mo] Error 127 (ignored)
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/po'
+../../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1
+../../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man5
+../x86_64-linux-libtool --mode=install ../include/install-sh -o root -g root -m 755 getfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+../x86_64-linux-libtool --mode=install ../include/install-sh -o root -g root -m 755 chacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+../x86_64-linux-libtool --mode=install ../include/install-sh -o root -g root -m 755 setfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+../include/install-sh -o root -g root -m 644 PORTING CHANGES.gz /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/doc/acl
+../../include/install-sh -o root -g root -m 644 chacl.1 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1/chacl.1
+../../include/install-sh -o root -g root -m 644 acl.5 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man5/acl.5
+../include/install-sh -o root -g root -m 644 COPYING COPYING.LGPL /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/doc/acl
+x86_64-linux-libtool: warning: '../libacl/libacl.la' has not been installed in '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib'
+gmake[2]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man5'
+x86_64-linux-libtool: warning: '../libacl/libacl.la' has not been installed in '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib'
+x86_64-linux-libtool: warning: '../libacl/libacl.la' has not been installed in '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib'
+../../include/install-sh -o root -g root -m 644 getfacl.1 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1/getfacl.1
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/doc'
+x86_64-linux-libtool: install: ../include/install-sh -o root -g root -m 755 .libs/chacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin/chacl
+x86_64-linux-libtool: install: ../include/install-sh -o root -g root -m 755 .libs/getfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin/getfacl
+x86_64-linux-libtool: install: ../include/install-sh -o root -g root -m 755 .libs/setfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin/setfacl
+../../include/install-sh -o root -g root -m 644 setfacl.1 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1/setfacl.1
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/setfacl'
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/getfacl'
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/chacl'
+gmake[2]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man1'
+gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man'
+WARNING: /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/temp/run.do_install.997766:1 exit 1 from 'exit 1'
+
+ERROR: Logfile of failure stored in: /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/temp/log.do_install.997766
+Log data follows:
+| DEBUG: Executing python function autotools_aclocals
+| DEBUG: SITE files ['endian-little', 'common-linux', 'common-glibc', 'bit-64', 'x86_64-linux', 'common']
+| DEBUG: Python function autotools_aclocals finished
+| DEBUG: Executing shell function do_install
+| NOTE: make -j 8 PKG_LIB_DIR=/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib PKG_DEVLIB_DIR=/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib install install-lib install-dev DIST_ROOT=/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/image ZIP=gzip -n
+| /usr/bin/gmake -C include install
+| /usr/bin/gmake -C libmisc install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/include'
+| /usr/bin/gmake -C libacl install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libmisc'
+| /usr/bin/gmake -C getfacl install
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/include'
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libmisc'
+| /usr/bin/gmake -C setfacl install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/getfacl'
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libacl'
+| /usr/bin/gmake -C chacl install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/setfacl'
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libacl'
+| ../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| /usr/bin/gmake -C m4 install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/chacl'
+| ../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| /usr/bin/gmake -C man install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/m4'
+| /usr/bin/gmake -C doc install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man'
+| ../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/m4'
+| /usr/bin/gmake -C po install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/doc'
+| /usr/bin/gmake -C man1 install
+| /usr/bin/gmake -C test install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/po'
+| /usr/bin/gmake -C man3 install
+| gmake[2]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man1'
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/test'
+| ../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/doc/acl
+| gmake[2]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man3'
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/test'
+| /usr/bin/gmake -C man5 install
+| make: *** read jobs pipe: Resource temporarily unavailable.  Stop.
+| make: *** Waiting for unfinished jobs....
+| o de.mo de.po
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: de.mo] Error 127 (ignored)
+| o es.mo es.po
+| gmake[2]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man5'
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: es.mo] Error 127 (ignored)
+| o fr.mo fr.po
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: fr.mo] Error 127 (ignored)
+| o gl.mo gl.po
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: gl.mo] Error 127 (ignored)
+| o pl.mo pl.po
+| gmake[2]: Nothing to be done for 'install'.
+| gmake[2]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man3'
+| gmake[1]: o: Command not found
+| o sv.mo sv.po
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: pl.mo] Error 127 (ignored)
+| gmake[1]: [../include/buildrules:66: sv.mo] Error 127 (ignored)
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/po'
+| ../../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1
+| ../../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man5
+| ../x86_64-linux-libtool --mode=install ../include/install-sh -o root -g root -m 755 getfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| ../x86_64-linux-libtool --mode=install ../include/install-sh -o root -g root -m 755 chacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| ../x86_64-linux-libtool --mode=install ../include/install-sh -o root -g root -m 755 setfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| ../include/install-sh -o root -g root -m 644 PORTING CHANGES.gz /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/doc/acl
+| ../../include/install-sh -o root -g root -m 644 chacl.1 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1/chacl.1
+| ../../include/install-sh -o root -g root -m 644 acl.5 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man5/acl.5
+| ../include/install-sh -o root -g root -m 644 COPYING COPYING.LGPL /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/doc/acl
+| x86_64-linux-libtool: warning: '../libacl/libacl.la' has not been installed in '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib'
+| gmake[2]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man5'
+| x86_64-linux-libtool: warning: '../libacl/libacl.la' has not been installed in '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib'
+| x86_64-linux-libtool: warning: '../libacl/libacl.la' has not been installed in '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib'
+| ../../include/install-sh -o root -g root -m 644 getfacl.1 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1/getfacl.1
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/doc'
+| x86_64-linux-libtool: install: ../include/install-sh -o root -g root -m 755 .libs/chacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin/chacl
+| x86_64-linux-libtool: install: ../include/install-sh -o root -g root -m 755 .libs/getfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin/getfacl
+| x86_64-linux-libtool: install: ../include/install-sh -o root -g root -m 755 .libs/setfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin/setfacl
+| ../../include/install-sh -o root -g root -m 644 setfacl.1 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1/setfacl.1
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/setfacl'
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/getfacl'
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/chacl'
+| gmake[2]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man1'
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man'
+| ERROR: oe_runmake failed
+| WARNING: /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/temp/run.do_install.997766:1 exit 1 from 'exit 1'
+| ERROR: Execution of '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/temp/run.do_install.997766' failed with exit code 1:
+| /usr/bin/gmake -C include install
+| /usr/bin/gmake -C libmisc install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/include'
+| /usr/bin/gmake -C libacl install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libmisc'
+| /usr/bin/gmake -C getfacl install
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/include'
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libmisc'
+| /usr/bin/gmake -C setfacl install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/getfacl'
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libacl'
+| /usr/bin/gmake -C chacl install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/setfacl'
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/libacl'
+| ../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| /usr/bin/gmake -C m4 install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/chacl'
+| ../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| /usr/bin/gmake -C man install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/m4'
+| /usr/bin/gmake -C doc install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man'
+| ../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/m4'
+| /usr/bin/gmake -C po install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/doc'
+| /usr/bin/gmake -C man1 install
+| /usr/bin/gmake -C test install
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/po'
+| /usr/bin/gmake -C man3 install
+| gmake[2]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man1'
+| gmake[1]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/test'
+| ../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/doc/acl
+| gmake[2]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man3'
+| gmake[1]: Nothing to be done for 'install'.
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/test'
+| /usr/bin/gmake -C man5 install
+| make: *** read jobs pipe: Resource temporarily unavailable.  Stop.
+| make: *** Waiting for unfinished jobs....
+| o de.mo de.po
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: de.mo] Error 127 (ignored)
+| o es.mo es.po
+| gmake[2]: Entering directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man5'
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: es.mo] Error 127 (ignored)
+| o fr.mo fr.po
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: fr.mo] Error 127 (ignored)
+| o gl.mo gl.po
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: gl.mo] Error 127 (ignored)
+| o pl.mo pl.po
+| gmake[2]: Nothing to be done for 'install'.
+| gmake[2]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man3'
+| gmake[1]: o: Command not found
+| o sv.mo sv.po
+| gmake[1]: o: Command not found
+| gmake[1]: [../include/buildrules:66: pl.mo] Error 127 (ignored)
+| gmake[1]: [../include/buildrules:66: sv.mo] Error 127 (ignored)
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/po'
+| ../../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1
+| ../../include/install-sh -o root -g root -m 755 -d /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man5
+| ../x86_64-linux-libtool --mode=install ../include/install-sh -o root -g root -m 755 getfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| ../x86_64-linux-libtool --mode=install ../include/install-sh -o root -g root -m 755 chacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| ../x86_64-linux-libtool --mode=install ../include/install-sh -o root -g root -m 755 setfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin
+| ../include/install-sh -o root -g root -m 644 PORTING CHANGES.gz /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/doc/acl
+| ../../include/install-sh -o root -g root -m 644 chacl.1 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1/chacl.1
+| ../../include/install-sh -o root -g root -m 644 acl.5 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man5/acl.5
+| ../include/install-sh -o root -g root -m 644 COPYING COPYING.LGPL /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/doc/acl
+| x86_64-linux-libtool: warning: '../libacl/libacl.la' has not been installed in '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib'
+| gmake[2]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man5'
+| x86_64-linux-libtool: warning: '../libacl/libacl.la' has not been installed in '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib'
+| x86_64-linux-libtool: warning: '../libacl/libacl.la' has not been installed in '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/lib'
+| ../../include/install-sh -o root -g root -m 644 getfacl.1 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1/getfacl.1
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/doc'
+| x86_64-linux-libtool: install: ../include/install-sh -o root -g root -m 755 .libs/chacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin/chacl
+| x86_64-linux-libtool: install: ../include/install-sh -o root -g root -m 755 .libs/getfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin/getfacl
+| x86_64-linux-libtool: install: ../include/install-sh -o root -g root -m 755 .libs/setfacl /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/bin/setfacl
+| ../../include/install-sh -o root -g root -m 644 setfacl.1 /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/recipe-sysroot-native/usr/share/man/man1/setfacl.1
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/setfacl'
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/getfacl'
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/chacl'
+| gmake[2]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man/man1'
+| gmake[1]: Leaving directory '/home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/acl-2.2.52/man'
+| WARNING: /home/david/petalinux/template/build/tmp/work/x86_64-linux/acl-native/2.2.52-r0/temp/run.do_install.997766:1 exit 1 from 'exit 1'
+| 
+ERROR: Task (virtual:native:/home/david/petalinux/template/components/yocto/layers/core/meta/recipes-support/attr/acl_2.2.52.bb:do_install) failed with exit code '1'
+NOTE: Tasks Summary: Attempted 2028 tasks of which 284 didn't need to be rerun and 1 failed.
+
+Summary: 1 task failed:
+  virtual:native:/home/david/petalinux/template/components/yocto/layers/core/meta/recipes-support/attr/acl_2.2.52.bb:do_install
+Summary: There were 2 WARNING messages shown.
+Summary: There were 2 ERROR messages shown, returning a non-zero exit code.
+ERROR: Failed to build project
+====================================================================================================================================
+david@I7MINT:~/petalinux/template$ petalinux-config
+INFO: Sourcing build tools
+[INFO] Menuconfig project
+
+
+*** End of the configuration.
+*** Execute 'make' to start the build or try 'make help'.
+
+[INFO] Sourcing build environment
+[INFO] Generating kconfig for Rootfs
+[INFO] Silentconfig rootfs
+[INFO] Generating plnxtool conf
+[INFO] Generating workspace directory
+[INFO] Successfully configured project
+====================================================================================================================================
+
+david@I7MINT:~/petalinux/template$ petalinux-build
+INFO: Sourcing build tools
+[INFO] Building project
+[INFO] Sourcing build environment
+[INFO] Generating workspace directory
+INFO: bitbake petalinux-image-minimal
+WARNING: Host distribution "linuxmint-20.1" has not been validated with this version of the build system; you may possibly experience unexpected failures. It is recommended that you use a tested distribution.
+Loading cache: 100% |#################################################################################################################################################################################################################| Time: 0:00:00
+Loaded 4264 entries from dependency cache.
+Parsing recipes: 100% |###############################################################################################################################################################################################################| Time: 0:00:04
+Parsing of 2995 .bb files complete (2994 cached, 1 parsed). 4265 targets, 204 skipped, 0 masked, 0 errors.
+NOTE: Resolving any missing task queue dependencies
+NOTE: Fetching uninative binary shim from file:///home/david/petalinux/template/components/yocto/downloads/uninative/9498d8bba047499999a7310ac2576d0796461184965351a56f6d32c888a1f216/x86_64-nativesdk-libc.tar.xz;sha256sum=9498d8bba047499999a7310ac2576d0796461184965351a56f6d32c888a1f216
+WARNING: Your host glibc verson (2.31) is newer than that in uninative (2.30). Disabling uninative so that sstate is not corrupted.
+Initialising tasks: 100% |############################################################################################################################################################################################################| Time: 0:00:03
+Checking sstate mirror object availability: 100% |####################################################################################################################################################################################| Time: 0:00:07
+Sstate summary: Wanted 170 Found 13 Missed 157 Current 806 (7% match, 83% complete)
+NOTE: Executing Tasks
+NOTE: Setscene tasks completed
+NOTE: Tasks Summary: Attempted 3513 tasks of which 2800 didn't need to be rerun and all succeeded.
+
+Summary: There were 2 WARNING messages shown.
+INFO: Successfully copied built images to tftp dir: /srv/tftp/template
+[INFO] Successfully built project
+david@I7MINT:~/petalinux/template$ petalinux-package --boot --format BIN --fsbl --fpga --u-boot
+INFO: Sourcing build tools
+INFO: File in BOOT BIN: "/home/david/petalinux/template/images/linux/zynq_fsbl.elf"
+INFO: File in BOOT BIN: "/home/david/petalinux/template/project-spec/hw-description/design_1_wrapper.bit"
+INFO: File in BOOT BIN: "/home/david/petalinux/template/images/linux/u-boot.elf"
+INFO: File in BOOT BIN: "/home/david/petalinux/template/images/linux/system.dtb"
+INFO: Generating Zynq binary package BOOT.BIN...
+
+
+****** Xilinx Bootgen v2020.2
+  **** Build date : Nov 15 2020-06:11:24
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+[INFO]   : Bootimage generated successfully
+
+INFO: Binary is ready.
+====================================================================================================================================
+
+david@I7MINT:~/petalinux/template$ petalinux-config --get-hw-description=/home/david/Documents/GitHub/djrm-EBAZ4205/template  # xsa folder path
+INFO: Sourcing build tools
+INFO: Getting hardware description...
+INFO: Rename design_1_wrapper.xsa to system.xsa
+[INFO] Generating Kconfig for project
+[INFO] Menuconfig project
+
+
+*** End of the configuration.
+*** Execute 'make' to start the build or try 'make help'.
+
+[INFO] Sourcing build environment
+[INFO] Generating kconfig for Rootfs
+[INFO] Silentconfig rootfs
+[INFO] Generating plnxtool conf
+[INFO] Generating workspace directory
+====================================================================================================================================
+
+david@I7MINT:~/petalinux/template$ petalinux-build
+INFO: Sourcing build tools
+[INFO] Building project
+[INFO] Sourcing build environment
+[INFO] Generating workspace directory
+INFO: bitbake petalinux-image-minimal
+WARNING: Host distribution "linuxmint-20.1" has not been validated with this version of the build system; you may possibly experience unexpected failures. It is recommended that you use a tested distribution.
+Loading cache: 100% |#################################################################################################################################################################################################################| Time: 0:00:00
+Loaded 4264 entries from dependency cache.
+Parsing recipes: 100% |###############################################################################################################################################################################################################| Time: 0:00:04
+Parsing of 2995 .bb files complete (2994 cached, 1 parsed). 4265 targets, 204 skipped, 0 masked, 0 errors.
+NOTE: Resolving any missing task queue dependencies
+NOTE: Fetching uninative binary shim from file:///home/david/petalinux/template/components/yocto/downloads/uninative/9498d8bba047499999a7310ac2576d0796461184965351a56f6d32c888a1f216/x86_64-nativesdk-libc.tar.xz;sha256sum=9498d8bba047499999a7310ac2576d0796461184965351a56f6d32c888a1f216
+WARNING: Your host glibc verson (2.31) is newer than that in uninative (2.30). Disabling uninative so that sstate is not corrupted.
+Initialising tasks: 100% |############################################################################################################################################################################################################| Time: 0:00:03
+Checking sstate mirror object availability: 100% |####################################################################################################################################################################################| Time: 0:00:06
+Sstate summary: Wanted 153 Found 17 Missed 136 Current 823 (11% match, 86% complete)
+NOTE: Executing Tasks
+NOTE: Setscene tasks completed
+NOTE: Tasks Summary: Attempted 3513 tasks of which 3266 didn't need to be rerun and all succeeded.
+
+Summary: There were 2 WARNING messages shown.
+INFO: Successfully copied built images to tftp dir: /srv/tftp/template
+[INFO] Successfully built project
+====================================================================================================================================
+
+david@I7MINT:~/petalinux/template$ petalinux-package --boot --format BIN --fsbl --fpga --u-boot --force
+INFO: Sourcing build tools
+INFO: File in BOOT BIN: "/home/david/petalinux/template/images/linux/zynq_fsbl.elf"
+INFO: File in BOOT BIN: "/home/david/petalinux/template/project-spec/hw-description/design_1_wrapper.bit"
+INFO: File in BOOT BIN: "/home/david/petalinux/template/images/linux/u-boot.elf"
+INFO: File in BOOT BIN: "/home/david/petalinux/template/images/linux/system.dtb"
+INFO: Generating Zynq binary package BOOT.BIN...
+
+
+****** Xilinx Bootgen v2020.2
+  **** Build date : Nov 15 2020-06:11:24
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+[INFO]   : Bootimage generated successfully
+
+INFO: Binary is ready.
+david@I7MINT:~/petalinux/template$ 
+

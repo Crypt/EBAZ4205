@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAA0C55533149C8E0",
+      "boundary_crc": "0xAA0C5553E9745E76",
       "device": "xc7z010clg400-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -179,7 +179,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "10000000",
+            "value": "25000000",
             "value_src": "ip_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -727,13 +727,13 @@
             "value": "BUFG"
           },
           "CLKOUT1_JITTER": {
-            "value": "285.743"
+            "value": "244.752"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "164.985"
+            "value": "159.385"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "10"
+            "value": "25"
           },
           "CLKOUT2_DRIVES": {
             "value": "BUFG"
@@ -754,10 +754,10 @@
             "value": "BUFG"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "20.000"
+            "value": "18.250"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "100.000"
+            "value": "36.500"
           },
           "SECONDARY_SOURCE": {
             "value": "Single_ended_clock_capable_pin"
@@ -829,10 +829,10 @@
       }
     },
     "interface_nets": {
-      "processing_system7_0_DDR": {
+      "processing_system7_0_FIXED_IO": {
         "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       },
       "processing_system7_0_MDIO_ETHERNET_0": {
@@ -841,10 +841,10 @@
           "processing_system7_0/MDIO_ETHERNET_0"
         ]
       },
-      "processing_system7_0_FIXED_IO": {
+      "processing_system7_0_DDR": {
         "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       }
     },
