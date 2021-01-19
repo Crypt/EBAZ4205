@@ -119,10 +119,6 @@ design_1_processing_system7_0_0_sc::design_1_processing_system7_0_0_sc(const sc_
     model_param_props.addString("C_PACKAGE_NAME", "clg400");
 
   mp_impl = new processing_system7_v5_5_tlm("inst", model_param_props);
-
-  // initialize AXI sockets
-  M_AXI_GP0_wr_socket = mp_impl->M_AXI_GP0_wr_socket;
-  M_AXI_GP0_rd_socket = mp_impl->M_AXI_GP0_rd_socket;
 }
 
 design_1_processing_system7_0_0_sc::~design_1_processing_system7_0_0_sc()

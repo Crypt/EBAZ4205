@@ -112,8 +112,6 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
   mp_M_AXI_GP0_ARLEN_converter = NULL;
   mp_M_AXI_GP0_AWLEN_converter = NULL;
 
-  // initialize socket stubs
-
 }
 
 void design_1_processing_system7_0_0::before_end_of_elaboration()
@@ -191,8 +189,6 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
 
     // M_AXI_GP0' transactor sockets
 
-    mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
-    mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
   }
   else
   {
@@ -257,8 +253,6 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
   mp_M_AXI_GP0_ARLEN_converter = NULL;
   mp_M_AXI_GP0_AWLEN_converter = NULL;
 
-  // initialize socket stubs
-
 }
 
 void design_1_processing_system7_0_0::before_end_of_elaboration()
@@ -336,8 +330,6 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
 
     // M_AXI_GP0' transactor sockets
 
-    mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
-    mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
   }
   else
   {
@@ -402,8 +394,6 @@ design_1_processing_system7_0_0::design_1_processing_system7_0_0(const sc_core::
   mp_M_AXI_GP0_ARLEN_converter = NULL;
   mp_M_AXI_GP0_AWLEN_converter = NULL;
 
-  // initialize socket stubs
-
 }
 
 void design_1_processing_system7_0_0::before_end_of_elaboration()
@@ -481,8 +471,6 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
 
     // M_AXI_GP0' transactor sockets
 
-    mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
-    mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
   }
   else
   {
@@ -621,8 +609,6 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
   // configure 'M_AXI_GP0' transactor
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_processing_system7_0_0", "M_AXI_GP0_TLM_MODE") != 1)
   {
-    mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
-    mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
   
   }
   else
@@ -767,8 +753,6 @@ void design_1_processing_system7_0_0::before_end_of_elaboration()
   // configure 'M_AXI_GP0' transactor
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("design_1_processing_system7_0_0", "M_AXI_GP0_TLM_MODE") != 1)
   {
-    mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
-    mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
   
   }
   else

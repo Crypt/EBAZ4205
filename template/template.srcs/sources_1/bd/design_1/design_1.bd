@@ -223,7 +223,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "50.000000"
+            "value": "125.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -277,7 +277,7 @@
             "value": "111.111115"
           },
           "PCW_CLK0_FREQ": {
-            "value": "50000000"
+            "value": "125000000"
           },
           "PCW_CLK1_FREQ": {
             "value": "10000000"
@@ -320,6 +320,9 @@
           },
           "PCW_EN_UART1": {
             "value": "1"
+          },
+          "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
+            "value": "125"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
@@ -727,10 +730,10 @@
             "value": "BUFG"
           },
           "CLKOUT1_JITTER": {
-            "value": "244.752"
+            "value": "312.659"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "159.385"
+            "value": "245.713"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
             "value": "25"
@@ -754,7 +757,7 @@
             "value": "BUFG"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "18.250"
+            "value": "36.500"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
             "value": "36.500"
@@ -801,7 +804,7 @@
             "direction": "I",
             "parameters": {
               "FREQ_HZ": {
-                "value": "50000000",
+                "value": "125000000",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
@@ -829,10 +832,10 @@
       }
     },
     "interface_nets": {
-      "processing_system7_0_FIXED_IO": {
+      "processing_system7_0_DDR": {
         "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       },
       "processing_system7_0_MDIO_ETHERNET_0": {
@@ -841,10 +844,10 @@
           "processing_system7_0/MDIO_ETHERNET_0"
         ]
       },
-      "processing_system7_0_DDR": {
+      "processing_system7_0_FIXED_IO": {
         "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       }
     },
