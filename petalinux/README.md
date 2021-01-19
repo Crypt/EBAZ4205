@@ -91,3 +91,24 @@ INFO: Successfully copied built images to tftp dir: /srv/tftp/template
 [INFO] Successfully built project
 david@I7MINT:~/Documents/GitHub/djrm-EBAZ4205/petalinux/template$ 
 ```
+## create BOOT.BIN
+
+```
+avid@I7MINT:~/Documents/GitHub/djrm-EBAZ4205/petalinux/template$ petalinux-package --boot  --force --fsbl ./images/linux/zynq_fsbl.elf --fpga ./images/linux/system.bit --u-boot
+INFO: Sourcing build tools
+INFO: File in BOOT BIN: "/home/david/Documents/GitHub/djrm-EBAZ4205/petalinux/template/images/linux/zynq_fsbl.elf"
+INFO: File in BOOT BIN: "/home/david/Documents/GitHub/djrm-EBAZ4205/petalinux/template/images/linux/system.bit"
+INFO: File in BOOT BIN: "/home/david/Documents/GitHub/djrm-EBAZ4205/petalinux/template/images/linux/u-boot.elf"
+INFO: File in BOOT BIN: "/home/david/Documents/GitHub/djrm-EBAZ4205/petalinux/template/images/linux/system.dtb"
+INFO: Generating Zynq binary package BOOT.BIN...
+
+
+****** Xilinx Bootgen v2020.2
+  **** Build date : Nov 15 2020-06:11:24
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+[INFO]   : Bootimage generated successfully
+
+INFO: Binary is ready.
+```
