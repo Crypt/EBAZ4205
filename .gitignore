@@ -1,2 +1,6 @@
 *.*~
+*/*.bsp
+template/**
+-petalinux/build/**
+
 

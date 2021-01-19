@@ -1,0 +1,55 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Thu Nov 19 01:54:42 2020
+| Host         : xcosswbld06 running 64-bit Red Hat Enterprise Linux Workstation release 7.4 (Maipo)
+| Command      : report_methodology -file project_1_wrapper_methodology_drc_routed.rpt -pb project_1_wrapper_methodology_drc_routed.pb -rpx project_1_wrapper_methodology_drc_routed.rpx
+| Design       : project_1_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 4
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 4          |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An output delay is missing on leds_4bits_tri_o[0] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on leds_4bits_tri_o[1] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on leds_4bits_tri_o[2] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on leds_4bits_tri_o[3] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+
