@@ -1,5 +1,11 @@
 ## Links to external information
 
+EBAZ4205 Bitcoin miner board
+http://cholla.mmto.org/ebaz4205/
+
+ZYNQ learning from scratch (based on mining card EBAZ4205) (1)
+https://blog.csdn.net/Turix/article/details/109738107
+
 https://www.xilinx.com/support/answers/63794.html
 
 zynq[1] mine board helloworld

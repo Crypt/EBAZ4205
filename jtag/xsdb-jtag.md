@@ -3,8 +3,41 @@
 The hw_server talks through the USB cable to the jtag adapter connected to the zncq board. it is controlled through the tcp link by the xsdb program which can accept commands typed at its console.
 
 the hw_server must first be started and run in a seperate console, then the xsdb can be started to talk to the zync.
-hw_server is located in the directory~/Xilinx/Vivado/2020.2/bin  when the server is running then xsdb can be started to control the comminicatiosns withther zynq
+hw_server is located in the directory ~/Xilinx/Vivado/2020.2/bin  when the server is running then xsdb can be started to control the comminicatiosns withther zynq
+'''
+~/Xilinx/Vivado/2020.2/bin/hw_server
+'''
+hw_server mmay already be running, it may have been started by Vivado, in this case it is not needed to re-start it.
 
+it is best (neccessary?) to set the Vivado enviorenment before trying to use xsdb, 
+
+```
+david@I7MINT:~/petalinux/template$ source ~/Xilinx/Vivado/2020.2/settings64.sh
+david@I7MINT:~/petalinux/template$ xsdb
+rlwrap: warning: your $TERM is 'xterm-256color' but rlwrap couldn't find it in the terminfo database. Expect some problems.
+                                                                                                                                                                        
+****** Xilinx System Debugger (XSDB) v2020.2
+  **** Build date : Nov 18 2020-09:50:50
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+xsdb%                                                                                                                                                                   
+xsdb% connect                                                                                                                                                           
+tcfchan#0                                                                                                                                                               
+xsdb% targets                                                                                                                                                           
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z010
+xsdb% target 4                                                                                                                                                          
+xsdb% fpga /home/david/Documents/GitHub/zed-multicomp/zedmulti/zedmulti.runs/impl_1/multicomp_wrapper.bit                                                               
+100%    1MB   1.8MB/s  00:01                                                                                                                                            
+xsdb% exit                                                                                                                                                              
+exit
+
+```
+
+Another example
 
 ```
 xsdb

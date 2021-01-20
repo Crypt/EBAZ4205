@@ -112,3 +112,19 @@ INFO: Generating Zynq binary package BOOT.BIN...
 
 INFO: Binary is ready.
 ```
+
+## copy files to SD card
+
+copy these files onto an SD card formatted as FAT32 to boot the ebaz board - the system must be configured for SD card booting with the correct boot option links set. 
+
+| SD card files   |
+|-----------------|
+|[BOOT.BIN](./template/images/linux/BOOT.BIN)|
+|[boot.scr](./boot.scr)|
+|[uImage](./template/images/linux/uImage)|
+|[system.dtb](./template/images/linux/system.dtb)|
+|[image.ub](./template/images/linux/image.ub)|
+
+
+![Boot links](../image/ebaz4205-boot-links.png)
+
