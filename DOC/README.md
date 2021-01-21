@@ -1,5 +1,8 @@
 ## Links to external information
 
+OpenOCD Support for XIlinx Zynq 
+https://devel.rtems.org/wiki/Debugging/OpenOCD/Xilinx_Zynq
+
 EBAZ4205 Bitcoin miner board
 http://cholla.mmto.org/ebaz4205/
 

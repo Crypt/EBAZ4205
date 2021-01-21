@@ -2,5 +2,14 @@
 */*.bsp
 template/**
 -petalinux/build/**
-
+/projects/P01**
+/projects/P02**
+/projects/P03**
+/projects/P04**
+/projects/P05**
+/projects/P06**
+/projects/P07**
+/projects/P08**
+/projects/P09_VGA_TEST-org**
+/projects/P10**
 

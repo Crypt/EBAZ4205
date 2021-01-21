@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]E:\EBAZ4205\P15_VGA_TEST\VGA_TEST.sdk\FSBL\Debug\FSBL.elf
+	E:\EBAZ4205\P15_VGA_TEST\VGA_TEST.sdk\VGA_TEST_hw_platform_0\VGA_TEST.bit
+	E:\EBAZ4205\P15_VGA_TEST\VGA_TEST.sdk\VGA_TEST\Debug\VGA_TEST.elf
+}
