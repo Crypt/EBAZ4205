@@ -38,13 +38,31 @@ The file in this directory 'nand' are copies of the original nand memory content
 |mtd8:|0x000007e00000-0x000008000000| 00200000| 00020000| "nand-reserve"      |2.1 MB	 |-all 0xff|
 |     |                             |          |          |                   |        |     |
 |     |                             |          |          |                   |        |     |
-|     |                             |          |          |                   |        |     |
-|     |                             |          |          |                   |        |     |
-|     |                             |          |          |                   |        |     |
-|     |                             |          |          |                   |        |     |
-|     |                             |          |          |                   |        |     |
-|     |                             |          |          |                   |        |     |
 
+## dumpimage
+```
+david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd0ro.bin 
+Image Type   : Xilinx ZynqMP Boot Image support
+Image Offset : 0x00001700
+Image Size   : 0 bytes (98320 bytes packed)
+PMUFW Size   : 98320 bytes (0 bytes packed)
+Image Load   : 0x01010000
+Checksum     : 0xfc164520
+FSBL payload on CPU unknown (unknown):
+    Offset     : 0xaa655598
+    Size       : 2885681144 (0xabfffff8) bytes
+    Load       : 0xeafffffeeafffffe
+    Attributes : BigEndian AArch32 
+    Checksum   : 0x00000000
+Segmentation fault (core dumped)
+david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd2ro.bin GP Header: Size d00dfeed LoadAddr 2b91
+david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd3ro.bin GP Header: Size ffffffff LoadAddr ffffffff
+david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd4ro.bin GP Header: Size 851901e0 LoadAddr 31000000
+david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd5ro.bin GP Header: Size ffffffff LoadAddr ffffffff
+david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd6ro.bin GP Header: Size 851902e0 LoadAddr 44100000
+david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd7ro.bin GP Header: Size ffffffff LoadAddr ffffffff
+david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd8ro.bin GP Header: Size ffffffff LoadAddr ffffffff
+```
 
 
 

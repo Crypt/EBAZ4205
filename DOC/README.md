@@ -1,5 +1,14 @@
 ## Links to external information
 
+Bootable linux creation - includes u-boot and device tree etc.
+https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841722/ZCU102+Image+creation+in+OSL+flow
+
+Tutorial on above
+https://www.youtube.com/watch?v=6no1zMczc0M&feature=youtu.be
+
+Zync tutorial index
+http://www.googoolia.com/wp/category/zynq-training/
+
 OpenOCD Support for XIlinx Zynq 
 https://devel.rtems.org/wiki/Debugging/OpenOCD/Xilinx_Zynq
 
