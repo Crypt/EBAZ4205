@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:led_flasher:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "led_flasher,Vivado 2020.2" *)
+(* X_CORE_INFO = "led_flasher,Vivado 2020.2.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_led_flasher_0_0,led_flasher,{}" *)
-(* CORE_GENERATION_INFO = "design_1_led_flasher_0_0,led_flasher,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=led_flasher,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_led_flasher_0_0,led_flasher,{x_ipProduct=Vivado 2020.2.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=led_flasher,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_led_flasher_0_0 (

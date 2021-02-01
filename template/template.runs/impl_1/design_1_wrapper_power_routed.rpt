@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date             : Tue Jan 12 09:17:03 2021
+| Tool Version     : Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
+| Date             : Sun Jan 31 15:03:59 2021
 | Host             : I7MINT running 64-bit Linux Mint 20.1
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.513        |
+| Total On-Chip Power (W)  | 1.525        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.395        |
-| Device Static (W)        | 0.117        |
+| Dynamic (W)              | 1.403        |
+| Device Static (W)        | 0.122        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 67.6         |
-| Junction Temperature (C) | 42.4         |
+| Max Ambient (C)          | 67.4         |
+| Junction Temperature (C) | 42.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      186 |       --- |             --- |
+| Slice Logic    |    <0.001 |      188 |       --- |             --- |
 |   CARRY4       |    <0.001 |        7 |      4400 |            0.16 |
 |   Register     |    <0.001 |       38 |     35200 |            0.11 |
-|   LUT as Logic |    <0.001 |        2 |     17600 |            0.01 |
-|   Others       |     0.000 |      139 |       --- |             --- |
-| Signals        |    <0.001 |       61 |       --- |             --- |
+|   LUT as Logic |    <0.001 |        3 |     17600 |            0.02 |
+|   Others       |     0.000 |      140 |       --- |             --- |
+| Signals        |    <0.001 |       64 |       --- |             --- |
 | MMCM           |     0.115 |        1 |         2 |           50.00 |
-| I/O            |     0.011 |       17 |       100 |           17.00 |
-| PS7            |     1.268 |        1 |       --- |             --- |
-| Static Power   |     0.117 |          |           |                 |
-| Total          |     1.513 |          |           |                 |
+| I/O            |     0.006 |       19 |       100 |           19.00 |
+| PS7            |     1.281 |        1 |       --- |             --- |
+| Static Power   |     0.122 |          |           |                 |
+| Total          |     1.525 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.008 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.007 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.072 |       0.064 |      0.008 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -86,12 +86,12 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.691 |       0.662 |      0.028 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.695 |       0.667 |      0.028 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.036 |       0.026 |      0.010 |       NA    | Unspecified | NA         |
-| Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |       NA    | Unspecified | NA         |
+| Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.356 |       0.354 |      0.002 |       NA    | Unspecified | NA         |
-| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco_mio1 |       1.800 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco_mio0 |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco_mio1 |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 
@@ -136,10 +136,10 @@ Table of Contents
 +-------------------------------+-------------------------------------------------------------+-----------------+
 | Clock                         | Domain                                                      | Constraint (ns) |
 +-------------------------------+-------------------------------------------------------------+-----------------+
-| clk_fpga_0                    | design_1_i/processing_system7_0/inst/FCLK_CLK0              |             8.0 |
-| clk_fpga_0                    | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |             8.0 |
+| clk_fpga_0                    | design_1_i/processing_system7_0/inst/FCLK_CLK0              |            20.0 |
+| clk_fpga_0                    | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            20.0 |
 | clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0     |            40.0 |
-| clkfbout_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0     |            40.0 |
+| clkfbout_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0     |            20.0 |
 +-------------------------------+-------------------------------------------------------------+-----------------+
 
 
@@ -152,12 +152,12 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.395 |
-|   design_1_i             |     1.384 |
-|     clk_wiz_0            |     0.115 |
-|       inst               |     0.115 |
-|     processing_system7_0 |     1.268 |
-|       inst               |     1.268 |
+| design_1_wrapper         |     1.403 |
+|   design_1_i             |     1.397 |
+|     clk_wiz_0            |     0.116 |
+|       inst               |     0.116 |
+|     processing_system7_0 |     1.281 |
+|       inst               |     1.281 |
 +--------------------------+-----------+
 
 

@@ -15,7 +15,7 @@ CONFIG_system-zynq=y
 #
 # sudo 
 #
-# CONFIG_sudo is not set
+CONFIG_sudo=y
 # CONFIG_sudo-dbg is not set
 # CONFIG_sudo-dev is not set
 
@@ -953,7 +953,7 @@ CONFIG_pciutils=y
 #
 # make 
 #
-# CONFIG_make is not set
+CONFIG_make=y
 # CONFIG_make-dbg is not set
 # CONFIG_make-dev is not set
 
@@ -4022,8 +4022,8 @@ CONFIG_imagefeature-debug-tweaks=y
 #
 # apps 
 #
-# CONFIG_gpio-demo is not set
-# CONFIG_peekpoke is not set
+CONFIG_gpio-demo=y
+CONFIG_peekpoke=y
 
 #
 # user packages 
@@ -4033,4 +4033,4 @@ CONFIG_imagefeature-debug-tweaks=y
 # PetaLinux RootFS Settings
 #
 CONFIG_ROOTFS_ROOT_PASSWD="root"
-CONFIG_ADD_EXTRA_USERS="petalinux:petalinux;"
+CONFIG_ADD_EXTRA_USERS="petalinux:petalinux;david:david;"

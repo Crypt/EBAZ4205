@@ -128,3 +128,43 @@ copy these files onto an SD card formatted as FAT32 to boot the ebaz board - the
 
 ![Boot links](../image/ebaz4205-boot-links.png)
 
+## use SD partition for root FS
+
+An SD partition formatted as ext4 may be used for the root FS, the neccessary files are created during the petalinux-build process. A modification to the boot command is needed to change the location of the rootfs, example:
+
+```
+set bootargs 'debug memblock-debug console=ttyPS0,115200 root=/dev/mmcblk0p2 rw earlyprintk earlycon loglevel=8 rootfstype=ext4 rootwait'
+fatload mmc 0 0x3000000 uImage
+fatload mmc 0 0x2C00000 system.dtb
+bootm 0x3000000 - 0x2C00000
+```
+
+The partition can be created ising disks, gparted, fdisk etc
+the ext4 partition will need to have the files in the generated archive added.
+mount the partition in the build system and extract the file archive, e.g.
+
+```
+cd /media/david/EBAZ_FS
+sudo tar ./xvf ./images/linux/rootfs.tar.gz
+```
+
+## How to add mc to petalinux image
+
+The first thing I do on a new system is to install midnight commander (mc) to allow easy navigation of the file system and use use its editor (insted of vi)
+mc is not available in the petalinux-config meus by default and I had to find a way to enable it Thanfully it turns out that it wasnt too difficult.
+I found an example here: https://forums.xilinx.com/t5/Embedded-Linux/Midnight-Commander-for-Petalinux/td-p/1058820
+on my ststem I edited ./project-spec/meta-user/conf/petalinuxbsp.conf and added 'IMAGE_INSTALL_append = mc' as a new line at the end of the file.
+
+Afterwards the new option to install mc appeared in the menu 'petalinux-config -c rootfs' Filesystem Packages ---> console ---> utils ---> mc ---> [*] mc
+
+Then save the configuration < Save > and rebuild the binaries using 'petalinux-build' to make the new FS.
+
+note: when using mc from the serial terminal there is a problem with the line drawing characters, a workaround is to start mc withthe command line option --stickchars, or -a This is not needed when using ssh, the full colour display with proper line drawing is then seen.
+
+
+
+
+
+
+
+

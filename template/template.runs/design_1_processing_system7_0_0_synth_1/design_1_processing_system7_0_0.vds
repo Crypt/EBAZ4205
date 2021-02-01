@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Vivado v2020.2 (64-bit)
-# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
-# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Jan 12 09:14:53 2021
-# Process ID: 1230846
+# Vivado v2020.2.1 (64-bit)
+# SW Build 3080587 on Fri Dec 11 14:53:26 MST 2020
+# IP Build 3080454 on Sat Dec 12 02:19:03 MST 2020
+# Start of session at: Sun Jan 31 15:00:40 2021
+# Process ID: 328423
 # Current directory: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/design_1_processing_system7_0_0_synth_1
 # Command line: vivado -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
 # Log file: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
@@ -17,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1230885
+INFO: [Synth 8-7075] Helper process launched with PID 328677
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2290.422 ; gain = 0.000 ; free physical = 183 ; free virtual = 5199
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2356.328 ; gain = 0.000 ; free physical = 164 ; free virtual = 1601
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
@@ -49,7 +49,7 @@ INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_sys
 	Parameter C_FCLK_CLK1_BUF bound to: FALSE - type: string 
 	Parameter C_FCLK_CLK2_BUF bound to: FALSE - type: string 
 	Parameter C_FCLK_CLK3_BUF bound to: FALSE - type: string 
-	Parameter C_EMIO_GPIO_WIDTH bound to: 64 - type: integer 
+	Parameter C_EMIO_GPIO_WIDTH bound to: 1 - type: integer 
 	Parameter C_INCLUDE_TRACE_BUFFER bound to: 0 - type: integer 
 	Parameter C_TRACE_BUFFER_FIFO_SIZE bound to: 128 - type: integer 
 	Parameter C_TRACE_BUFFER_CLOCK_DELAY bound to: 12 - type: integer 
@@ -79,41 +79,41 @@ INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_sys
 	Parameter C_USE_S_AXI_ACP bound to: 0 - type: integer 
 	Parameter C_GP0_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
 	Parameter C_GP1_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/david/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (1#1) [/home/david/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
-INFO: [Synth 8-6157] synthesizing module 'BIBUF' [/home/david/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:730]
-INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (2#1) [/home/david/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:730]
-INFO: [Synth 8-6157] synthesizing module 'PS7' [/home/david/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:62034]
-INFO: [Synth 8-6155] done synthesizing module 'PS7' (3#1) [/home/david/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:62034]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (1#1) [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6157] synthesizing module 'BIBUF' [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:730]
+INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (2#1) [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:730]
+INFO: [Synth 8-6157] synthesizing module 'PS7' [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:83976]
+INFO: [Synth 8-6155] done synthesizing module 'PS7' (3#1) [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:83976]
 INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (4#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
-WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:361]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:370]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (5#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2290.422 ; gain = 0.000 ; free physical = 1741 ; free virtual = 6766
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2356.328 ; gain = 0.000 ; free physical = 871 ; free virtual = 2381
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2290.422 ; gain = 0.000 ; free physical = 1729 ; free virtual = 6756
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2356.328 ; gain = 0.000 ; free physical = 857 ; free virtual = 2369
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2290.422 ; gain = 0.000 ; free physical = 1729 ; free virtual = 6756
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2356.328 ; gain = 0.000 ; free physical = 857 ; free virtual = 2369
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2290.422 ; gain = 0.000 ; free physical = 1713 ; free virtual = 6740
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2356.328 ; gain = 0.000 ; free physical = 835 ; free virtual = 2357
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -126,30 +126,30 @@ Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.r
 Finished Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2354.281 ; gain = 0.000 ; free physical = 1575 ; free virtual = 6617
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2420.188 ; gain = 0.000 ; free physical = 662 ; free virtual = 2278
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2354.281 ; gain = 0.000 ; free physical = 1575 ; free virtual = 6617
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2420.188 ; gain = 0.000 ; free physical = 660 ; free virtual = 2277
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2354.281 ; gain = 63.859 ; free physical = 1667 ; free virtual = 6721
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2420.188 ; gain = 63.859 ; free physical = 739 ; free virtual = 2351
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2354.281 ; gain = 63.859 ; free physical = 1667 ; free virtual = 6721
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2420.188 ; gain = 63.859 ; free physical = 739 ; free virtual = 2351
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2354.281 ; gain = 63.859 ; free physical = 1652 ; free virtual = 6714
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2420.188 ; gain = 63.859 ; free physical = 752 ; free virtual = 2350
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2354.281 ; gain = 63.859 ; free physical = 1645 ; free virtual = 6709
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2420.188 ; gain = 63.859 ; free physical = 745 ; free virtual = 2349
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -174,25 +174,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2354.281 ; gain = 63.859 ; free physical = 1611 ; free virtual = 6687
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2420.188 ; gain = 63.859 ; free physical = 722 ; free virtual = 2337
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2389.266 ; gain = 98.844 ; free physical = 1244 ; free virtual = 6322
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2520.172 ; gain = 163.844 ; free physical = 439 ; free virtual = 2056
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2408.273 ; gain = 117.852 ; free physical = 1231 ; free virtual = 6309
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2540.180 ; gain = 183.852 ; free physical = 426 ; free virtual = 2043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2424.289 ; gain = 133.867 ; free physical = 1232 ; free virtual = 6310
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2556.195 ; gain = 199.867 ; free physical = 418 ; free virtual = 2042
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -210,37 +210,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2427.258 ; gain = 136.836 ; free physical = 1450 ; free virtual = 6529
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 2559.164 ; gain = 202.836 ; free physical = 385 ; free virtual = 2039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2427.258 ; gain = 136.836 ; free physical = 1450 ; free virtual = 6529
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 2559.164 ; gain = 202.836 ; free physical = 385 ; free virtual = 2039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2427.258 ; gain = 136.836 ; free physical = 1450 ; free virtual = 6529
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2559.164 ; gain = 202.836 ; free physical = 385 ; free virtual = 2039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2427.258 ; gain = 136.836 ; free physical = 1450 ; free virtual = 6529
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2559.164 ; gain = 202.836 ; free physical = 384 ; free virtual = 2038
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2427.258 ; gain = 136.836 ; free physical = 1450 ; free virtual = 6529
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2559.164 ; gain = 202.836 ; free physical = 384 ; free virtual = 2038
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2427.258 ; gain = 136.836 ; free physical = 1450 ; free virtual = 6529
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2559.164 ; gain = 202.836 ; free physical = 384 ; free virtual = 2038
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -258,31 +258,31 @@ Report Cell Usage:
 +------+------+------+
 |1     |BIBUF |   130|
 |2     |BUFG  |     1|
-|3     |LUT1  |    25|
+|3     |LUT1  |    26|
 |4     |PS7   |     1|
 |5     |FDRE  |    22|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2427.258 ; gain = 136.836 ; free physical = 1450 ; free virtual = 6529
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2559.164 ; gain = 202.836 ; free physical = 384 ; free virtual = 2038
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2427.258 ; gain = 72.977 ; free physical = 1505 ; free virtual = 6584
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2427.266 ; gain = 136.836 ; free physical = 1505 ; free virtual = 6584
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2559.164 ; gain = 138.977 ; free physical = 442 ; free virtual = 2097
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2559.172 ; gain = 202.836 ; free physical = 442 ; free virtual = 2098
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2427.266 ; gain = 0.000 ; free physical = 1591 ; free virtual = 6671
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2559.172 ; gain = 0.000 ; free physical = 429 ; free virtual = 2093
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2437.164 ; gain = 0.000 ; free physical = 1531 ; free virtual = 6610
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2567.102 ; gain = 0.000 ; free physical = 456 ; free virtual = 2123
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 23 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 2437.164 ; gain = 146.914 ; free physical = 1814 ; free virtual = 6894
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2567.102 ; gain = 210.945 ; free physical = 738 ; free virtual = 2406
 INFO: [Common 17-1381] The checkpoint '/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_processing_system7_0_0, cache-ID = 778aa4a78d2b7926
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_processing_system7_0_0, cache-ID = 094a09b93f6718aa
 INFO: [Common 17-1381] The checkpoint '/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_processing_system7_0_0_utilization_synth.rpt -pb design_1_processing_system7_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 12 09:15:32 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 31 15:01:31 2021...

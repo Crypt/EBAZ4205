@@ -99,6 +99,7 @@ template/**
 /projects/P07**
 /projects/P08**
 /projects/P09_VGA_TEST-org**
+/projects/P09_VGA_TEST**
 /projects/P10**
 /projects/VGA_COLBAR/VGA_TEST.cache**
 /projects/VGA_COLBAR/VGA_TEST.sdk**
@@ -106,5 +107,13 @@ template/**
 /projects/VGA_COLBAR/VGA_TEST.runs**
 !/projects/VGA_COLBAR/README.md
 !/projects/VGA_COLBAR/VGA_COLBAR.png
+/projects/VGA_COLBAR/**
+/projects/
+/workspace/**
+!/workspace/ADV7123_VGA_application**
+!/workspace/ADV7123_VGA_platform**
+!/workspace/ebaz4205_standalone**
+
+
 
 

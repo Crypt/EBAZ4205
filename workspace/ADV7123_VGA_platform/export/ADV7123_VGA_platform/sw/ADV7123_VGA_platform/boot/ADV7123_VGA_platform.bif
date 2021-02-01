@@ -1,0 +1,7 @@
+/*ADV7123_VGA_platform*/
+the_ROM_image:
+{
+  [bootloader]<ADV7123_VGA_platform/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

@@ -1,5 +1,11 @@
 ## Links to external information
 
+Add mc to petalinux
+https://forums.xilinx.com/t5/Embedded-Linux/Midnight-Commander-for-Petalinux/td-p/1058820
+
+Vitis hello world example video using XSA import
+https://www.youtube.com/watch?v=3D2-OPArCiA
+
 Bootable linux creation - includes u-boot and device tree etc.
 https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841722/ZCU102+Image+creation+in+OSL+flow
 
@@ -18,8 +24,6 @@ http://cholla.mmto.org/ebaz4205/
 ZYNQ learning from scratch (based on mining card EBAZ4205) (1)
 https://blog.csdn.net/Turix/article/details/109738107
 
-https://www.xilinx.com/support/answers/63794.html
-
 zynq[1] mine board helloworld
 https://hhuysqt.github.io/zynq1/
 
@@ -32,6 +36,10 @@ https://www.programmersought.com/article/20844187860/
 AR# 63794 Install - What Ubuntu files are required for Vivado to run successfully?
 https://www.xilinx.com/support/answers/63794.html
 
+tpecar: anyway, I've had some success with setting up Vivado on Linux by applying workarounds provided in the Arch Linux Wiki
+https://wiki.archlinux.org/index.php/Xilinx_Vivado
+
+Torrent directories in english
 https://docs.google.com/spreadsheets/d/1gH5yqmZFvx-v_gPzcNBpqH7Yv8eWHvKH8vTq5j1jSfo/edit#gid=837728157
 
 EBAZ4205 ZYNQ 7Z010 裸机程序NAND固化 JTAG调试方法

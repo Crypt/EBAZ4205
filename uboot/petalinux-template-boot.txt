@@ -1,0 +1,129 @@
+printenv
+arch=arm
+baudrate=115200
+board=zynq
+board_name=zynq
+boot_a_script=load ${devtype} ${devnum}:${distro_bootpart} ${scriptaddr} ${prefix}${script}; source ${scriptaddr}
+boot_efi_binary=if fdt addr ${fdt_addr_r}; then bootefi bootmgr ${fdt_addr_r};else bootefi bootmgr ${fdtcontroladdr};fi;load ${devtype} ${devnum}:${distro_boi
+boot_extlinux=sysboot ${devtype} ${devnum}:${distro_bootpart} any ${scriptaddr} ${prefix}${boot_syslinux_conf}
+boot_net_usb_start=usb start
+boot_prefixes=/ /boot/
+boot_script_dhcp=boot.scr.uimg
+boot_scripts=boot.scr.uimg boot.scr
+boot_syslinux_conf=extlinux/extlinux.conf
+boot_targets=mmc0 jtag mmc0 mmc1 qspi nand nor usb0 usb1 pxe dhcp 
+bootcmd=run distro_bootcmd
+bootcmd_dhcp=run boot_net_usb_start; if dhcp ${scriptaddr} ${boot_script_dhcp}; then source ${scriptaddr}; fi;setenv efi_fdtfile ${fdtfile}; if test -z "${fd;
+bootcmd_jtag=echo JTAG: Trying to boot script at ${scriptaddr} && source ${scriptaddr}; echo JTAG: SCRIPT FAILED: continuing...;
+bootcmd_mmc0=devnum=0; run mmc_boot
+bootcmd_mmc1=devnum=1; run mmc_boot
+bootcmd_nand=nand info && nand read ${scriptaddr} ${script_offset_f} ${script_size_f} && echo NAND: Trying to boot script at ${scriptaddr} && source ${script;
+bootcmd_nor=cp.b ${script_offset_nor} ${scriptaddr} ${script_size_f} && echo NOR: Trying to boot script at ${scriptaddr} && source ${scriptaddr}; echo NOR: S;
+bootcmd_pxe=run boot_net_usb_start; dhcp; if pxe get; then pxe boot; fi
+bootcmd_qspi=sf probe 0 0 0 && sf read ${scriptaddr} ${script_offset_f} ${script_size_f} && echo QSPI: Trying to boot script at ${scriptaddr} && source ${scr;
+bootcmd_usb0=devnum=0; run usb_boot
+bootcmd_usb1=devnum=1; run usb_boot
+bootdelay=2
+bootfile=boot.scr.uimg
+bootfstype=fat
+bootm_low=0
+bootm_size=10000000
+cpu=armv7
+dfu_mmc=run dfu_mmc_info && dfu 0 mmc 0
+dfu_mmc_info=setenv dfu_alt_info ${kernel_image} fat 0 1\\;${devicetree_image} fat 0 1\\;${ramdisk_image} fat 0 1
+dfu_ram=run dfu_ram_info && dfu 0 ram 0
+dfu_ram_info=setenv dfu_alt_info ${kernel_image} ram 0x3000000 0x500000\\;${devicetree_image} ram 0x2A00000 0x20000\\;${ramdisk_image} ram 0x2000000 0x600000
+distro_bootcmd=for target in ${boot_targets}; do run bootcmd_${target}; done
+efi_dtb_prefixes=/ /dtb/ /dtb/current/
+ethact=ethernet@e000b000
+ethaddr=00:0a:35:00:1e:53
+fdt_addr_r=0x1f00000
+fdt_high=0x20000000
+fdtcontroladdr=eb0a088
+fileaddr=3000000
+filesize=7da
+initrd_high=0x20000000
+kernel_addr_r=0x2000000
+load_efi_dtb=load ${devtype} ${devnum}:${distro_bootpart} ${fdt_addr_r} ${prefix}${efi_fdtfile}
+mmc_boot=if mmc dev ${devnum}; then devtype=mmc; run scan_dev_for_boot_part; fi
+modeboot=sdboot
+nand_erasesize=20000
+nand_oobsize=40
+nand_writesize=800
+pxefile_addr_r=0x2000000
+ramdisk_addr_r=0x3100000
+scan_dev_for_boot=echo Scanning ${devtype} ${devnum}:${distro_bootpart}...; for prefix in ${boot_prefixes}; do run scan_dev_for_extlinux; run scan_dev_for_sc;
+scan_dev_for_boot_part=part list ${devtype} ${devnum} -bootable devplist; env exists devplist || setenv devplist 1; for distro_bootpart in ${devplist}; do ift
+scan_dev_for_efi=setenv efi_fdtfile ${fdtfile}; if test -z "${fdtfile}" -a -n "${soc}"; then setenv efi_fdtfile ${soc}-${board}${boardver}.dtb; fi; for prefie
+scan_dev_for_extlinux=if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${boot_syslinux_conf}; then echo Found ${prefix}${boot_syslinux_conf}; run i
+scan_dev_for_scripts=for script in ${boot_scripts}; do if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${script}; then echo Found U-Boot script $e
+script_offset_f=fc0000
+script_offset_nor=0xE2FC0000
+script_size_f=0x40000
+scriptaddr=0x3000000
+soc=zynq
+stderr=serial@e0001000
+stdin=serial@e0001000
+stdout=serial@e0001000
+thor_mmc=run dfu_mmc_info && thordown 0 mmc 0
+thor_ram=run dfu_ram_info && thordown 0 ram 0
+usb_boot=usb start; if usb dev ${devnum}; then devtype=usb; run scan_dev_for_boot_part; fi
+vendor=xilinx
+
+Environment size: 5348/131068 bytes
+------------------------------------------------
+
+LABEL Linux
+KERNEL zImage
+FDT system.dtb
+INITRD rootfs.cpio.gz.u-boot
+
+------------------------------------------------
+
+set serverip 192.168.178.24 && set ipaddr 192.168.178.131 && set bootargs 'console=ttyPS0,115200 rw earlyprintk earlycon loglevel=8 rootfstype=ext4 rootwait'
+set serverip 192.168.178.24 && tftpboot 0x3000000 ${serverip}:/template/uImage  
+set serverip 192.168.178.24 && tftpboot 0x2000000 ${serverip}:/template/image.ub 
+set serverip 192.168.178.24 && tftpboot 0x2A00000 ${serverip}:/template/system.dtb
+bootm 0x3000000 0x2000000 0x2A00000d
+
+
+tftpboot 0x2A00000 ${serverip}:/template/system.bit
+
+
+------------------------------------------------
+set serverip 192.168.178.24 && set ipaddr 192.168.178.131 && set bootargs 'console=ttyPS0,115200 rw earlyprintk earlycon loglevel=8 rootfstype=ext4 rootwait'
+tftpboot 0x3000000 ${serverip}:/template/uImage && tftpboot 0x2000000 ${serverip}:/template/image.ub && tftpboot 0x2C00000 ${serverip}:/template/system.dtb  
+bootm 0x3000000 0x2000000 0x2C00000
+
+set serverip 192.168.178.24 && set ipaddr 192.168.178.131 && set bootargs 'debug memblock-debug systemd-unit=single console=ttyPS0,115200 rw earlyprintk earlycon loglevel=8  rootwait'
+tftpboot 0x3000000 ${serverip}:/template/uImage && tftpboot 0x2000000 ${serverip}:/template/image.ub && tftpboot 0x2C00000 ${serverip}:/template/system.dtb  
+bootm 0x3000000 0x2000000 0x2C00000
+
+------------------------------------------------
+
+debug memblock-debug systemd-unit=single
+
+
+set serverip 192.168.178.24
+set ipaddr 192.168.178.131
+set bootargs 'debug memblock-debug systemd-unit=single console=ttyPS0,115200 rw earlyprintk earlycon loglevel=8  rootwait'
+tftpboot 0x3000000 ${serverip}:/template/uImage
+tftpboot 0x2000000 ${serverip}:/template/image.ub
+tftpboot 0x2C00000 ${serverip}:/template/system.dtb  
+bootm 0x3000000 0x2000000 0x2C00000
+
+------------------------------------------------
+
+loadbit_addr=0x100000
+bitstream_image=multicomp_wrapper.bit
+load mmc 0 ${loadbit_addr} ${bitstream_image}
+fpga loadb 0 ${loadbit_addr} ${filesize}
+
+
+
+loadbit_addr=0x100000 && bitstream_image=multicomp_wrapper.bit && load mmc 0 ${loadbit_addr} ${bitstream_image}
+fpga loadb 0 ${loadbit_addr} ${filesize}
+
+
+
+

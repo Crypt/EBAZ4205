@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-//Date        : Tue Jan 12 09:14:25 2021
+//Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
+//Date        : Sun Jan 31 15:00:15 2021
 //Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -43,7 +43,9 @@ module design_1
     clk_out1_0,
     enet0_gmii_rxd,
     enet_gmii_txd,
-    led);
+    led,
+    led_b,
+    switch);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -77,10 +79,13 @@ module design_1
   input [3:0]enet0_gmii_rxd;
   output [3:0]enet_gmii_txd;
   output [1:0]led;
+  output [0:0]led_b;
+  input [0:0]switch;
 
   wire ENET0_GMII_RX_CLK_0_1;
   wire ENET0_GMII_RX_DV_0_1;
   wire ENET0_GMII_TX_CLK_0_1;
+  wire [0:0]GPIO_I_0_1;
   wire [3:0]In0_0_1;
   wire clk_wiz_0_clk_out1;
   wire [1:0]led_flasher_0_led;
@@ -108,6 +113,7 @@ module design_1
   wire processing_system7_0_FIXED_IO_PS_CLK;
   wire processing_system7_0_FIXED_IO_PS_PORB;
   wire processing_system7_0_FIXED_IO_PS_SRSTB;
+  wire [0:0]processing_system7_0_GPIO_O;
   wire processing_system7_0_MDIO_ETHERNET_0_MDC;
   wire processing_system7_0_MDIO_ETHERNET_0_MDIO_I;
   wire processing_system7_0_MDIO_ETHERNET_0_MDIO_O;
@@ -120,6 +126,7 @@ module design_1
   assign ENET0_GMII_RX_DV_0_1 = ENET0_GMII_RX_DV_0;
   assign ENET0_GMII_TX_CLK_0_1 = ENET0_GMII_TX_CLK_0;
   assign ENET0_GMII_TX_EN_0[0] = processing_system7_0_ENET0_GMII_TX_EN;
+  assign GPIO_I_0_1 = switch[0];
   assign In0_0_1 = enet0_gmii_rxd[3:0];
   assign MDIO_ETHERNET_0_0_mdc = processing_system7_0_MDIO_ETHERNET_0_MDC;
   assign MDIO_ETHERNET_0_0_mdio_o = processing_system7_0_MDIO_ETHERNET_0_MDIO_O;
@@ -127,6 +134,7 @@ module design_1
   assign clk_out1_0 = clk_wiz_0_clk_out1;
   assign enet_gmii_txd[3:0] = xlslice_0_Dout;
   assign led[1:0] = led_flasher_0_led;
+  assign led_b[0] = processing_system7_0_GPIO_O;
   assign processing_system7_0_MDIO_ETHERNET_0_MDIO_I = MDIO_ETHERNET_0_0_mdio_i;
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(processing_system7_0_FCLK_CLK0),
@@ -167,6 +175,8 @@ module design_1
         .ENET0_MDIO_O(processing_system7_0_MDIO_ETHERNET_0_MDIO_O),
         .ENET0_MDIO_T(processing_system7_0_MDIO_ETHERNET_0_MDIO_T),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
+        .GPIO_I(GPIO_I_0_1),
+        .GPIO_O(processing_system7_0_GPIO_O),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARREADY(1'b0),

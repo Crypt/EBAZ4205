@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Mon Jan 11 20:30:29 2021
+-- Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
+-- Date        : Sun Jan 31 00:13:14 2021
 -- Host        : I7MINT running 64-bit Linux Mint 20.1
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_led_flasher_0_0_stub.vhdl
@@ -26,6 +26,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "led[1:0],clk";
 attribute X_CORE_INFO : string;
-attribute X_CORE_INFO of stub : architecture is "led_flasher,Vivado 2020.2";
+attribute X_CORE_INFO of stub : architecture is "led_flasher,Vivado 2020.2.1";
 begin
 end;

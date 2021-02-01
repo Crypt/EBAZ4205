@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Tue Jan 26 09:08:21 2021
+// Date        : Tue Jan 26 14:17:17 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
 // Command     : write_verilog -force -mode synth_stub
-//               /home/david/ebaz4205/projects/P09_VGA_TEST/VGA_TEST.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v
+//               /home/david/Documents/GitHub/djrm-EBAZ4205/projects/VGA_COLBAR/VGA_TEST.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v
 // Design      : clk_wiz_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

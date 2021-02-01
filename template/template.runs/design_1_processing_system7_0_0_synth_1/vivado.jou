@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Vivado v2020.2 (64-bit)
-# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
-# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Jan 12 09:14:53 2021
-# Process ID: 1230846
+# Vivado v2020.2.1 (64-bit)
+# SW Build 3080587 on Fri Dec 11 14:53:26 MST 2020
+# IP Build 3080454 on Sat Dec 12 02:19:03 MST 2020
+# Start of session at: Sun Jan 31 15:00:40 2021
+# Process ID: 328423
 # Current directory: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/design_1_processing_system7_0_0_synth_1
 # Command line: vivado -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
 # Log file: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds

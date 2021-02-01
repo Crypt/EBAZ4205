@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-// Date        : Tue Jan 12 09:15:29 2021
+// Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
+// Date        : Sun Jan 31 00:13:14 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
 // Command     : write_verilog -force -mode funcsim
 //               /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.v
@@ -73,10 +73,10 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(36.500000),
+    .CLKFBOUT_MULT_F(18.250000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
-    .CLKIN1_PERIOD(8.000000),
+    .CLKIN1_PERIOD(20.000000),
     .CLKIN2_PERIOD(0.000000),
     .CLKOUT0_DIVIDE_F(36.500000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
@@ -108,7 +108,7 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
     .COMPENSATION("INTERNAL"),
-    .DIVCLK_DIVIDE(5),
+    .DIVCLK_DIVIDE(1),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PSEN_INVERTED(1'b0),
     .IS_PSINCDEC_INVERTED(1'b0),

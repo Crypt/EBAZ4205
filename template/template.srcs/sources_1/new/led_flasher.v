@@ -27,8 +27,10 @@ module led_flasher(
 reg [31:0] cnt;
 //reg [1:0] led_i;
 
-assign led[1] = cnt[26];
-assign led[0] = cnt[24];
+assign led[0] =  cnt[26] || cnt[25] || cnt[24] || cnt[22]; // green
+assign led[1] = 1;
+//assign led[1] = cnt[26];
+//assign led[0] = cnt[24];
 
 initial begin
 cnt = 0;

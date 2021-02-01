@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Mon Jan 11 20:30:30 2021
+-- Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
+-- Date        : Sun Jan 31 00:13:14 2021
 -- Host        : I7MINT running 64-bit Linux Mint 20.1
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_led_flasher_0_0/design_1_led_flasher_0_0_sim_netlist.vhdl
@@ -16,7 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_led_flasher_0_0_led_flasher is
   port (
-    led : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    led : out STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -25,6 +25,7 @@ end design_1_led_flasher_0_0_led_flasher;
 
 architecture STRUCTURE of design_1_led_flasher_0_0_led_flasher is
   signal \cnt[0]_i_2_n_0\ : STD_LOGIC;
+  signal cnt_reg : STD_LOGIC_VECTOR ( 26 downto 22 );
   signal \cnt_reg[0]_i_1_n_0\ : STD_LOGIC;
   signal \cnt_reg[0]_i_1_n_1\ : STD_LOGIC;
   signal \cnt_reg[0]_i_1_n_2\ : STD_LOGIC;
@@ -57,11 +58,11 @@ architecture STRUCTURE of design_1_led_flasher_0_0_led_flasher is
   signal \cnt_reg[20]_i_1_n_5\ : STD_LOGIC;
   signal \cnt_reg[20]_i_1_n_6\ : STD_LOGIC;
   signal \cnt_reg[20]_i_1_n_7\ : STD_LOGIC;
-  signal \cnt_reg[26]_i_1_n_2\ : STD_LOGIC;
-  signal \cnt_reg[26]_i_1_n_3\ : STD_LOGIC;
-  signal \cnt_reg[26]_i_1_n_5\ : STD_LOGIC;
-  signal \cnt_reg[26]_i_1_n_6\ : STD_LOGIC;
-  signal \cnt_reg[26]_i_1_n_7\ : STD_LOGIC;
+  signal \cnt_reg[24]_i_1_n_2\ : STD_LOGIC;
+  signal \cnt_reg[24]_i_1_n_3\ : STD_LOGIC;
+  signal \cnt_reg[24]_i_1_n_5\ : STD_LOGIC;
+  signal \cnt_reg[24]_i_1_n_6\ : STD_LOGIC;
+  signal \cnt_reg[24]_i_1_n_7\ : STD_LOGIC;
   signal \cnt_reg[4]_i_1_n_0\ : STD_LOGIC;
   signal \cnt_reg[4]_i_1_n_1\ : STD_LOGIC;
   signal \cnt_reg[4]_i_1_n_2\ : STD_LOGIC;
@@ -92,9 +93,7 @@ architecture STRUCTURE of design_1_led_flasher_0_0_led_flasher is
   signal \cnt_reg_n_0_[1]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[20]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[21]\ : STD_LOGIC;
-  signal \cnt_reg_n_0_[22]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[23]\ : STD_LOGIC;
-  signal \cnt_reg_n_0_[25]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[2]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[3]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[4]\ : STD_LOGIC;
@@ -103,11 +102,9 @@ architecture STRUCTURE of design_1_led_flasher_0_0_led_flasher is
   signal \cnt_reg_n_0_[7]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[8]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[9]\ : STD_LOGIC;
-  signal \^led\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_cnt_reg[26]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
-  signal \NLW_cnt_reg[26]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal \NLW_cnt_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \NLW_cnt_reg[24]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
 begin
-  led(1 downto 0) <= \^led\(1 downto 0);
 \cnt[0]_i_2\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -327,7 +324,7 @@ begin
       O(1) => \cnt_reg[20]_i_1_n_6\,
       O(0) => \cnt_reg[20]_i_1_n_7\,
       S(3) => \cnt_reg_n_0_[23]\,
-      S(2) => \cnt_reg_n_0_[22]\,
+      S(2) => cnt_reg(22),
       S(1) => \cnt_reg_n_0_[21]\,
       S(0) => \cnt_reg_n_0_[20]\
     );
@@ -350,7 +347,7 @@ begin
       C => clk,
       CE => '1',
       D => \cnt_reg[20]_i_1_n_5\,
-      Q => \cnt_reg_n_0_[22]\,
+      Q => cnt_reg(22),
       R => '0'
     );
 \cnt_reg[23]\: unisim.vcomponents.FDRE
@@ -371,9 +368,24 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => \cnt_reg[26]_i_1_n_7\,
-      Q => \^led\(0),
+      D => \cnt_reg[24]_i_1_n_7\,
+      Q => cnt_reg(24),
       R => '0'
+    );
+\cnt_reg[24]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \cnt_reg[20]_i_1_n_0\,
+      CO(3 downto 2) => \NLW_cnt_reg[24]_i_1_CO_UNCONNECTED\(3 downto 2),
+      CO(1) => \cnt_reg[24]_i_1_n_2\,
+      CO(0) => \cnt_reg[24]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \NLW_cnt_reg[24]_i_1_O_UNCONNECTED\(3),
+      O(2) => \cnt_reg[24]_i_1_n_5\,
+      O(1) => \cnt_reg[24]_i_1_n_6\,
+      O(0) => \cnt_reg[24]_i_1_n_7\,
+      S(3) => '0',
+      S(2 downto 0) => cnt_reg(26 downto 24)
     );
 \cnt_reg[25]\: unisim.vcomponents.FDRE
     generic map(
@@ -382,8 +394,8 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => \cnt_reg[26]_i_1_n_6\,
-      Q => \cnt_reg_n_0_[25]\,
+      D => \cnt_reg[24]_i_1_n_6\,
+      Q => cnt_reg(25),
       R => '0'
     );
 \cnt_reg[26]\: unisim.vcomponents.FDRE
@@ -393,26 +405,9 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => \cnt_reg[26]_i_1_n_5\,
-      Q => \^led\(1),
+      D => \cnt_reg[24]_i_1_n_5\,
+      Q => cnt_reg(26),
       R => '0'
-    );
-\cnt_reg[26]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \cnt_reg[20]_i_1_n_0\,
-      CO(3 downto 2) => \NLW_cnt_reg[26]_i_1_CO_UNCONNECTED\(3 downto 2),
-      CO(1) => \cnt_reg[26]_i_1_n_2\,
-      CO(0) => \cnt_reg[26]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3) => \NLW_cnt_reg[26]_i_1_O_UNCONNECTED\(3),
-      O(2) => \cnt_reg[26]_i_1_n_5\,
-      O(1) => \cnt_reg[26]_i_1_n_6\,
-      O(0) => \cnt_reg[26]_i_1_n_7\,
-      S(3) => '0',
-      S(2) => \^led\(1),
-      S(1) => \cnt_reg_n_0_[25]\,
-      S(0) => \^led\(0)
     );
 \cnt_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -538,6 +533,17 @@ begin
       Q => \cnt_reg_n_0_[9]\,
       R => '0'
     );
+p_3_out: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => cnt_reg(22),
+      I1 => cnt_reg(26),
+      I2 => cnt_reg(25),
+      I3 => cnt_reg(24),
+      O => led(0)
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -557,18 +563,26 @@ entity design_1_led_flasher_0_0 is
   attribute IP_DEFINITION_SOURCE : string;
   attribute IP_DEFINITION_SOURCE of design_1_led_flasher_0_0 : entity is "module_ref";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of design_1_led_flasher_0_0 : entity is "led_flasher,Vivado 2020.2";
+  attribute X_CORE_INFO of design_1_led_flasher_0_0 : entity is "led_flasher,Vivado 2020.2.1";
 end design_1_led_flasher_0_0;
 
 architecture STRUCTURE of design_1_led_flasher_0_0 is
+  signal \<const1>\ : STD_LOGIC;
+  signal \^led\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
 begin
+  led(1) <= \<const1>\;
+  led(0) <= \^led\(0);
+VCC: unisim.vcomponents.VCC
+     port map (
+      P => \<const1>\
+    );
 inst: entity work.design_1_led_flasher_0_0_led_flasher
      port map (
       clk => clk,
-      led(1 downto 0) => led(1 downto 0)
+      led(0) => \^led\(0)
     );
 end STRUCTURE;

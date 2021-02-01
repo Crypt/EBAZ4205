@@ -35,5 +35,14 @@ set_property PACKAGE_PIN W13 [get_ports {led[0]}]
 
 
 set_property IOSTANDARD LVCMOS33 [get_ports clk_out1_0]
-#set_property PACKAGE_PIN M20 [get_ports clk_out1_0]
 set_property PACKAGE_PIN U18 [get_ports clk_out1_0]
+
+set_property PACKAGE_PIN A20 [get_ports {led_b[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_b[0]}]
+
+#set_property PACKAGE_PIN H16 [get_ports {led_b[1]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {led_b[1]}]
+
+set_property PACKAGE_PIN H16 [get_ports {switch[0]}]
+set_property PULLUP true [get_ports {switch[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {switch[0]}]
