@@ -113,6 +113,12 @@ template/**
 !/workspace/ADV7123_VGA_application**
 !/workspace/ADV7123_VGA_platform**
 !/workspace/ebaz4205_standalone**
+!/workspace/hello_world**
+!/workspace/FATFS_application**
+!/workspace/lwip_echo_server**
+
+
+
 
 
 

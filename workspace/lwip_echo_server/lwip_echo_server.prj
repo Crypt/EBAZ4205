@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="lwip_echo_server" location="/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/lwip_echo_server" platform="/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/export/ebaz4205_standalone/ebaz4205_standalone.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="lwip_echo_server_system" sysConfig="ebaz4205_standalone" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="954768a7eefda0928abf39c24831b489">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1577696059">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1515918137" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="lwip_echo_server" hasBspSettings="true"/>
+</sdkproject:SdkProject>
