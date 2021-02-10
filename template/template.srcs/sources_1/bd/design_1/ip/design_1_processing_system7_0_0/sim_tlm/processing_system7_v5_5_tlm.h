@@ -152,6 +152,9 @@ class processing_system7_v5_5_tlm : public sc_core::sc_module   {
     sc_core::sc_in<sc_dt::sc_bv<1> >  GPIO_I;
     sc_core::sc_out<sc_dt::sc_bv<1> >  GPIO_O;
     sc_core::sc_out<sc_dt::sc_bv<1> >  GPIO_T;
+    sc_core::sc_out<bool> TTC0_WAVE0_OUT;
+    sc_core::sc_out<bool> TTC0_WAVE1_OUT;
+    sc_core::sc_out<bool> TTC0_WAVE2_OUT;
     sc_core::sc_in<bool> M_AXI_GP0_ACLK;
     sc_core::sc_out<bool> FCLK_CLK0;
     sc_core::sc_out<bool> FCLK_RESET0_N;

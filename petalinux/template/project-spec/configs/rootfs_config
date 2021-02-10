@@ -504,7 +504,7 @@ CONFIG_can-utils=y
 #
 # minicom 
 #
-# CONFIG_minicom is not set
+CONFIG_minicom=y
 # CONFIG_minicom-dbg is not set
 # CONFIG_minicom-dev is not set
 
@@ -585,7 +585,7 @@ CONFIG_openssh-sftp-server=y
 #
 # wget 
 #
-# CONFIG_wget is not set
+CONFIG_wget=y
 # CONFIG_wget-dev is not set
 # CONFIG_wget-dbg is not set
 
@@ -627,7 +627,7 @@ CONFIG_openssh-sftp-server=y
 #
 # bash-completion 
 #
-# CONFIG_bash-completion is not set
+CONFIG_bash-completion=y
 # CONFIG_bash-completion-dev is not set
 # CONFIG_bash-completion-extra is not set
 # CONFIG_bash-completion-dbg is not set
@@ -729,7 +729,7 @@ CONFIG_openssh-sftp-server=y
 #
 # mc 
 #
-# CONFIG_mc is not set
+CONFIG_mc=y
 # CONFIG_mc-dev is not set
 # CONFIG_mc-helpers-perl is not set
 # CONFIG_mc-helpers is not set
@@ -755,7 +755,7 @@ CONFIG_pciutils=y
 #
 # screen 
 #
-# CONFIG_screen is not set
+CONFIG_screen=y
 # CONFIG_screen-dbg is not set
 # CONFIG_screen-dev is not set
 
@@ -3427,7 +3427,7 @@ CONFIG_bridge-utils=y
 #
 # netcat 
 #
-# CONFIG_netcat is not set
+CONFIG_netcat=y
 # CONFIG_netcat-dbg is not set
 # CONFIG_netcat-dev is not set
 

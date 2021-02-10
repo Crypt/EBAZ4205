@@ -695,6 +695,9 @@
   GPIO_I,
   GPIO_O,
   GPIO_T,
+  TTC0_WAVE0_OUT,
+  TTC0_WAVE1_OUT,
+  TTC0_WAVE2_OUT,
   M_AXI_GP0_ARVALID,
   M_AXI_GP0_AWVALID,
   M_AXI_GP0_BREADY,
@@ -838,6 +841,9 @@
       input  [0 : 0] GPIO_I;
       output  [0 : 0] GPIO_O;
       output  [0 : 0] GPIO_T;
+      output  TTC0_WAVE0_OUT;
+      output  TTC0_WAVE1_OUT;
+      output  TTC0_WAVE2_OUT;
       output  M_AXI_GP0_ARVALID;
       output  M_AXI_GP0_AWVALID;
       output  M_AXI_GP0_BREADY;
@@ -911,6 +917,9 @@
       reg [7 : 0] ENET0_GMII_TXD;
       reg [0 : 0] GPIO_O;
       reg [0 : 0] GPIO_T;
+      reg TTC0_WAVE0_OUT;
+      reg TTC0_WAVE1_OUT;
+      reg TTC0_WAVE2_OUT;
       reg M_AXI_GP0_ARVALID;
       reg M_AXI_GP0_AWVALID;
       reg M_AXI_GP0_BREADY;
@@ -1096,7 +1105,7 @@ output bit M_AXI_GP0_RREADY
      FCLK_CLK0 = 1'b0;
   end
 
-  always #(10.0) FCLK_CLK0 <= ~FCLK_CLK0;
+  always #(20.0) FCLK_CLK0 <= ~FCLK_CLK0;
 
   always@(posedge FCLK_CLK0)
   begin

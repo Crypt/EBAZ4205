@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-//Date        : Sun Jan 31 15:00:15 2021
+//Date        : Wed Feb 10 08:59:12 2021
 //Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -29,6 +29,7 @@ module design_1_wrapper
     ENET0_GMII_RX_DV_0,
     ENET0_GMII_TX_CLK_0,
     ENET0_GMII_TX_EN_0,
+    FCLK_CLK0_0,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
@@ -37,11 +38,10 @@ module design_1_wrapper
     FIXED_IO_ps_srstb,
     MDIO_ETHERNET_0_0_mdc,
     MDIO_ETHERNET_0_0_mdio_io,
-    clk_out1_0,
     enet0_gmii_rxd,
     enet_gmii_txd,
-    led,
     led_b,
+    led_g_0,
     switch);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -62,6 +62,7 @@ module design_1_wrapper
   input ENET0_GMII_RX_DV_0;
   input ENET0_GMII_TX_CLK_0;
   output [0:0]ENET0_GMII_TX_EN_0;
+  output FCLK_CLK0_0;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
@@ -70,11 +71,10 @@ module design_1_wrapper
   inout FIXED_IO_ps_srstb;
   output MDIO_ETHERNET_0_0_mdc;
   inout MDIO_ETHERNET_0_0_mdio_io;
-  output clk_out1_0;
   input [3:0]enet0_gmii_rxd;
   output [3:0]enet_gmii_txd;
-  output [1:0]led;
   output [0:0]led_b;
+  output led_g_0;
   input [0:0]switch;
 
   wire [14:0]DDR_addr;
@@ -96,6 +96,7 @@ module design_1_wrapper
   wire ENET0_GMII_RX_DV_0;
   wire ENET0_GMII_TX_CLK_0;
   wire [0:0]ENET0_GMII_TX_EN_0;
+  wire FCLK_CLK0_0;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
@@ -107,11 +108,10 @@ module design_1_wrapper
   wire MDIO_ETHERNET_0_0_mdio_io;
   wire MDIO_ETHERNET_0_0_mdio_o;
   wire MDIO_ETHERNET_0_0_mdio_t;
-  wire clk_out1_0;
   wire [3:0]enet0_gmii_rxd;
   wire [3:0]enet_gmii_txd;
-  wire [1:0]led;
   wire [0:0]led_b;
+  wire led_g_0;
   wire [0:0]switch;
 
   IOBUF MDIO_ETHERNET_0_0_mdio_iobuf
@@ -139,6 +139,7 @@ module design_1_wrapper
         .ENET0_GMII_RX_DV_0(ENET0_GMII_RX_DV_0),
         .ENET0_GMII_TX_CLK_0(ENET0_GMII_TX_CLK_0),
         .ENET0_GMII_TX_EN_0(ENET0_GMII_TX_EN_0),
+        .FCLK_CLK0_0(FCLK_CLK0_0),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
@@ -149,10 +150,9 @@ module design_1_wrapper
         .MDIO_ETHERNET_0_0_mdio_i(MDIO_ETHERNET_0_0_mdio_i),
         .MDIO_ETHERNET_0_0_mdio_o(MDIO_ETHERNET_0_0_mdio_o),
         .MDIO_ETHERNET_0_0_mdio_t(MDIO_ETHERNET_0_0_mdio_t),
-        .clk_out1_0(clk_out1_0),
         .enet0_gmii_rxd(enet0_gmii_rxd),
         .enet_gmii_txd(enet_gmii_txd),
-        .led(led),
         .led_b(led_b),
+        .led_g_0(led_g_0),
         .switch(switch));
 endmodule

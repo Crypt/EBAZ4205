@@ -116,6 +116,10 @@ template/**
 !/workspace/hello_world**
 !/workspace/FATFS_application**
 !/workspace/lwip_echo_server**
+/petalinux/template/junk**
+/template/template.cache/**
+/template/template.runs/**
+
 
 
 

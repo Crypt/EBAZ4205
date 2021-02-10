@@ -1,5 +1,17 @@
 ## Links to external information
 
+Petalinux toolchain 2019.1 Walkthrough
+https://webuiltawallwebuiltthepyramids.blogspot.com/2021/01/ebaz4205-petalinux-installation.html
+
+Petalinux build to install PYNQ
+https://webuiltawallwebuiltthepyramids.blogspot.com/2021/01/yet-another-ebaz4205-writeup-3-pynq.html
+
+EBAZ4205 – “Recycle” a cheap crypto-miner
+https://embed-me.com/category/fpga-development/
+
+Modify u-boot enviorenment variables
+https://www.fpgadeveloper.com/how-to-modify-u-boot-environment-variables-in-petalinux/
+
 Add mc to petalinux
 https://forums.xilinx.com/t5/Embedded-Linux/Midnight-Commander-for-Petalinux/td-p/1058820
 

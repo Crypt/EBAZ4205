@@ -16,3 +16,8 @@ platform write
 platform generate -domains 
 platform active {ADV7123_VGA_platform}
 platform generate
+platform active {ADV7123_VGA_platform}
+domain active {zynq_fsbl}
+bsp reload
+domain active {standalone_domain}
+bsp reload

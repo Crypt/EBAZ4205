@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6C84F2042B04CD65",
+      "boundary_crc": "0xB993D4507D73FE01",
       "device": "xc7z010clg400-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -12,9 +12,10 @@
     "design_tree": {
       "processing_system7_0": "",
       "xlconcat_1": "",
-      "clk_wiz_0": "",
       "xlconstant_0": "",
       "xlslice_0": "",
+      "system_ila_0": "",
+      "clk_wiz_0": "",
       "led_flasher_0": ""
     },
     "interface_ports": {
@@ -170,17 +171,29 @@
           }
         }
       },
-      "clk_out1_0": {
+      "led_b": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "switch": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "led_g_0": {
+        "direction": "O"
+      },
+      "FCLK_CLK0_0": {
         "type": "clk",
         "direction": "O",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "design_1_clk_wiz_0_0_clk_out1",
+            "value": "design_1_processing_system7_0_0_FCLK_CLK0",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "25000000",
-            "value_src": "ip_prop"
+            "value": "25000000"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -191,25 +204,10 @@
             "value_src": "default"
           },
           "PHASE": {
-            "value": "0.0",
-            "value_src": "ip_prop"
+            "value": "0.000",
+            "value_src": "default"
           }
         }
-      },
-      "led": {
-        "direction": "O",
-        "left": "1",
-        "right": "0"
-      },
-      "led_b": {
-        "direction": "O",
-        "left": "0",
-        "right": "0"
-      },
-      "switch": {
-        "direction": "I",
-        "left": "0",
-        "right": "0"
       }
     },
     "components": {
@@ -233,7 +231,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "50.000000"
+            "value": "25.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -287,7 +285,7 @@
             "value": "111.111115"
           },
           "PCW_CLK0_FREQ": {
-            "value": "50000000"
+            "value": "25000000"
           },
           "PCW_CLK1_FREQ": {
             "value": "10000000"
@@ -319,6 +317,15 @@
           "PCW_ENET_RESET_ENABLE": {
             "value": "0"
           },
+          "PCW_EN_CLK1_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_CLK2_PORT": {
+            "value": "0"
+          },
+          "PCW_EN_CLK3_PORT": {
+            "value": "0"
+          },
           "PCW_EN_EMIO_CD_SDIO0": {
             "value": "0"
           },
@@ -326,6 +333,9 @@
             "value": "1"
           },
           "PCW_EN_EMIO_GPIO": {
+            "value": "1"
+          },
+          "PCW_EN_EMIO_TTC0": {
             "value": "1"
           },
           "PCW_EN_ENET0": {
@@ -340,11 +350,26 @@
           "PCW_EN_SMC": {
             "value": "1"
           },
+          "PCW_EN_TTC0": {
+            "value": "1"
+          },
           "PCW_EN_UART1": {
             "value": "1"
           },
+          "PCW_FCLK1_PERIPHERAL_CLKSRC": {
+            "value": "IO PLL"
+          },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "50"
+            "value": "25"
+          },
+          "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
+            "value": "25"
+          },
+          "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
+            "value": "25"
+          },
+          "PCW_FPGA3_PERIPHERAL_FREQMHZ": {
+            "value": "25"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
@@ -833,10 +858,10 @@
             "value": "slow"
           },
           "PCW_MIO_TREE_PERIPHERALS": {
-            "value": "NAND Flash#GPIO#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#UART 1#UART 1#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#SD 0#GPIO#GPIO#GPIO#GPIO#GPIO#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO"
+            "value": "NAND Flash#GPIO#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#NAND Flash#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#UART 1#UART 1#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO"
           },
           "PCW_MIO_TREE_SIGNALS": {
-            "value": "cs#gpio[1]#ale#we_b#data[2]#data[0]#data[1]#cle#re_b#data[4]#data[5]#data[6]#data[7]#data[3]#busy#gpio[15]#gpio[16]#gpio[17]#gpio[18]#gpio[19]#gpio[20]#gpio[21]#gpio[22]#gpio[23]#tx#rx#gpio[26]#gpio[27]#gpio[28]#gpio[29]#gpio[30]#gpio[31]#gpio[32]#gpio[33]#cd#gpio[35]#gpio[36]#gpio[37]#gpio[38]#gpio[39]#clk#cmd#data[0]#data[1]#data[2]#data[3]#gpio[46]#gpio[47]#gpio[48]#gpio[49]#gpio[50]#gpio[51]#gpio[52]#gpio[53]"
+            "value": "cs#gpio[1]#ale#we_b#data[2]#data[0]#data[1]#cle#re_b#data[4]#data[5]#data[6]#data[7]#data[3]#busy#gpio[15]#gpio[16]#gpio[17]#gpio[18]#gpio[19]#gpio[20]#gpio[21]#gpio[22]#gpio[23]#tx#rx#gpio[26]#gpio[27]#gpio[28]#gpio[29]#gpio[30]#gpio[31]#gpio[32]#gpio[33]#gpio[34]#gpio[35]#gpio[36]#gpio[37]#gpio[38]#gpio[39]#clk#cmd#data[0]#data[1]#data[2]#data[3]#gpio[46]#gpio[47]#gpio[48]#gpio[49]#gpio[50]#gpio[51]#gpio[52]#gpio[53]"
           },
           "PCW_NAND_GRP_D8_ENABLE": {
             "value": "0"
@@ -873,6 +898,15 @@
           },
           "PCW_SMC_PERIPHERAL_VALID": {
             "value": "1"
+          },
+          "PCW_TTC0_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_TTC0_TTC0_IO": {
+            "value": "EMIO"
+          },
+          "PCW_TTC_PERIPHERAL_FREQMHZ": {
+            "value": "50"
           },
           "PCW_UART1_GRP_FULL_ENABLE": {
             "value": "0"
@@ -1053,60 +1087,6 @@
           }
         }
       },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "design_1_clk_wiz_0_0",
-        "parameters": {
-          "CLKOUT1_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT1_JITTER": {
-            "value": "244.752"
-          },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "159.385"
-          },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "25"
-          },
-          "CLKOUT2_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT3_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT4_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT5_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT6_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT7_DRIVES": {
-            "value": "BUFG"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "18.250"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "36.500"
-          },
-          "SECONDARY_SOURCE": {
-            "value": "Single_ended_clock_capable_pin"
-          },
-          "USE_LOCKED": {
-            "value": "false"
-          },
-          "USE_PHASE_ALIGNMENT": {
-            "value": "false"
-          },
-          "USE_RESET": {
-            "value": "false"
-          }
-        }
-      },
       "xlconstant_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "xci_name": "design_1_xlconstant_0_0",
@@ -1131,6 +1111,78 @@
           }
         }
       },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "design_1_system_ila_0_0",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "4"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE_WIDTH_PROPAGATION": {
+            "value": "MANUAL"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "401.466"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "245.713"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "25"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "36.500"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "36.500"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_PHASE_ALIGNMENT": {
+            "value": "false"
+          }
+        }
+      },
       "led_flasher_0": {
         "vlnv": "xilinx.com:module_ref:led_flasher:1.0",
         "xci_name": "design_1_led_flasher_0_0",
@@ -1140,17 +1192,15 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "led": {
-            "direction": "O",
-            "left": "1",
-            "right": "0"
+          "led_g": {
+            "direction": "O"
           },
           "clk": {
             "type": "clk",
             "direction": "I",
             "parameters": {
               "FREQ_HZ": {
-                "value": "50000000",
+                "value": "25000000",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
@@ -1183,14 +1233,6 @@
       }
     },
     "nets": {
-      "processing_system7_0_FCLK_CLK0": {
-        "ports": [
-          "processing_system7_0/FCLK_CLK0",
-          "processing_system7_0/M_AXI_GP0_ACLK",
-          "clk_wiz_0/clk_in1",
-          "led_flasher_0/clk"
-        ]
-      },
       "xlconcat_1_dout": {
         "ports": [
           "xlconcat_1/dout",
@@ -1227,22 +1269,10 @@
           "processing_system7_0/ENET0_GMII_TX_CLK"
         ]
       },
-      "clk_wiz_0_clk_out1": {
-        "ports": [
-          "clk_wiz_0/clk_out1",
-          "clk_out1_0"
-        ]
-      },
       "xlconstant_0_dout": {
         "ports": [
           "xlconstant_0/dout",
           "xlconcat_1/In1"
-        ]
-      },
-      "led_flasher_0_led": {
-        "ports": [
-          "led_flasher_0/led",
-          "led"
         ]
       },
       "processing_system7_0_ENET0_GMII_TXD": {
@@ -1257,16 +1287,47 @@
           "enet_gmii_txd"
         ]
       },
-      "processing_system7_0_GPIO_O": {
-        "ports": [
-          "processing_system7_0/GPIO_O",
-          "led_b"
-        ]
-      },
       "GPIO_I_0_1": {
         "ports": [
           "switch",
-          "processing_system7_0/GPIO_I"
+          "processing_system7_0/GPIO_I",
+          "system_ila_0/probe2"
+        ]
+      },
+      "processing_system7_0_FCLK_RESET0_N": {
+        "ports": [
+          "processing_system7_0/FCLK_RESET0_N",
+          "clk_wiz_0/resetn"
+        ]
+      },
+      "processing_system7_0_GPIO_O": {
+        "ports": [
+          "processing_system7_0/GPIO_O",
+          "led_b",
+          "system_ila_0/probe3"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "system_ila_0/probe1"
+        ]
+      },
+      "led_flasher_0_led_g": {
+        "ports": [
+          "led_flasher_0/led_g",
+          "led_g_0",
+          "system_ila_0/probe0"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK0": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK0",
+          "FCLK_CLK0_0",
+          "clk_wiz_0/clk_in1",
+          "led_flasher_0/clk",
+          "system_ila_0/clk",
+          "processing_system7_0/M_AXI_GP0_ACLK"
         ]
       }
     }

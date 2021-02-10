@@ -2325,3 +2325,218 @@ TRACE::2021-02-01.15:03:22::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/
 /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2021-02-01.15:03:22::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:30::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:30::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:30::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:30::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw
+TRACE::2021-02-03.17:02:30::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:30::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-03.17:02:30::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_22
+TRACE::2021-02-03.17:02:30::SCWPlatform::Opened existing hwdb design_1_wrapper_22
+TRACE::2021-02-03.17:02:30::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-03.17:02:30::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:30::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_7||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_5||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_9||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_8||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_platform_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_6||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-03.17:02:30::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::In reload Mss file.
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Opened existing hwdb design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-03.17:02:31::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_7||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_5||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_9||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_8||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_platform_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_6||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+KEYINFO::2021-02-03.17:02:31::SCWMssOS::Could not open the swdb for system_1
+KEYINFO::2021-02-03.17:02:31::SCWMssOS::Could not open the sw design at  system_1
+ERROR: [Hsi 55-1558] Software Design system_1 is not found
+
+TRACE::2021-02-03.17:02:31::SCWMssOS::Cleared the swdb table entry
+TRACE::2021-02-03.17:02:31::SCWMssOS::No sw design opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::mss exists loading the mss file  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::Opened the sw design from mss  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::Adding the swdes entry /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system_1
+TRACE::2021-02-03.17:02:31::SCWMssOS::updating the scw layer about changes
+TRACE::2021-02-03.17:02:31::SCWMssOS::Opened the sw design.  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Opened existing hwdb design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-03.17:02:31::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_7||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_5||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_9||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_8||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_platform_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_6||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-03.17:02:31::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Opened existing hwdb design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-03.17:02:31::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_7||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_5||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_9||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_8||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_platform_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_6||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-03.17:02:31::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-02-03.17:02:31::SCWMssOS::Saving the mss changes /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-02-03.17:02:31::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-02-03.17:02:31::SCWMssOS::Commit changes completed.
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Opened existing hwdb design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-03.17:02:31::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_7||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_5||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_9||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_8||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_platform_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_6||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-03.17:02:31::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::Removing the swdes entry for  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:31::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-03.17:02:31::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Opened existing hwdb design_1_wrapper_22
+TRACE::2021-02-03.17:02:31::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-03.17:02:31::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:31::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_7||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_5||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_9||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_8||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_platform_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_6||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-03.17:02:31::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:32::SCWMssOS::In reload Mss file.
+TRACE::2021-02-03.17:02:32::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:32::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:32::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:32::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw
+TRACE::2021-02-03.17:02:32::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:32::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-03.17:02:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_22
+TRACE::2021-02-03.17:02:32::SCWPlatform::Opened existing hwdb design_1_wrapper_22
+TRACE::2021-02-03.17:02:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-03.17:02:32::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:32::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_7||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_5||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_9||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_8||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_platform_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_6||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+KEYINFO::2021-02-03.17:02:32::SCWMssOS::Could not open the swdb for system_2
+KEYINFO::2021-02-03.17:02:32::SCWMssOS::Could not open the sw design at  system_2
+ERROR: [Hsi 55-1558] Software Design system_2 is not found
+
+TRACE::2021-02-03.17:02:32::SCWMssOS::Cleared the swdb table entry
+TRACE::2021-02-03.17:02:32::SCWMssOS::No sw design opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:32::SCWMssOS::mss exists loading the mss file  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:32::SCWMssOS::Opened the sw design from mss  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:32::SCWMssOS::Adding the swdes entry /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2021-02-03.17:02:32::SCWMssOS::updating the scw layer about changes
+TRACE::2021-02-03.17:02:32::SCWMssOS::Opened the sw design.  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:32::SCWMssOS::Saving the mss changes /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:32::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-02-03.17:02:32::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-02-03.17:02:32::SCWMssOS::Commit changes completed.
+TRACE::2021-02-03.17:02:32::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:32::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:32::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:32::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw
+TRACE::2021-02-03.17:02:32::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/hw/adv7123_vga.xsa
+TRACE::2021-02-03.17:02:32::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-03.17:02:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_22
+TRACE::2021-02-03.17:02:32::SCWPlatform::Opened existing hwdb design_1_wrapper_22
+TRACE::2021-02-03.17:02:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-03.17:02:32::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:32::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_1||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_7||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/AXI_LED/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_5||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_9||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/GPIO_INT_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_8||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_platform_3/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_6||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-03.17:02:32::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-03.17:02:32::SCWMssOS::Removing the swdes entry for  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_platform/ps7_cortexa9_0/standalone_domain/bsp/system.mss

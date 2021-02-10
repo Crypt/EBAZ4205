@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-// Date        : Sun Jan 31 00:13:14 2021
+// Date        : Tue Feb  9 22:19:20 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
 // Command     : write_verilog -force -mode funcsim
 //               /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_led_flasher_0_0/design_1_led_flasher_0_0_sim_netlist.v
@@ -21,14 +21,14 @@ module design_1_led_flasher_0_0
   output [1:0]led;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
 
-  wire \<const1> ;
+  wire \<const0> ;
   wire clk;
   wire [0:0]\^led ;
 
-  assign led[1] = \<const1> ;
+  assign led[1] = \<const0> ;
   assign led[0] = \^led [0];
-  VCC VCC
-       (.P(\<const1> ));
+  GND GND
+       (.G(\<const0> ));
   design_1_led_flasher_0_0_led_flasher inst
        (.clk(clk),
         .led(\^led ));
@@ -396,7 +396,7 @@ module design_1_led_flasher_0_0_led_flasher
         .R(1'b0));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    p_3_out
+    led0
        (.I0(cnt_reg[22]),
         .I1(cnt_reg[26]),
         .I2(cnt_reg[25]),

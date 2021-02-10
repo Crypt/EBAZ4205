@@ -25,5 +25,4 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ADV7123_VGA_application/Debug/ADV7123_VGA_application.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A9*#0"}
-con
+bpadd -addr &main
