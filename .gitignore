@@ -119,6 +119,8 @@ template/**
 /petalinux/template/junk**
 /template/template.cache/**
 /template/template.runs/**
+!/ELLC/**
+!*.md
 
 
 
