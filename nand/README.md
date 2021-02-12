@@ -64,6 +64,16 @@ david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd7ro.bin GP Header: Size ffffffff L
 david@I7MINT:~/ebaz4205/nand$ dumpimage -l mtd8ro.bin GP Header: Size ffffffff LoadAddr ffffffff
 ```
 
+### extracted device tree source files
+
+the binary files can be broken into part with a tool (forget which one now)
+
+the dtc tool can be used to de-compile an existing device tree
+```dtc -I dtb -O dts -o devicetree.dts devicetree.dtb```
+
+The fsbl and devicetree files can have the dt extracted, here are the contents:
+Device tree in [nand-fsbl-uboot](./mtd0-ftddump.txt)
+Device tree in [nand-device-tree](./mtd2-ftddump.txt)
 
 
 ![PCB-V2](../image/08-PCB-V2-TL.jpg)
