@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB993D4507D73FE01",
+      "boundary_crc": "0x792E3A009EC9B6B8",
       "device": "xc7z010clg400-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -16,7 +16,9 @@
       "xlslice_0": "",
       "system_ila_0": "",
       "clk_wiz_0": "",
-      "led_flasher_0": ""
+      "led_flasher_0": "",
+      "xlconcat_0": "",
+      "util_vector_logic_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -179,17 +181,24 @@
       "switch": {
         "direction": "I",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
       },
-      "led_g_0": {
-        "direction": "O"
-      },
-      "FCLK_CLK0_0": {
+      "ETHERNET_CLOCK": {
         "type": "clk",
         "direction": "O",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+            "value": "design_1_processing_system7_0_0_FCLK_CLK1",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
@@ -208,6 +217,11 @@
             "value_src": "default"
           }
         }
+      },
+      "GPIO_O_0": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
       }
     },
     "components": {
@@ -231,10 +245,10 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "25.000000"
+            "value": "125.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "25.000000"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -285,10 +299,10 @@
             "value": "111.111115"
           },
           "PCW_CLK0_FREQ": {
-            "value": "25000000"
+            "value": "125000000"
           },
           "PCW_CLK1_FREQ": {
-            "value": "10000000"
+            "value": "25000000"
           },
           "PCW_CLK2_FREQ": {
             "value": "10000000"
@@ -317,8 +331,11 @@
           "PCW_ENET_RESET_ENABLE": {
             "value": "0"
           },
+          "PCW_EN_CLK0_PORT": {
+            "value": "1"
+          },
           "PCW_EN_CLK1_PORT": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_CLK2_PORT": {
             "value": "0"
@@ -359,8 +376,14 @@
           "PCW_FCLK1_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
+          "PCW_FCLK_CLK0_BUF": {
+            "value": "TRUE"
+          },
+          "PCW_FCLK_CLK1_BUF": {
+            "value": "TRUE"
+          },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "25"
+            "value": "125"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "25"
@@ -374,14 +397,17 @@
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
           },
+          "PCW_FPGA_FCLK1_ENABLE": {
+            "value": "1"
+          },
           "PCW_GPIO_EMIO_GPIO_ENABLE": {
             "value": "1"
           },
           "PCW_GPIO_EMIO_GPIO_IO": {
-            "value": "1"
+            "value": "2"
           },
           "PCW_GPIO_EMIO_GPIO_WIDTH": {
-            "value": "1"
+            "value": "2"
           },
           "PCW_GPIO_MIO_GPIO_ENABLE": {
             "value": "1"
@@ -1115,6 +1141,9 @@
         "vlnv": "xilinx.com:ip:system_ila:1.1",
         "xci_name": "design_1_system_ila_0_0",
         "parameters": {
+          "ALL_PROBE_SAME_MU": {
+            "value": "false"
+          },
           "C_MON_TYPE": {
             "value": "NATIVE"
           },
@@ -1123,6 +1152,15 @@
           },
           "C_PROBE0_WIDTH": {
             "value": "1"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "2"
+          },
+          "C_PROBE3_MU_CNT": {
+            "value": "1"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "2"
           },
           "C_PROBE_WIDTH_PROPAGATION": {
             "value": "MANUAL"
@@ -1192,8 +1230,21 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "led_g": {
+          "led": {
             "direction": "O"
+          },
+          "switch": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "clk": {
             "type": "clk",
@@ -1204,19 +1255,35 @@
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value": "design_1_processing_system7_0_0_FCLK_CLK1",
                 "value_src": "default_prop"
               }
             }
           }
         }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "design_1_xlconcat_0_2"
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_1_util_vector_logic_0_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
-      "processing_system7_0_MDIO_ETHERNET_0": {
+      "processing_system7_0_FIXED_IO": {
         "interface_ports": [
-          "MDIO_ETHERNET_0_0",
-          "processing_system7_0/MDIO_ETHERNET_0"
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       },
       "processing_system7_0_DDR": {
@@ -1225,10 +1292,10 @@
           "processing_system7_0/DDR"
         ]
       },
-      "processing_system7_0_FIXED_IO": {
+      "processing_system7_0_MDIO_ETHERNET_0": {
         "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
+          "MDIO_ETHERNET_0_0",
+          "processing_system7_0/MDIO_ETHERNET_0"
         ]
       }
     },
@@ -1287,24 +1354,10 @@
           "enet_gmii_txd"
         ]
       },
-      "GPIO_I_0_1": {
-        "ports": [
-          "switch",
-          "processing_system7_0/GPIO_I",
-          "system_ila_0/probe2"
-        ]
-      },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "clk_wiz_0/resetn"
-        ]
-      },
-      "processing_system7_0_GPIO_O": {
-        "ports": [
-          "processing_system7_0/GPIO_O",
-          "led_b",
-          "system_ila_0/probe3"
         ]
       },
       "clk_wiz_0_locked": {
@@ -1313,21 +1366,53 @@
           "system_ila_0/probe1"
         ]
       },
-      "led_flasher_0_led_g": {
-        "ports": [
-          "led_flasher_0/led_g",
-          "led_g_0",
-          "system_ila_0/probe0"
-        ]
-      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
-          "processing_system7_0/FCLK_CLK0",
-          "FCLK_CLK0_0",
+          "processing_system7_0/FCLK_CLK1",
+          "ETHERNET_CLOCK",
           "clk_wiz_0/clk_in1",
-          "led_flasher_0/clk",
-          "system_ila_0/clk",
-          "processing_system7_0/M_AXI_GP0_ACLK"
+          "led_flasher_0/clk"
+        ]
+      },
+      "led_flasher_0_led_g": {
+        "ports": [
+          "led_flasher_0/led",
+          "system_ila_0/probe0",
+          "led_b"
+        ]
+      },
+      "switch_1": {
+        "ports": [
+          "switch",
+          "led_flasher_0/switch",
+          "xlconcat_0/In0",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "system_ila_0/probe2"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "xlconcat_0/In1"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK1": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK0",
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "system_ila_0/clk"
+        ]
+      },
+      "processing_system7_0_GPIO_O": {
+        "ports": [
+          "processing_system7_0/GPIO_O",
+          "GPIO_O_0",
+          "system_ila_0/probe3"
         ]
       }
     }

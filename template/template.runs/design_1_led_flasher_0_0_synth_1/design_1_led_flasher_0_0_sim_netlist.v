@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-// Date        : Wed Feb 10 08:56:44 2021
+// Date        : Thu Feb 11 09:42:34 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_led_flasher_0_0_sim_netlist.v
@@ -16,24 +16,30 @@
 (* X_CORE_INFO = "led_flasher,Vivado 2020.2.1" *) 
 (* NotValidForBitStream *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
-   (led_g,
+   (led,
+    switch,
     clk);
-  output led_g;
+  output led;
+  input switch;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
 
   wire clk;
-  wire led_g;
+  wire led;
+  wire switch;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher inst
        (.clk(clk),
-        .led_g(led_g));
+        .led(led),
+        .switch(switch));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher
-   (led_g,
-    clk);
-  output led_g;
+   (led,
+    clk,
+    switch);
+  output led;
   input clk;
+  input switch;
 
   wire clk;
   wire \cnt[0]_i_2_n_0 ;
@@ -106,7 +112,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher
   wire \cnt_reg_n_0_[7] ;
   wire \cnt_reg_n_0_[8] ;
   wire \cnt_reg_n_0_[9] ;
-  wire led_g;
+  wire led;
+  wire switch;
   wire [3:3]\NLW_cnt_reg[20]_i_1_CO_UNCONNECTED ;
 
   LUT1 #(
@@ -354,13 +361,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher
         .D(\cnt_reg[8]_i_1_n_6 ),
         .Q(\cnt_reg_n_0_[9] ),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'hFE)) 
-    led_g__0
+  LUT4 #(
+    .INIT(16'hFEEE)) 
+    led__0
        (.I0(cnt_reg[23]),
         .I1(cnt_reg[22]),
         .I2(cnt_reg[20]),
-        .O(led_g));
+        .I3(switch),
+        .O(led));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -160,19 +160,19 @@ proc create_root_design { parentCell } {
   set clk [ create_bd_port -dir I -type clk clk ]
   set probe0 [ create_bd_port -dir I -from 0 -to 0 probe0 ]
   set probe1 [ create_bd_port -dir I -from 0 -to 0 probe1 ]
-  set probe2 [ create_bd_port -dir I -from 0 -to 0 probe2 ]
-  set probe3 [ create_bd_port -dir I -from 0 -to 0 probe3 ]
+  set probe2 [ create_bd_port -dir I -from 1 -to 0 probe2 ]
+  set probe3 [ create_bd_port -dir I -from 1 -to 0 probe3 ]
 
   # Create instance: ila_lib, and set properties
   set ila_lib [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_lib ]
   set_property -dict [ list \
-   CONFIG.ALL_PROBE_SAME_MU {TRUE} \
+   CONFIG.ALL_PROBE_SAME_MU {false} \
    CONFIG.ALL_PROBE_SAME_MU_CNT {1} \
    CONFIG.C_ADV_TRIGGER {FALSE} \
    CONFIG.C_DATA_DEPTH {1024} \
    CONFIG.C_EN_STRG_QUAL {0} \
    CONFIG.C_EN_TIME_TAG {0} \
-   CONFIG.C_ILA_CLK_FREQ {25000000} \
+   CONFIG.C_ILA_CLK_FREQ {125000000} \
    CONFIG.C_INPUT_PIPE_STAGES {0} \
    CONFIG.C_MONITOR_TYPE {Native} \
    CONFIG.C_NUM_OF_PROBES {4} \
@@ -184,10 +184,10 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE1_WIDTH {1} \
    CONFIG.C_PROBE2_MU_CNT {1} \
    CONFIG.C_PROBE2_TYPE {0} \
-   CONFIG.C_PROBE2_WIDTH {1} \
+   CONFIG.C_PROBE2_WIDTH {2} \
    CONFIG.C_PROBE3_MU_CNT {1} \
    CONFIG.C_PROBE3_TYPE {0} \
-   CONFIG.C_PROBE3_WIDTH {1} \
+   CONFIG.C_PROBE3_WIDTH {2} \
    CONFIG.C_TIME_TAG_WIDTH {32} \
    CONFIG.C_TRIGIN_EN {false} \
    CONFIG.C_TRIGOUT_EN {false} \

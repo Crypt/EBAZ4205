@@ -2,8 +2,8 @@
 # Vivado v2020.2.1 (64-bit)
 # SW Build 3080587 on Fri Dec 11 14:53:26 MST 2020
 # IP Build 3080454 on Sat Dec 12 02:19:03 MST 2020
-# Start of session at: Wed Feb 10 09:01:37 2021
-# Process ID: 255492
+# Start of session at: Sat Feb 13 13:13:56 2021
+# Process ID: 2508033
 # Current directory: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/design_1_wrapper.vds

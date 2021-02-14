@@ -70,7 +70,7 @@ design_1_processing_system7_0_0_sc::design_1_processing_system7_0_0_sc(const sc_
     model_param_props.addLong("USE_TRACE_DATA_EDGE_DETECTOR", "0");
     model_param_props.addLong("C_TRACE_PIPELINE_WIDTH", "8");
     model_param_props.addLong("C_TRACE_BUFFER_CLOCK_DELAY", "12");
-    model_param_props.addLong("C_EMIO_GPIO_WIDTH", "1");
+    model_param_props.addLong("C_EMIO_GPIO_WIDTH", "2");
     model_param_props.addLong("C_INCLUDE_ACP_TRANS_CHECK", "0");
     model_param_props.addLong("C_USE_DEFAULT_ACP_USER_VAL", "0");
     model_param_props.addLong("C_S_AXI_ACP_ARUSER_VAL", "31");
@@ -113,7 +113,7 @@ design_1_processing_system7_0_0_sc::design_1_processing_system7_0_0_sc(const sc_
     model_param_props.addString("C_IRQ_F2P_MODE", "DIRECT");
     model_param_props.addString("C_PS7_SI_REV", "PRODUCTION");
     model_param_props.addString("C_FCLK_CLK0_BUF", "TRUE");
-    model_param_props.addString("C_FCLK_CLK1_BUF", "FALSE");
+    model_param_props.addString("C_FCLK_CLK1_BUF", "TRUE");
     model_param_props.addString("C_FCLK_CLK2_BUF", "FALSE");
     model_param_props.addString("C_FCLK_CLK3_BUF", "FALSE");
     model_param_props.addString("C_PACKAGE_NAME", "clg400");

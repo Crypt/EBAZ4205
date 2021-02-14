@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-| Date         : Wed Feb 10 09:02:17 2021
+| Date         : Sat Feb 13 13:14:37 2021
 | Host         : I7MINT running 64-bit Linux Mint 20.1
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   18 |     0 |       100 | 18.00 |
+| Bonded IOB                  |   19 |     0 |       100 | 19.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -146,7 +146,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    9 |                  IO |
+| OBUF     |   10 |                  IO |
 | IBUF     |    9 |                  IO |
 | OBUFT    |    1 |                  IO |
 +----------+------+---------------------+
@@ -158,6 +158,7 @@ Table of Contents
 +---------------------------------+------+
 |             Ref Name            | Used |
 +---------------------------------+------+
+| design_1_util_vector_logic_0_0  |    1 |
 | design_1_system_ila_0_0         |    1 |
 | design_1_processing_system7_0_0 |    1 |
 | design_1_led_flasher_0_0        |    1 |

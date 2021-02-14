@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF1324B0802EA616F",
+      "boundary_crc": "0xCE28E72EE9C09B94",
       "design_src": "SBD",
       "device": "xc7z010clg400-1",
       "name": "bd_f60c",
@@ -24,7 +24,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "25000000",
+            "value": "125000000",
             "value_src": "default_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -53,12 +53,12 @@
       },
       "probe2": {
         "direction": "I",
-        "left": "0",
+        "left": "1",
         "right": "0"
       },
       "probe3": {
         "direction": "I",
-        "left": "0",
+        "left": "1",
         "right": "0"
       }
     },
@@ -68,7 +68,7 @@
         "xci_name": "bd_f60c_ila_lib_0",
         "parameters": {
           "ALL_PROBE_SAME_MU": {
-            "value": "TRUE"
+            "value": "false"
           },
           "ALL_PROBE_SAME_MU_CNT": {
             "value": "1"
@@ -86,7 +86,7 @@
             "value": "0"
           },
           "C_ILA_CLK_FREQ": {
-            "value": "25000000"
+            "value": "125000000"
           },
           "C_INPUT_PIPE_STAGES": {
             "value": "0"
@@ -122,7 +122,7 @@
             "value": "0"
           },
           "C_PROBE2_WIDTH": {
-            "value": "1"
+            "value": "2"
           },
           "C_PROBE3_MU_CNT": {
             "value": "1"
@@ -131,7 +131,7 @@
             "value": "0"
           },
           "C_PROBE3_WIDTH": {
-            "value": "1"
+            "value": "2"
           },
           "C_TIME_TAG_WIDTH": {
             "value": "32"

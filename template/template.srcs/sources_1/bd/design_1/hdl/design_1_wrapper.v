@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-//Date        : Wed Feb 10 08:59:12 2021
+//Date        : Sat Feb 13 13:13:24 2021
 //Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -29,19 +29,19 @@ module design_1_wrapper
     ENET0_GMII_RX_DV_0,
     ENET0_GMII_TX_CLK_0,
     ENET0_GMII_TX_EN_0,
-    FCLK_CLK0_0,
+    ETHERNET_CLOCK,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    GPIO_O_0,
     MDIO_ETHERNET_0_0_mdc,
     MDIO_ETHERNET_0_0_mdio_io,
     enet0_gmii_rxd,
     enet_gmii_txd,
     led_b,
-    led_g_0,
     switch);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -62,19 +62,19 @@ module design_1_wrapper
   input ENET0_GMII_RX_DV_0;
   input ENET0_GMII_TX_CLK_0;
   output [0:0]ENET0_GMII_TX_EN_0;
-  output FCLK_CLK0_0;
+  output ETHERNET_CLOCK;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  output [1:0]GPIO_O_0;
   output MDIO_ETHERNET_0_0_mdc;
   inout MDIO_ETHERNET_0_0_mdio_io;
   input [3:0]enet0_gmii_rxd;
   output [3:0]enet_gmii_txd;
   output [0:0]led_b;
-  output led_g_0;
   input [0:0]switch;
 
   wire [14:0]DDR_addr;
@@ -96,13 +96,14 @@ module design_1_wrapper
   wire ENET0_GMII_RX_DV_0;
   wire ENET0_GMII_TX_CLK_0;
   wire [0:0]ENET0_GMII_TX_EN_0;
-  wire FCLK_CLK0_0;
+  wire ETHERNET_CLOCK;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [1:0]GPIO_O_0;
   wire MDIO_ETHERNET_0_0_mdc;
   wire MDIO_ETHERNET_0_0_mdio_i;
   wire MDIO_ETHERNET_0_0_mdio_io;
@@ -111,7 +112,6 @@ module design_1_wrapper
   wire [3:0]enet0_gmii_rxd;
   wire [3:0]enet_gmii_txd;
   wire [0:0]led_b;
-  wire led_g_0;
   wire [0:0]switch;
 
   IOBUF MDIO_ETHERNET_0_0_mdio_iobuf
@@ -139,13 +139,14 @@ module design_1_wrapper
         .ENET0_GMII_RX_DV_0(ENET0_GMII_RX_DV_0),
         .ENET0_GMII_TX_CLK_0(ENET0_GMII_TX_CLK_0),
         .ENET0_GMII_TX_EN_0(ENET0_GMII_TX_EN_0),
-        .FCLK_CLK0_0(FCLK_CLK0_0),
+        .ETHERNET_CLOCK(ETHERNET_CLOCK),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .GPIO_O_0(GPIO_O_0),
         .MDIO_ETHERNET_0_0_mdc(MDIO_ETHERNET_0_0_mdc),
         .MDIO_ETHERNET_0_0_mdio_i(MDIO_ETHERNET_0_0_mdio_i),
         .MDIO_ETHERNET_0_0_mdio_o(MDIO_ETHERNET_0_0_mdio_o),
@@ -153,6 +154,5 @@ module design_1_wrapper
         .enet0_gmii_rxd(enet0_gmii_rxd),
         .enet_gmii_txd(enet_gmii_txd),
         .led_b(led_b),
-        .led_g_0(led_g_0),
         .switch(switch));
 endmodule

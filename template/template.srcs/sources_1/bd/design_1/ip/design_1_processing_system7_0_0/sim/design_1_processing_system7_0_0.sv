@@ -56,9 +56,9 @@
       bit  ENET1_MDIO_I;
       bit  ENET1_EXT_INTIN;
       bit  [7 : 0] ENET1_GMII_RXD;
-      bit  [0 : 0] GPIO_I;
-      bit  [0 : 0] GPIO_O;
-      bit  [0 : 0] GPIO_T;
+      bit  [1 : 0] GPIO_I;
+      bit  [1 : 0] GPIO_O;
+      bit  [1 : 0] GPIO_T;
       bit  I2C0_SDA_I;
       bit  I2C0_SDA_O;
       bit  I2C0_SDA_T;
@@ -738,6 +738,7 @@
   M_AXI_GP0_RRESP,
   M_AXI_GP0_RDATA,
   FCLK_CLK0,
+  FCLK_CLK1,
   FCLK_RESET0_N,
   MIO,
   DDR_CAS_n,
@@ -773,7 +774,7 @@
       parameter USE_TRACE_DATA_EDGE_DETECTOR = 0;
       parameter C_TRACE_PIPELINE_WIDTH = 8;
       parameter C_TRACE_BUFFER_CLOCK_DELAY = 12;
-      parameter C_EMIO_GPIO_WIDTH = 1;
+      parameter C_EMIO_GPIO_WIDTH = 2;
       parameter C_INCLUDE_ACP_TRANS_CHECK = 0;
       parameter C_USE_DEFAULT_ACP_USER_VAL = 0;
       parameter C_S_AXI_ACP_ARUSER_VAL = 31;
@@ -814,7 +815,7 @@
       parameter C_USE_S_AXI_ACP = 0;
       parameter C_PS7_SI_REV = "PRODUCTION";
       parameter C_FCLK_CLK0_BUF = "TRUE";
-      parameter C_FCLK_CLK1_BUF = "FALSE";
+      parameter C_FCLK_CLK1_BUF = "TRUE";
       parameter C_FCLK_CLK2_BUF = "FALSE";
       parameter C_FCLK_CLK3_BUF = "FALSE";
       parameter C_PACKAGE_NAME = "clg400";
@@ -838,9 +839,9 @@
       input  ENET0_MDIO_I;
       input  ENET0_EXT_INTIN;
       input  [7 : 0] ENET0_GMII_RXD;
-      input  [0 : 0] GPIO_I;
-      output  [0 : 0] GPIO_O;
-      output  [0 : 0] GPIO_T;
+      input  [1 : 0] GPIO_I;
+      output  [1 : 0] GPIO_O;
+      output  [1 : 0] GPIO_T;
       output  TTC0_WAVE0_OUT;
       output  TTC0_WAVE1_OUT;
       output  TTC0_WAVE2_OUT;
@@ -884,6 +885,7 @@
       input  [1 : 0] M_AXI_GP0_RRESP;
       input  [31 : 0] M_AXI_GP0_RDATA;
       output  FCLK_CLK0;
+      output  FCLK_CLK1;
       output  FCLK_RESET0_N;
       inout  [53 : 0] MIO;
       inout  DDR_CAS_n;
@@ -915,8 +917,8 @@
       reg ENET0_MDIO_O;
       reg ENET0_MDIO_T;
       reg [7 : 0] ENET0_GMII_TXD;
-      reg [0 : 0] GPIO_O;
-      reg [0 : 0] GPIO_T;
+      reg [1 : 0] GPIO_O;
+      reg [1 : 0] GPIO_T;
       reg TTC0_WAVE0_OUT;
       reg TTC0_WAVE1_OUT;
       reg TTC0_WAVE2_OUT;
@@ -948,6 +950,7 @@
       reg [3 : 0] M_AXI_GP0_AWQOS;
       reg [3 : 0] M_AXI_GP0_WSTRB;
       reg FCLK_CLK0;
+      reg FCLK_CLK1;
       reg FCLK_RESET0_N;
       string ip_name;
       reg disable_port;
@@ -959,6 +962,7 @@ import "DPI-C" function void ps7_set_int_param(input string name,input longint v
 import "DPI-C" function void ps7_init_c_model();
 import "DPI-C" function void ps7_init_m_axi_gp0(input int M_AXI_GP0_AWID_size,input int M_AXI_GP0_AWADDR_size,input int M_AXI_GP0_AWLEN_size,input int M_AXI_GP0_AWSIZE_size,input int M_AXI_GP0_AWBURST_size,input int M_AXI_GP0_AWLOCK_size,input int M_AXI_GP0_AWCACHE_size,input int M_AXI_GP0_AWPROT_size,input int M_AXI_GP0_AWQOS_size,input int M_AXI_GP0_AWVALID_size,input int M_AXI_GP0_AWREADY_size,input int M_AXI_GP0_WID_size,input int M_AXI_GP0_WDATA_size,input int M_AXI_GP0_WSTRB_size,input int M_AXI_GP0_WLAST_size,input int M_AXI_GP0_WVALID_size,input int M_AXI_GP0_WREADY_size,input int M_AXI_GP0_BID_size,input int M_AXI_GP0_BRESP_size,input int M_AXI_GP0_BVALID_size,input int M_AXI_GP0_BREADY_size,input int M_AXI_GP0_ARID_size,input int M_AXI_GP0_ARADDR_size,input int M_AXI_GP0_ARLEN_size,input int M_AXI_GP0_ARSIZE_size,input int M_AXI_GP0_ARBURST_size,input int M_AXI_GP0_ARLOCK_size,input int M_AXI_GP0_ARCACHE_size,input int M_AXI_GP0_ARPROT_size,input int M_AXI_GP0_ARQOS_size,input int M_AXI_GP0_ARVALID_size,input int M_AXI_GP0_ARREADY_size,input int M_AXI_GP0_RID_size,input int M_AXI_GP0_RDATA_size,input int M_AXI_GP0_RRESP_size,input int M_AXI_GP0_RLAST_size,input int M_AXI_GP0_RVALID_size,input int M_AXI_GP0_RREADY_size);
 import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK0();
+import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK1();
 import "DPI-C" function void ps7_simulate_single_cycle_M_AXI_GP0_ACLK();
 import "DPI-C" function void ps7_set_inputs_m_axi_gp0_M_AXI_GP0_ACLK(
 input bit M_AXI_GP0_AWREADY,
@@ -1105,12 +1109,25 @@ output bit M_AXI_GP0_RREADY
      FCLK_CLK0 = 1'b0;
   end
 
-  always #(20.0) FCLK_CLK0 <= ~FCLK_CLK0;
+  always #(4.0) FCLK_CLK0 <= ~FCLK_CLK0;
 
   always@(posedge FCLK_CLK0)
   begin
    ps7_set_ip_context(ip_name);
    ps7_simulate_single_cycle_FCLK_CLK0();
+  end
+
+  initial
+  begin
+     FCLK_CLK1 = 1'b0;
+  end
+
+  always #(20.0) FCLK_CLK1 <= ~FCLK_CLK1;
+
+  always@(posedge FCLK_CLK1)
+  begin
+   ps7_set_ip_context(ip_name);
+   ps7_simulate_single_cycle_FCLK_CLK1();
   end
 
 

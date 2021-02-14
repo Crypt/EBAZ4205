@@ -70,10 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
 set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
-set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -86,6 +84,11 @@ set_property parent.project_path /home/david/Documents/GitHub/djrm-EBAZ4205/temp
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths {
+  /home/david/Documents/GitHub/djrm-EBAZ4205/ip_repo/myip_interrupt_1.0
+  /home/david/Documents/GitHub/vivado-library
+} [current_project]
+update_ip_catalog
 set_property ip_output_repo /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
--- Date        : Wed Feb 10 08:56:44 2021
+-- Date        : Thu Feb 11 09:42:34 2021
 -- Host        : I7MINT running 64-bit Linux Mint 20.1
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_led_flasher_0_0_sim_netlist.vhdl
@@ -16,8 +16,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher is
   port (
-    led_g : out STD_LOGIC;
-    clk : in STD_LOGIC
+    led : out STD_LOGIC;
+    clk : in STD_LOGIC;
+    switch : in STD_LOGIC
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher;
 
@@ -480,15 +481,16 @@ begin
       Q => \cnt_reg_n_0_[9]\,
       R => '0'
     );
-\led_g__0\: unisim.vcomponents.LUT3
+\led__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE"
+      INIT => X"FEEE"
     )
         port map (
       I0 => cnt_reg(23),
       I1 => cnt_reg(22),
       I2 => cnt_reg(20),
-      O => led_g
+      I3 => switch,
+      O => led
     );
 end STRUCTURE;
 library IEEE;
@@ -497,7 +499,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
-    led_g : out STD_LOGIC;
+    led : out STD_LOGIC;
+    switch : in STD_LOGIC;
     clk : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -521,6 +524,7 @@ begin
 inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher
      port map (
       clk => clk,
-      led_g => led_g
+      led => led,
+      switch => switch
     );
 end STRUCTURE;

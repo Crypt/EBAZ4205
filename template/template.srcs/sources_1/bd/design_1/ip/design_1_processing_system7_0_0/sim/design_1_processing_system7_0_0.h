@@ -95,9 +95,9 @@ public:
   sc_core::sc_in< bool > ENET0_MDIO_I;
   sc_core::sc_in< bool > ENET0_EXT_INTIN;
   sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
-  sc_core::sc_in< sc_dt::sc_bv<1> > GPIO_I;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_O;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_T;
+  sc_core::sc_in< sc_dt::sc_bv<2> > GPIO_I;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_O;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_T;
   sc_core::sc_out< bool > TTC0_WAVE0_OUT;
   sc_core::sc_out< bool > TTC0_WAVE1_OUT;
   sc_core::sc_out< bool > TTC0_WAVE2_OUT;
@@ -141,6 +141,7 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
   sc_core::sc_out< bool > FCLK_CLK0;
+  sc_core::sc_out< bool > FCLK_CLK1;
   sc_core::sc_out< bool > FCLK_RESET0_N;
   sc_core::sc_out< sc_dt::sc_bv<54> > MIO;
   sc_core::sc_out< bool > DDR_CAS_n;
@@ -215,9 +216,9 @@ public:
   sc_core::sc_in< bool > ENET0_MDIO_I;
   sc_core::sc_in< bool > ENET0_EXT_INTIN;
   sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
-  sc_core::sc_in< sc_dt::sc_bv<1> > GPIO_I;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_O;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_T;
+  sc_core::sc_in< sc_dt::sc_bv<2> > GPIO_I;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_O;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_T;
   sc_core::sc_out< bool > TTC0_WAVE0_OUT;
   sc_core::sc_out< bool > TTC0_WAVE1_OUT;
   sc_core::sc_out< bool > TTC0_WAVE2_OUT;
@@ -261,6 +262,7 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
   sc_core::sc_out< bool > FCLK_CLK0;
+  sc_core::sc_out< bool > FCLK_CLK1;
   sc_core::sc_out< bool > FCLK_RESET0_N;
   sc_core::sc_out< sc_dt::sc_bv<54> > MIO;
   sc_core::sc_out< bool > DDR_CAS_n;
@@ -335,9 +337,9 @@ public:
   sc_core::sc_in< bool > ENET0_MDIO_I;
   sc_core::sc_in< bool > ENET0_EXT_INTIN;
   sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
-  sc_core::sc_in< sc_dt::sc_bv<1> > GPIO_I;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_O;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_T;
+  sc_core::sc_in< sc_dt::sc_bv<2> > GPIO_I;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_O;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_T;
   sc_core::sc_out< bool > TTC0_WAVE0_OUT;
   sc_core::sc_out< bool > TTC0_WAVE1_OUT;
   sc_core::sc_out< bool > TTC0_WAVE2_OUT;
@@ -381,6 +383,7 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
   sc_core::sc_out< bool > FCLK_CLK0;
+  sc_core::sc_out< bool > FCLK_CLK1;
   sc_core::sc_out< bool > FCLK_RESET0_N;
   sc_core::sc_out< sc_dt::sc_bv<54> > MIO;
   sc_core::sc_out< bool > DDR_CAS_n;
@@ -457,9 +460,9 @@ public:
   sc_core::sc_in< bool > ENET0_MDIO_I;
   sc_core::sc_in< bool > ENET0_EXT_INTIN;
   sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
-  sc_core::sc_in< sc_dt::sc_bv<1> > GPIO_I;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_O;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_T;
+  sc_core::sc_in< sc_dt::sc_bv<2> > GPIO_I;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_O;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_T;
   sc_core::sc_out< bool > TTC0_WAVE0_OUT;
   sc_core::sc_out< bool > TTC0_WAVE1_OUT;
   sc_core::sc_out< bool > TTC0_WAVE2_OUT;
@@ -503,6 +506,7 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
   sc_core::sc_out< bool > FCLK_CLK0;
+  sc_core::sc_out< bool > FCLK_CLK1;
   sc_core::sc_out< bool > FCLK_RESET0_N;
   sc_core::sc_out< sc_dt::sc_bv<54> > MIO;
   sc_core::sc_out< bool > DDR_CAS_n;
@@ -585,9 +589,9 @@ public:
   sc_core::sc_in< bool > ENET0_MDIO_I;
   sc_core::sc_in< bool > ENET0_EXT_INTIN;
   sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
-  sc_core::sc_in< sc_dt::sc_bv<1> > GPIO_I;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_O;
-  sc_core::sc_out< sc_dt::sc_bv<1> > GPIO_T;
+  sc_core::sc_in< sc_dt::sc_bv<2> > GPIO_I;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_O;
+  sc_core::sc_out< sc_dt::sc_bv<2> > GPIO_T;
   sc_core::sc_out< bool > TTC0_WAVE0_OUT;
   sc_core::sc_out< bool > TTC0_WAVE1_OUT;
   sc_core::sc_out< bool > TTC0_WAVE2_OUT;
@@ -631,6 +635,7 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M_AXI_GP0_RRESP;
   sc_core::sc_in< sc_dt::sc_bv<32> > M_AXI_GP0_RDATA;
   sc_core::sc_out< bool > FCLK_CLK0;
+  sc_core::sc_out< bool > FCLK_CLK1;
   sc_core::sc_out< bool > FCLK_RESET0_N;
   sc_core::sc_out< sc_dt::sc_bv<54> > MIO;
   sc_core::sc_out< bool > DDR_CAS_n;

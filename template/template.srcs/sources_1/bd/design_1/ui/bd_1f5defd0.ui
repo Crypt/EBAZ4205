@@ -1,52 +1,57 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-303,-143",
+   "Default View_TopLeft":"-437,-60",
    "ExpandedHierarchyInLayout":"",
    "PinnedBlocks":"",
    "PinnedPorts":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 1160 -y 310 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1160 -y 330 -defaultsOSRD
-preplace port MDIO_ETHERNET_0_0 -pg 1 -lvl 5 -x 1160 -y 230 -defaultsOSRD
-preplace port ENET0_GMII_RX_CLK_0 -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
-preplace port ENET0_GMII_RX_DV_0 -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
-preplace port ENET0_GMII_TX_CLK_0 -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
-preplace port led_g_0 -pg 1 -lvl 5 -x 1160 -y 660 -defaultsOSRD
-preplace port FCLK_CLK0_0 -pg 1 -lvl 5 -x 1160 -y 430 -defaultsOSRD
-preplace portBus enet0_gmii_rxd -pg 1 -lvl 0 -x 0 -y 570 -defaultsOSRD
-preplace portBus enet_gmii_txd -pg 1 -lvl 5 -x 1160 -y 130 -defaultsOSRD
-preplace portBus ENET0_GMII_TX_EN_0 -pg 1 -lvl 5 -x 1160 -y 70 -defaultsOSRD
-preplace portBus led_b -pg 1 -lvl 5 -x 1160 -y 850 -defaultsOSRD
-preplace portBus switch -pg 1 -lvl 0 -x 0 -y 550 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 440 -y 270 -defaultsOSRD
-preplace inst xlconcat_1 -pg 1 -lvl 2 -x 440 -y 620 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 630 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 4 -x 1040 -y 130 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 3 -x 840 -y 750 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 440 -y 740 -defaultsOSRD
-preplace inst led_flasher_0 -pg 1 -lvl 4 -x 1040 -y 710 -defaultsOSRD
-preplace netloc xlconcat_1_dout 1 2 1 700 210n
-preplace netloc In0_0_1 1 0 2 NJ 570 180J
-preplace netloc processing_system7_0_ENET0_GMII_TX_EN 1 2 3 690J 70 NJ 70 NJ
-preplace netloc ENET0_GMII_RX_CLK_0_1 1 0 3 NJ 20 NJ 20 680
-preplace netloc ENET0_GMII_RX_DV_0_1 1 0 3 NJ 510 NJ 510 690
-preplace netloc ENET0_GMII_TX_CLK_0_1 1 0 3 NJ 530 NJ 530 710
-preplace netloc xlconstant_0_dout 1 1 1 NJ 630
-preplace netloc processing_system7_0_ENET0_GMII_TXD 1 2 2 NJ 130 NJ
-preplace netloc xlslice_0_Dout 1 4 1 NJ 130
-preplace netloc GPIO_I_0_1 1 0 3 NJ 550 NJ 550 730
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 200 520 680
-preplace netloc processing_system7_0_GPIO_O 1 2 3 720 850 NJ 850 NJ
-preplace netloc clk_wiz_0_locked 1 2 1 N 750
-preplace netloc led_flasher_0_led_g 1 2 3 750 650 N 650 1140
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 4 190 30 740J 430 930J 430 NJ
-preplace netloc processing_system7_0_MDIO_ETHERNET_0 1 2 3 NJ 230 NJ 230 NJ
-preplace netloc processing_system7_0_DDR 1 2 3 NJ 310 NJ 310 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 330 NJ 330 NJ
-levelinfo -pg 1 0 100 440 840 1040 1160
-pagesize -pg 1 -db -bbox -sgen -220 0 1400 870
+preplace port DDR -pg 1 -lvl 4 -x 1160 -y 480 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1160 -y 500 -defaultsOSRD
+preplace port MDIO_ETHERNET_0_0 -pg 1 -lvl 4 -x 1160 -y 380 -defaultsOSRD
+preplace port ENET0_GMII_RX_CLK_0 -pg 1 -lvl 0 -x -10 -y 140 -defaultsOSRD
+preplace port ENET0_GMII_RX_DV_0 -pg 1 -lvl 0 -x -10 -y 160 -defaultsOSRD
+preplace port ENET0_GMII_TX_CLK_0 -pg 1 -lvl 0 -x -10 -y 180 -defaultsOSRD
+preplace port ETHERNET_CLOCK -pg 1 -lvl 4 -x 1160 -y 540 -defaultsOSRD
+preplace portBus enet0_gmii_rxd -pg 1 -lvl 0 -x -10 -y 20 -defaultsOSRD
+preplace portBus enet_gmii_txd -pg 1 -lvl 4 -x 1160 -y 320 -defaultsOSRD
+preplace portBus ENET0_GMII_TX_EN_0 -pg 1 -lvl 4 -x 1160 -y 260 -defaultsOSRD
+preplace portBus led_b -pg 1 -lvl 4 -x 1160 -y 580 -defaultsOSRD
+preplace portBus switch -pg 1 -lvl 0 -x -10 -y 680 -defaultsOSRD
+preplace portBus GPIO_O_0 -pg 1 -lvl 4 -x 1160 -y 520 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 260 -y 480 -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 2 -x 750 -y 70 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 260 -y 80 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 3 -x 1040 -y 320 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 3 -x 1040 -y 710 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 750 -y 700 -defaultsOSRD
+preplace inst led_flasher_0 -pg 1 -lvl 2 -x 750 -y 580 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -x 1040 -y 880 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 2 -x 750 -y 890 -defaultsOSRD
+preplace netloc xlconcat_1_dout 1 1 2 NJ 400 900
+preplace netloc In0_0_1 1 0 2 NJ 20 500J
+preplace netloc processing_system7_0_ENET0_GMII_TX_EN 1 1 3 530J 260 NJ 260 NJ
+preplace netloc ENET0_GMII_RX_CLK_0_1 1 0 2 NJ 140 520
+preplace netloc ENET0_GMII_RX_DV_0_1 1 0 2 NJ 160 510
+preplace netloc ENET0_GMII_TX_CLK_0_1 1 0 2 NJ 180 500
+preplace netloc xlconstant_0_dout 1 1 1 NJ 80
+preplace netloc processing_system7_0_ENET0_GMII_TXD 1 1 2 NJ 320 NJ
+preplace netloc xlslice_0_Dout 1 3 1 NJ 320
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 510 680n
+preplace netloc clk_wiz_0_locked 1 2 1 N 710
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 550 770 910 540 NJ
+preplace netloc led_flasher_0_led_g 1 2 2 930 580 NJ
+preplace netloc switch_1 1 0 3 10J 750 540 830 920J
+preplace netloc xlconcat_0_dout 1 2 2 930 810 1140
+preplace netloc util_vector_logic_0_Res 1 2 1 NJ 890
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 3 20 740 530 510 920
+preplace netloc processing_system7_0_GPIO_O 1 1 3 500J 490 900J 520 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 520J 500 NJ 500 NJ
+preplace netloc processing_system7_0_DDR 1 1 3 510J 480 NJ 480 NJ
+preplace netloc processing_system7_0_MDIO_ETHERNET_0 1 1 3 520J 380 NJ 380 NJ
+levelinfo -pg 1 -10 260 750 1040 1160
+pagesize -pg 1 -db -bbox -sgen -230 0 1400 950
 "
 }
 {
