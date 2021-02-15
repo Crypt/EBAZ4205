@@ -70,3 +70,4 @@ platform generate
 platform active {ebaz4205_standalone}
 platform config -updatehw {/home/david/Documents/GitHub/djrm-EBAZ4205/template/design_3_wrapper.xsa}
 platform generate -domains 
+platform active {ebaz4205_standalone}

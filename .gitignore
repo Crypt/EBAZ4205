@@ -90,6 +90,8 @@ template/**
 !*.bmm
 !*.xmp
 
+/gitignore/**
+/ip_repo/**
 /projects/P01**
 /projects/P02**
 /projects/P03**

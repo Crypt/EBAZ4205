@@ -11928,3 +11928,213 @@ TRACE::2021-02-01.16:13:14::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/
 /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/vgaVDMA_platform/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2021-02-01.16:13:14::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:12::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:12::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:12::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:14::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:14::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:14::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:14::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened new HwDB with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWReader::Active system found as  ebaz4205_standalone
+TRACE::2021-02-11.08:31:15::SCWReader::Handling sysconfig ebaz4205_standalone
+TRACE::2021-02-11.08:31:15::SCWDomain::checking for install qemu data   : 
+TRACE::2021-02-11.08:31:15::SCWDomain:: Using the QEMU Data from install at  : /opt/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2021-02-11.08:31:15::SCWDomain:: Using the QEMU args  from install at  : /opt/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-02-11.08:31:15::SCWMssOS::No sw design opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::mss exists loading the mss file  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::Opened the sw design from mss  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::Adding the swdes entry /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-02-11.08:31:15::SCWMssOS::updating the scw layer about changes
+TRACE::2021-02-11.08:31:15::SCWMssOS::Opened the sw design.  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-11.08:31:15::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-11.08:31:15::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-11.08:31:15::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS:: library already available in sw design:  lwip211:1.3
+TRACE::2021-02-11.08:31:15::SCWMssOS::Saving the mss changes /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-02-11.08:31:15::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-02-11.08:31:15::SCWMssOS::Commit changes completed.
+TRACE::2021-02-11.08:31:15::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-02-11.08:31:15::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-11.08:31:15::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWReader::No isolation master present  
+TRACE::2021-02-11.08:31:15::SCWDomain::checking for install qemu data   : 
+TRACE::2021-02-11.08:31:15::SCWDomain:: Using the QEMU Data from install at  : /opt/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2021-02-11.08:31:15::SCWDomain:: Using the QEMU args  from install at  : /opt/Xilinx/Vitis/2020.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-11.08:31:15::SCWMssOS::No sw design opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::mss exists loading the mss file  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::Opened the sw design from mss  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::Adding the swdes entry /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-02-11.08:31:15::SCWMssOS::updating the scw layer about changes
+TRACE::2021-02-11.08:31:15::SCWMssOS::Opened the sw design.  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-11.08:31:15::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS:: library already available in sw design:  lwip211:1.3
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-11.08:31:15::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2021-02-11.08:31:15::SCWMssOS::Saving the mss changes /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-02-11.08:31:15::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-02-11.08:31:15::SCWMssOS::Commit changes completed.
+TRACE::2021-02-11.08:31:15::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-02-11.08:31:15::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to open the hw design at /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA given /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA absoulate path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform::DSA directory /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Platform Path /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/hw/design_3_wrapper.xsa
+TRACE::2021-02-11.08:31:15::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2021-02-11.08:31:15::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Opened existing hwdb design_1_wrapper
+TRACE::2021-02-11.08:31:15::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-11.08:31:15::SCWMssOS::Checking the sw design at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWMssOS::DEBUG:  swdes dump  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+/home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-11.08:31:15::SCWMssOS::Sw design exists and opened at  /home/david/Documents/GitHub/djrm-EBAZ4205/workspace/ebaz4205_standalone/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-11.08:31:15::SCWReader::No isolation master present  
