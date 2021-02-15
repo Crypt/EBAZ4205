@@ -1,0 +1,1071 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.1 (64-bit)
+# SW Build 3080587 on Fri Dec 11 14:53:26 MST 2020
+# IP Build 3080454 on Sat Dec 12 02:19:03 MST 2020
+# Start of session at: Mon Feb 15 13:22:52 2021
+# Process ID: 247333
+# Current directory: /home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1
+# Command line: vivado -log multicomp_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source multicomp_wrapper.tcl -notrace
+# Log file: /home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1/multicomp_wrapper.vdi
+# Journal file: /home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source multicomp_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+Command: link_design -top multicomp_wrapper -part xc7z010clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2370.266 ; gain = 0.000 ; free physical = 1648 ; free virtual = 4530
+INFO: [Netlist 29-17] Analyzing 252 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc]
+WARNING: [Vivado 12-584] No ports matched 'ENET0_GMII_RX_CLK_0'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ENET0_GMII_TX_CLK_0'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet0_gmii_rxd[3]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet0_gmii_rxd[2]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet0_gmii_rxd[1]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet0_gmii_rxd[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ENET0_GMII_TX_EN_0[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet_gmii_txd[3]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet_gmii_txd[2]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet_gmii_txd[1]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet_gmii_txd[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ENET0_GMII_RX_DV_0'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ENET0_GMII_RX_CLK_0'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet0_gmii_rxd[3]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet0_gmii_rxd[2]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet0_gmii_rxd[1]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet0_gmii_rxd[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ENET0_GMII_TX_CLK_0'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ENET0_GMII_TX_EN_0[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet_gmii_txd[3]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet_gmii_txd[2]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet_gmii_txd[1]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enet_gmii_txd[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ENET0_GMII_RX_DV_0'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MDIO_ETHERNET_0_0_mdc'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MDIO_ETHERNET_0_0_mdio_io'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MDIO_ETHERNET_0_0_mdc'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MDIO_ETHERNET_0_0_mdio_io'. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2530.168 ; gain = 0.000 ; free physical = 1546 ; free virtual = 4428
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 8 instances
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 4 instances
+
+11 Infos, 28 Warnings, 28 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2530.168 ; gain = 160.078 ; free physical = 1546 ; free virtual = 4428
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2530.168 ; gain = 0.000 ; free physical = 1534 ; free virtual = 4417
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 18abbc7c1
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2666.102 ; gain = 135.934 ; free physical = 1164 ; free virtual = 4047
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 147b85a6b
+
+Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2840.039 ; gain = 0.000 ; free physical = 996 ; free virtual = 3879
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 24 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 159952f4e
+
+Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2840.039 ; gain = 0.000 ; free physical = 996 ; free virtual = 3879
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 22 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: d6fd9071
+
+Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.41 . Memory (MB): peak = 2840.039 ; gain = 0.000 ; free physical = 996 ; free virtual = 3879
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 66 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: d6fd9071
+
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.48 . Memory (MB): peak = 2840.039 ; gain = 0.000 ; free physical = 996 ; free virtual = 3879
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: d6fd9071
+
+Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.49 . Memory (MB): peak = 2840.039 ; gain = 0.000 ; free physical = 996 ; free virtual = 3879
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: d6fd9071
+
+Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.50 . Memory (MB): peak = 2840.039 ; gain = 0.000 ; free physical = 996 ; free virtual = 3880
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              24  |                                              1  |
+|  Constant propagation         |               0  |              22  |                                              0  |
+|  Sweep                        |               0  |              66  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2840.039 ; gain = 0.000 ; free physical = 996 ; free virtual = 3879
+Ending Logic Optimization Task | Checksum: 1f0d96b6c
+
+Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.63 . Memory (MB): peak = 2840.039 ; gain = 0.000 ; free physical = 996 ; free virtual = 3879
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 23 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 8 newly gated: 16 Total Ports: 46
+Ending PowerOpt Patch Enables Task | Checksum: 1e0bb2af6
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 985 ; free virtual = 3868
+Ending Power Optimization Task | Checksum: 1e0bb2af6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3223.391 ; gain = 383.352 ; free physical = 991 ; free virtual = 3874
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1e0bb2af6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 991 ; free virtual = 3874
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 991 ; free virtual = 3874
+Ending Netlist Obfuscation Task | Checksum: 231442e80
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 991 ; free virtual = 3874
+INFO: [Common 17-83] Releasing license: Implementation
+35 Infos, 28 Warnings, 28 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 3223.391 ; gain = 693.223 ; free physical = 991 ; free virtual = 3874
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 985 ; free virtual = 3870
+INFO: [Common 17-1381] The checkpoint '/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1/multicomp_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file multicomp_wrapper_drc_opted.rpt -pb multicomp_wrapper_drc_opted.pb -rpx multicomp_wrapper_drc_opted.rpx
+Command: report_drc -file multicomp_wrapper_drc_opted.rpt -pb multicomp_wrapper_drc_opted.pb -rpx multicomp_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1/multicomp_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[0] (net: computer/ram1/ADDRBWRADDR[0]) which is driven by a register (computer/cpu1/u0/A_reg[0]_rep__2) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[10] (net: computer/ram1/ADDRBWRADDR[10]) which is driven by a register (computer/cpu1/u0/A_reg[10]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[11] (net: computer/ram1/ADDRBWRADDR[11]) which is driven by a register (computer/cpu1/u0/A_reg[11]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[12] (net: computer/ram1/ADDRBWRADDR[12]) which is driven by a register (computer/cpu1/u0/A_reg[12]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[13] (net: computer/ram1/ADDRBWRADDR[13]) which is driven by a register (computer/cpu1/u0/A_reg[13]_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[14] (net: computer/ram1/ADDRBWRADDR[14]) which is driven by a register (computer/cpu1/u0/A_reg[14]_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[15] (net: computer/ram1/ADDRBWRADDR[15]) which is driven by a register (computer/cpu1/u0/A_reg[15]_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[1] (net: computer/ram1/ADDRARDADDR[1]) which is driven by a register (computer/cpu1/u0/A_reg[1]_rep_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[2] (net: computer/ram1/ADDRARDADDR[2]) which is driven by a register (computer/cpu1/u0/A_reg[2]_rep_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[3] (net: computer/ram1/ADDRBWRADDR[3]) which is driven by a register (computer/cpu1/u0/A_reg[3]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[4] (net: computer/ram1/ADDRBWRADDR[4]) which is driven by a register (computer/cpu1/u0/A_reg[4]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[5] (net: computer/ram1/ADDRBWRADDR[5]) which is driven by a register (computer/cpu1/u0/A_reg[5]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[6] (net: computer/ram1/ADDRBWRADDR[6]) which is driven by a register (computer/cpu1/u0/A_reg[6]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[7] (net: computer/ram1/ADDRBWRADDR[7]) which is driven by a register (computer/cpu1/u0/A_reg[7]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[8] (net: computer/ram1/ADDRBWRADDR[8]) which is driven by a register (computer/cpu1/u0/A_reg[8]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRARDADDR[9] (net: computer/ram1/ADDRBWRADDR[9]) which is driven by a register (computer/cpu1/u0/A_reg[9]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRBWRADDR[12] (net: computer/ram1/ADDRBWRADDR[12]) which is driven by a register (computer/cpu1/u0/A_reg[12]_rep__0) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRBWRADDR[13] (net: computer/ram1/ADDRBWRADDR[13]) which is driven by a register (computer/cpu1/u0/A_reg[13]_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRBWRADDR[14] (net: computer/ram1/ADDRBWRADDR[14]) which is driven by a register (computer/cpu1/u0/A_reg[14]_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 computer/ram1/mem_reg_0_0 has an input control pin computer/ram1/mem_reg_0_0/ADDRBWRADDR[15] (net: computer/ram1/ADDRBWRADDR[15]) which is driven by a register (computer/cpu1/u0/A_reg[15]_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 941 ; free virtual = 3826
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 179299260
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 941 ; free virtual = 3826
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 941 ; free virtual = 3826
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-568] A LUT 'computer/cpu1/u0/controlReg[7]_i_2' is driving clock pin of 12 registers. This could lead to large hold time violations. First few involved registers are:
+	computer/io2/txByteLatch_reg[5] {FDRE}
+	computer/io2/controlReg_reg[5] {FDRE}
+	computer/io2/controlReg_reg[6] {FDRE}
+	computer/io2/controlReg_reg[7] {FDRE}
+	computer/io2/txByteLatch_reg[0] {FDRE}
+WARNING: [Place 30-568] A LUT 'computer/cpu1/u0/controlReg[7]_i_2__0' is driving clock pin of 12 registers. This could lead to large hold time violations. First few involved registers are:
+	computer/io1/controlReg_reg[5] {FDRE}
+	computer/io1/controlReg_reg[6] {FDRE}
+	computer/io1/controlReg_reg[7] {FDRE}
+	computer/io1/dispByteLatch_reg[0] {FDRE}
+	computer/io1/dispByteLatch_reg[1] {FDRE}
+WARNING: [Place 30-568] A LUT 'computer/cpu1/u0/dataOut[7]_i_2__0' is driving clock pin of 12 registers. This could lead to large hold time violations. First few involved registers are:
+	computer/io2/dataOut_reg[0] {FDRE}
+	computer/io2/dataOut_reg[1] {FDRE}
+	computer/io2/dataOut_reg[2] {FDRE}
+	computer/io2/dataOut_reg[3] {FDRE}
+	computer/io2/dataOut_reg[4] {FDRE}
+WARNING: [Place 30-568] A LUT 'computer/cpu1/u0/host_read_flag_i_2' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	computer/sd1/host_read_flag_reg {FDRE}
+WARNING: [Place 30-568] A LUT 'computer/cpu1/u0/kbReadPointer[2]_i_2' is driving clock pin of 11 registers. This could lead to large hold time violations. First few involved registers are:
+	computer/io1/dataOut_reg[0] {FDRE}
+	computer/io1/dataOut_reg[1] {FDRE}
+	computer/io1/dataOut_reg[2] {FDRE}
+	computer/io1/dataOut_reg[4] {FDRE}
+	computer/io1/dataOut_reg[6] {FDRE}
+WARNING: [Place 30-568] A LUT 'computer/cpu1/n_RomActive_i_2' is driving clock pin of 1 registers. This could lead to large hold time violations. First few involved registers are:
+	computer/n_RomActive_reg {FDCE}
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1406290dd
+
+Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.56 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 958 ; free virtual = 3843
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1dc5f287f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 965 ; free virtual = 3850
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1dc5f287f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 965 ; free virtual = 3850
+Phase 1 Placer Initialization | Checksum: 1dc5f287f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 965 ; free virtual = 3850
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 22d7cf351
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 959 ; free virtual = 3845
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1a5008bb3
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 959 ; free virtual = 3844
+
+Phase 2.3 Global Placement Core
+
+Phase 2.3.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 111 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 44 nets or cells. Created 0 new cell, deleted 44 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 944 ; free virtual = 3829
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |             44  |                    44  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |             44  |                    44  |           0  |           8  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.3.1 Physical Synthesis In Placer | Checksum: 12246dd3b
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+Phase 2.3 Global Placement Core | Checksum: 14e167ee1
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+Phase 2 Global Placement | Checksum: 14e167ee1
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 19c146649
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 265f89a67
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 948 ; free virtual = 3832
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 19e29be55
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 948 ; free virtual = 3832
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1b503846d
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 948 ; free virtual = 3833
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1b8a3e5b2
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 932 ; free virtual = 3818
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 210886eba
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 940 ; free virtual = 3825
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 241509f43
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 951 ; free virtual = 3837
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1eab6fd5b
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 951 ; free virtual = 3837
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 16c3aa04e
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 931 ; free virtual = 3815
+Phase 3 Detail Placement | Checksum: 16c3aa04e
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 931 ; free virtual = 3815
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: cb35f664
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.811 | TNS=-298.900 |
+Phase 1 Physical Synthesis Initialization | Checksum: 152001e10
+
+Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 939 ; free virtual = 3824
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 11919311d
+
+Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.10 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 939 ; free virtual = 3824
+Phase 4.1.1.1 BUFG Insertion | Checksum: cb35f664
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:11 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 939 ; free virtual = 3824
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-10.393. For the most accurate timing information please run report_timing.
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+Phase 4.1 Post Commit Optimization | Checksum: 1336d6435
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1336d6435
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1336d6435
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+Phase 4.3 Placer Reporting | Checksum: 1336d6435
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 158fd78b4
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+Ending Placer Task | Checksum: a8f13e9e
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3827
+INFO: [Common 17-83] Releasing license: Implementation
+75 Infos, 55 Warnings, 28 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:20 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 948 ; free virtual = 3833
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 935 ; free virtual = 3826
+INFO: [Common 17-1381] The checkpoint '/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1/multicomp_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file multicomp_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.21 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 922 ; free virtual = 3809
+INFO: [runtcl-4] Executing : report_utilization -file multicomp_wrapper_utilization_placed.rpt -pb multicomp_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file multicomp_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 942 ; free virtual = 3829
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 926 ; free virtual = 3814
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.244 | TNS=-283.166 |
+Phase 1 Physical Synthesis Initialization | Checksum: 163de700c
+
+Time (s): cpu = 00:00:00.88 ; elapsed = 00:00:00.42 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 926 ; free virtual = 3813
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.244 | TNS=-283.166 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 163de700c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.57 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 926 ; free virtual = 3813
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.244 | TNS=-283.166 |
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/dispAttData[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_inst/eth_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_35_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_18_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_80_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_113_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_89_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_120_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_90_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_122_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_161_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_157_n_0.  Did not re-place instance mem_reg_i_157
+INFO: [Physopt 32-572] Net mem_reg_i_157_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net mem_reg_i_157_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_219_n_0.  Did not re-place instance mem_reg_i_219
+INFO: [Physopt 32-710] Processed net mem_reg_i_157_n_0. Critical path length was reduced through logic transformation on cell mem_reg_i_157_comp.
+INFO: [Physopt 32-735] Processed net mem_reg_i_219_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.243 | TNS=-282.970 |
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_54_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_27_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_57_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_98_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_135_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_107_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net mem_reg_i_142_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.230 | TNS=-281.850 |
+INFO: [Physopt 32-702] Processed net mem_reg_i_154_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_90_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_129_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_125_n_0.  Did not re-place instance mem_reg_i_125
+INFO: [Physopt 32-710] Processed net mem_reg_i_129_n_0. Critical path length was reduced through logic transformation on cell mem_reg_i_129_comp.
+INFO: [Physopt 32-735] Processed net mem_reg_i_125_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.210 | TNS=-281.570 |
+INFO: [Physopt 32-662] Processed net mem_reg_i_156_n_0.  Did not re-place instance mem_reg_i_156
+INFO: [Physopt 32-572] Net mem_reg_i_156_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net mem_reg_i_156_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_217_n_0.  Did not re-place instance mem_reg_i_217
+INFO: [Physopt 32-710] Processed net mem_reg_i_156_n_0. Critical path length was reduced through logic transformation on cell mem_reg_i_156_comp.
+INFO: [Physopt 32-735] Processed net mem_reg_i_217_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.163 | TNS=-280.338 |
+INFO: [Physopt 32-702] Processed net mem_reg_i_142_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_108_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_144_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_183_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_179_n_0.  Did not re-place instance mem_reg_i_179
+INFO: [Physopt 32-710] Processed net mem_reg_i_183_n_0. Critical path length was reduced through logic transformation on cell mem_reg_i_183_comp.
+INFO: [Physopt 32-735] Processed net mem_reg_i_179_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.122 | TNS=-279.428 |
+INFO: [Physopt 32-702] Processed net mem_reg_i_170_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_221_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net mem_reg_i_349_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.109 | TNS=-279.246 |
+INFO: [Physopt 32-662] Processed net mem_reg_i_124_n_0.  Did not re-place instance mem_reg_i_124
+INFO: [Physopt 32-572] Net mem_reg_i_124_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net mem_reg_i_124_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_168_n_0.  Did not re-place instance mem_reg_i_168
+INFO: [Physopt 32-710] Processed net mem_reg_i_124_n_0. Critical path length was reduced through logic transformation on cell mem_reg_i_124_comp.
+INFO: [Physopt 32-735] Processed net mem_reg_i_168_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.097 | TNS=-278.392 |
+INFO: [Physopt 32-702] Processed net mem_reg_i_177_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_271_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_267_n_0.  Did not re-place instance mem_reg_i_267
+INFO: [Physopt 32-572] Net mem_reg_i_267_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net mem_reg_i_267_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_371_n_0.  Did not re-place instance mem_reg_i_371
+INFO: [Physopt 32-710] Processed net mem_reg_i_267_n_0. Critical path length was reduced through logic transformation on cell mem_reg_i_267_comp.
+INFO: [Physopt 32-735] Processed net mem_reg_i_371_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.086 | TNS=-278.238 |
+INFO: [Physopt 32-662] Processed net mem_reg_i_179_n_0.  Did not re-place instance mem_reg_i_179
+INFO: [Physopt 32-702] Processed net mem_reg_i_179_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_277_n_0.  Did not re-place instance mem_reg_i_277
+INFO: [Physopt 32-710] Processed net mem_reg_i_179_n_0. Critical path length was reduced through logic transformation on cell mem_reg_i_179_comp_2.
+INFO: [Physopt 32-735] Processed net mem_reg_i_277_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.068 | TNS=-277.986 |
+INFO: [Physopt 32-702] Processed net mem_reg_i_176_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_265_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_261_n_0.  Did not re-place instance mem_reg_i_261
+INFO: [Physopt 32-572] Net mem_reg_i_261_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net mem_reg_i_261_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_196_n_0.  Did not re-place instance mem_reg_i_196
+INFO: [Physopt 32-134] Processed net mem_reg_i_196_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net mem_reg_i_196_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net mem_reg_i_196_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.065 | TNS=-277.930 |
+INFO: [Physopt 32-735] Processed net mem_reg_i_185_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.050 | TNS=-277.734 |
+INFO: [Physopt 32-702] Processed net mem_reg_i_185_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_181_n_0.  Did not re-place instance mem_reg_i_181
+INFO: [Physopt 32-572] Net mem_reg_i_181_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net mem_reg_i_181_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_280_n_0.  Did not re-place instance mem_reg_i_280
+INFO: [Physopt 32-134] Processed net mem_reg_i_280_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net mem_reg_i_280_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net mem_reg_i_280_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_279_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_388_n_0.  Did not re-place instance mem_reg_i_388
+INFO: [Physopt 32-702] Processed net mem_reg_i_388_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i3[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/mem_reg_i_187_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4].  Did not re-place instance computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_15
+INFO: [Physopt 32-572] Net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i4__0_n_105. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i4_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/dispAttData[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_inst/eth_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_54_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_27_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_57_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_98_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_135_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_107_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_142_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_108_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_185_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_181_n_0.  Did not re-place instance mem_reg_i_181
+INFO: [Physopt 32-702] Processed net mem_reg_i_181_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_280_n_0.  Did not re-place instance mem_reg_i_280
+INFO: [Physopt 32-702] Processed net mem_reg_i_280_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_279_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_388_n_0.  Did not re-place instance mem_reg_i_388
+INFO: [Physopt 32-702] Processed net mem_reg_i_388_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i3[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4].  Did not re-place instance computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_15
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i4__0_n_105. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.050 | TNS=-277.734 |
+Phase 3 Critical Path Optimization | Checksum: 163de700c
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 913 ; free virtual = 3800
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.050 | TNS=-277.734 |
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/dispAttData[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_inst/eth_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_54_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_27_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_57_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_98_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_135_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_107_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_142_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_108_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_144_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_185_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_181_n_0.  Did not re-place instance mem_reg_i_181
+INFO: [Physopt 32-572] Net mem_reg_i_181_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net mem_reg_i_181_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_280_n_0.  Did not re-place instance mem_reg_i_280
+INFO: [Physopt 32-134] Processed net mem_reg_i_280_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net mem_reg_i_280_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net mem_reg_i_280_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_279_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_388_n_0.  Did not re-place instance mem_reg_i_388
+INFO: [Physopt 32-702] Processed net mem_reg_i_388_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i3[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/mem_reg_i_187_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4].  Did not re-place instance computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_15
+INFO: [Physopt 32-572] Net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i4__0_n_105. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i4_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/dispAttData[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_inst/eth_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_54_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_27_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_57_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_98_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_135_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_107_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_142_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_108_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_185_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_181_n_0.  Did not re-place instance mem_reg_i_181
+INFO: [Physopt 32-702] Processed net mem_reg_i_181_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_280_n_0.  Did not re-place instance mem_reg_i_280
+INFO: [Physopt 32-702] Processed net mem_reg_i_280_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net mem_reg_i_279_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net mem_reg_i_388_n_0.  Did not re-place instance mem_reg_i_388
+INFO: [Physopt 32-702] Processed net mem_reg_i_388_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i3[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4].  Did not re-place instance computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_i_15
+INFO: [Physopt 32-702] Processed net computer/io1/GEN_2KATTRAM.dispAttRam/ADDRBWRADDR[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net computer/io1/b_addr_i4__0_n_105. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-10.050 | TNS=-277.734 |
+Phase 4 Critical Path Optimization | Checksum: 163de700c
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 918 ; free virtual = 3806
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 919 ; free virtual = 3807
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-10.050 | TNS=-277.734 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.194  |          5.432  |            0  |              0  |                    11  |           0  |           2  |  00:00:06  |
+|  Total          |          0.194  |          5.432  |            0  |              0  |                    11  |           0  |           3  |  00:00:06  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 919 ; free virtual = 3807
+Ending Physical Synthesis Task | Checksum: 103b238ec
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 919 ; free virtual = 3807
+INFO: [Common 17-83] Releasing license: Implementation
+275 Infos, 55 Warnings, 28 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 922 ; free virtual = 3809
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.87 ; elapsed = 00:00:00.25 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 909 ; free virtual = 3804
+INFO: [Common 17-1381] The checkpoint '/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1/multicomp_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 78569bc7 ConstDB: 0 ShapeSum: 4367dbad RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: fc5e199b
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 846 ; free virtual = 3736
+Post Restoration Checksum: NetGraph: a1c1bf8b NumContArr: 5a9c5a10 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: fc5e199b
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 847 ; free virtual = 3736
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: fc5e199b
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 815 ; free virtual = 3705
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: fc5e199b
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 815 ; free virtual = 3705
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1ce505d76
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 803 ; free virtual = 3692
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-9.965 | TNS=-275.345| WHS=-0.477 | THS=-42.546|
+
+Phase 2 Router Initialization | Checksum: 16726ee7b
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 803 ; free virtual = 3693
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0271678 %
+  Global Horizontal Routing Utilization  = 0.0303309 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 3845
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 3829
+  Number of Partially Routed Nets     = 16
+  Number of Node Overlaps             = 29
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 16726ee7b
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 803 ; free virtual = 3692
+Phase 3 Initial Routing | Checksum: 178eacde2
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 797 ; free virtual = 3687
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1212
+ Number of Nodes with overlaps = 496
+ Number of Nodes with overlaps = 190
+ Number of Nodes with overlaps = 98
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.674| TNS=-317.406| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 12ad0dd23
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:21 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 804 ; free virtual = 3694
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 527
+ Number of Nodes with overlaps = 171
+ Number of Nodes with overlaps = 64
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.953| TNS=-320.310| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 14a9b6325
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:26 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 792 ; free virtual = 3682
+Phase 4 Rip-up And Reroute | Checksum: 14a9b6325
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:26 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 792 ; free virtual = 3682
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1695f7c1d
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:26 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 797 ; free virtual = 3687
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.559| TNS=-313.712| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1726a0a56
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 793 ; free virtual = 3683
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1726a0a56
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 793 ; free virtual = 3683
+Phase 5 Delay and Skew Optimization | Checksum: 1726a0a56
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 793 ; free virtual = 3683
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 17861c156
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 792 ; free virtual = 3682
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-11.519| TNS=-312.122| WHS=0.043  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 14ce3cd05
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 792 ; free virtual = 3682
+Phase 6 Post Hold Fix | Checksum: 14ce3cd05
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 792 ; free virtual = 3682
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 2.13218 %
+  Global Horizontal Routing Utilization  = 3.0324 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 35.1351%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 39.6396%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 58.8235%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 64.7059%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 15a26aab3
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 793 ; free virtual = 3683
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 15a26aab3
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 791 ; free virtual = 3681
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1803be6b2
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 791 ; free virtual = 3681
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-11.519| TNS=-312.122| WHS=0.043  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1803be6b2
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 791 ; free virtual = 3681
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:27 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 830 ; free virtual = 3720
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+293 Infos, 56 Warnings, 28 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:00 ; elapsed = 00:00:29 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 830 ; free virtual = 3720
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.34 . Memory (MB): peak = 3223.391 ; gain = 0.000 ; free physical = 813 ; free virtual = 3712
+INFO: [Common 17-1381] The checkpoint '/home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1/multicomp_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file multicomp_wrapper_drc_routed.rpt -pb multicomp_wrapper_drc_routed.pb -rpx multicomp_wrapper_drc_routed.rpx
+Command: report_drc -file multicomp_wrapper_drc_routed.rpt -pb multicomp_wrapper_drc_routed.pb -rpx multicomp_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1/multicomp_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file multicomp_wrapper_methodology_drc_routed.rpt -pb multicomp_wrapper_methodology_drc_routed.pb -rpx multicomp_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file multicomp_wrapper_methodology_drc_routed.rpt -pb multicomp_wrapper_methodology_drc_routed.pb -rpx multicomp_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/david/Documents/GitHub/djrm-EBAZ4205/projects/multicomp-z80/multicomp-z80.runs/impl_1/multicomp_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file multicomp_wrapper_power_routed.rpt -pb multicomp_wrapper_power_summary_routed.pb -rpx multicomp_wrapper_power_routed.rpx
+Command: report_power -file multicomp_wrapper_power_routed.rpt -pb multicomp_wrapper_power_summary_routed.pb -rpx multicomp_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+305 Infos, 56 Warnings, 28 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file multicomp_wrapper_route_status.rpt -pb multicomp_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file multicomp_wrapper_timing_summary_routed.rpt -pb multicomp_wrapper_timing_summary_routed.pb -rpx multicomp_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file multicomp_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file multicomp_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file multicomp_wrapper_bus_skew_routed.rpt -pb multicomp_wrapper_bus_skew_routed.pb -rpx multicomp_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 15 13:24:33 2021...
