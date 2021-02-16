@@ -132,7 +132,12 @@ clk_in1_clk_wiz_0 <= clk_in1;
     COMPENSATION         => "ZHOLD",
     STARTUP_WAIT         => FALSE,
     DIVCLK_DIVIDE        => 1,
-    CLKFBOUT_MULT_F      => 31.5, --10.500,
+    -- mult product needs to be 1050
+    -- CLKFBOUT_MULT_F multiply by 31.5 with 33.3 MHz input
+    -- CLKFBOUT_MULT_F multiply by 10.5 with 100 MHz input
+    -- CLKFBOUT_MULT_F multiply by 21.0 with 50 MHz input
+    -- CLKFBOUT_MULT_F multiply by 42.0 with 25 MHz input
+    CLKFBOUT_MULT_F      => 31.5,
     CLKFBOUT_PHASE       => 0.000,
     CLKFBOUT_USE_FINE_PS => FALSE,
     CLKOUT0_DIVIDE_F     => 21.000, -- ETH @ 50 MHz
@@ -147,7 +152,7 @@ clk_in1_clk_wiz_0 <= clk_in1;
     CLKOUT2_PHASE        => 0.000,
     CLKOUT2_DUTY_CYCLE   => 0.500,
     CLKOUT2_USE_FINE_PS  => FALSE,
-    CLKIN1_PERIOD        => 10.0,
+    CLKIN1_PERIOD        => 30.0, --10.0, -- 100 MHz
     REF_JITTER1          => 0.010)
   port map
     -- Output clocks

@@ -815,9 +815,9 @@
       parameter C_USE_S_AXI_HP3 = 0;
       parameter C_USE_S_AXI_ACP = 0;
       parameter C_PS7_SI_REV = "PRODUCTION";
-      parameter C_FCLK_CLK0_BUF = "TRUE";
-      parameter C_FCLK_CLK1_BUF = "FALSE";
-      parameter C_FCLK_CLK2_BUF = "FALSE";
+      parameter C_FCLK_CLK0_BUF = "FALSE";
+      parameter C_FCLK_CLK1_BUF = "TRUE";
+      parameter C_FCLK_CLK2_BUF = "TRUE";
       parameter C_FCLK_CLK3_BUF = "FALSE";
       parameter C_PACKAGE_NAME = "clg400";
       parameter C_GP0_EN_MODIFIABLE_TXN = "1";
@@ -1139,7 +1139,7 @@ output bit M_AXI_GP0_RREADY
      FCLK_CLK2 = 1'b0;
   end
 
-  always #(5.0) FCLK_CLK2 <= ~FCLK_CLK2;
+  always #(15.000000000015001) FCLK_CLK2 <= ~FCLK_CLK2;
 
   always@(posedge FCLK_CLK2)
   begin

@@ -168,6 +168,7 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
         ,M_AXI_GP0_ACLK("M_AXI_GP0_ACLK")
         ,FCLK_CLK0("FCLK_CLK0")
         ,FCLK_CLK1("FCLK_CLK1")
+        ,FCLK_CLK2("FCLK_CLK2")
         ,FCLK_RESET0_N("FCLK_RESET0_N")
         ,MIO("MIO")
         ,DDR_CAS_n("DDR_CAS_n")
@@ -193,6 +194,7 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
     ,m_rp_bridge_M_AXI_GP0("m_rp_bridge_M_AXI_GP0")     
         ,FCLK_CLK0_clk("FCLK_CLK0_clk", sc_time(8000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
         ,FCLK_CLK1_clk("FCLK_CLK1_clk", sc_time(40000.0,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
+        ,FCLK_CLK2_clk("FCLK_CLK2_clk", sc_time(29999.997600000188,sc_core::SC_PS))//clock period in picoseconds = 1000000/freq(in MZ)
     ,prop(_prop)
     {
         //creating instances of xtlm slave sockets
@@ -241,6 +243,9 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
         SC_METHOD(trigger_FCLK_CLK1_pin);
         sensitive << FCLK_CLK1_clk;
         dont_initialize();
+        SC_METHOD(trigger_FCLK_CLK2_pin);
+        sensitive << FCLK_CLK2_clk;
+        dont_initialize();
         m_rp_bridge_M_AXI_GP0.registerUserExtensionHandlerCallback(&get_extensions_from_tlm);
         m_zynq_tlm_model->rst(qemu_rst);
     }
@@ -259,6 +264,11 @@ processing_system7_v5_5_tlm :: ~processing_system7_v5_5_tlm() {
     //FCLK_CLK1 pin written based on FCLK_CLK1_clk clock value 
     void processing_system7_v5_5_tlm ::trigger_FCLK_CLK1_pin()    {
         FCLK_CLK1.write(FCLK_CLK1_clk.read());
+    }
+    //Method which is sentive to FCLK_CLK2_clk sc_clock object
+    //FCLK_CLK2 pin written based on FCLK_CLK2_clk clock value 
+    void processing_system7_v5_5_tlm ::trigger_FCLK_CLK2_pin()    {
+        FCLK_CLK2.write(FCLK_CLK2_clk.read());
     }
     //ps2pl_rst[0] output reset pin
     void processing_system7_v5_5_tlm :: FCLK_RESET0_N_trigger()   {

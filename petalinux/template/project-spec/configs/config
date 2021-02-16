@@ -275,4 +275,5 @@ CONFIG_USER_LAYER_0=""
 
 
 
+
 CONFIG_SUBSYSTEM_BOOTARGS_GENERATED="console=ttyPS0,115200 earlycon root=/dev/ram0 rw"

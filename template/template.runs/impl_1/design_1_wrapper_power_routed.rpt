@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-| Date             : Sat Feb 13 13:16:16 2021
+| Date             : Tue Feb 16 10:59:51 2021
 | Host             : I7MINT running 64-bit Linux Mint 20.1
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.536        |
+| Total On-Chip Power (W)  | 1.541        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.414        |
+| Dynamic (W)              | 1.418        |
 | Device Static (W)        | 0.122        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 67.3         |
-| Junction Temperature (C) | 42.7         |
+| Max Ambient (C)          | 67.2         |
+| Junction Temperature (C) | 42.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,7 +52,7 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.010 |        7 |       --- |             --- |
+| Clocks                   |     0.010 |        8 |       --- |             --- |
 | Slice Logic              |     0.001 |     3729 |       --- |             --- |
 |   LUT as Logic           |    <0.001 |     1035 |     17600 |            5.88 |
 |   Register               |    <0.001 |     1925 |     35200 |            5.47 |
@@ -61,13 +61,13 @@ Table of Contents
 |   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
 |   F7/F8 Muxes            |    <0.001 |        3 |     17600 |            0.02 |
 |   Others                 |     0.000 |      369 |       --- |             --- |
-| Signals                  |     0.002 |     2664 |       --- |             --- |
+| Signals                  |     0.002 |     2665 |       --- |             --- |
 | Block RAM                |    <0.001 |      0.5 |        60 |            0.83 |
 | MMCM                     |     0.115 |        1 |         2 |           50.00 |
-| I/O                      |     0.011 |       19 |       100 |           19.00 |
+| I/O                      |     0.015 |       20 |       100 |           20.00 |
 | PS7                      |     1.274 |        1 |       --- |             --- |
 | Static Power             |     0.122 |          |           |                 |
-| Total                    |     1.536 |          |           |                 |
+| Total                    |     1.540 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.020 |       0.013 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.072 |       0.064 |      0.008 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -143,6 +143,7 @@ Table of Contents
 | clk_fpga_0                                                                                 | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]          |             8.0 |
 | clk_fpga_1                                                                                 | design_1_i/processing_system7_0/inst/FCLK_CLK1                       |            40.0 |
 | clk_fpga_1                                                                                 | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]          |            40.0 |
+| clk_fpga_2                                                                                 | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]          |            30.0 |
 | clkfbout_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0              |            40.0 |
 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |            33.0 |
 +--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
@@ -157,7 +158,7 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.414 |
+| design_1_wrapper         |     1.418 |
 |   dbg_hub                |     0.004 |
 |     inst                 |     0.004 |
 |       BSCANID.u_xsdbm_id |     0.004 |

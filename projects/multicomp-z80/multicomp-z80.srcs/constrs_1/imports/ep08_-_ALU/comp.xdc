@@ -32,6 +32,10 @@ set_property PACKAGE_PIN Y14 [get_ports MDIO_ETHERNET_0_0_mdio_io]
 set_property IOSTANDARD LVCMOS33 [get_ports ETHERNET_CLOCK]
 set_property PACKAGE_PIN U18 [get_ports ETHERNET_CLOCK]
 
+# 33.3 Mhz MHz
+set_property IOSTANDARD LVCMOS33 [get_ports MULTICOMP_CLOCK]
+set_property PACKAGE_PIN U19 [get_ports MULTICOMP_CLOCK]
+
 # multicomp i/o below
 set_property -dict {PACKAGE_PIN P20 IOSTANDARD LVCMOS33} [get_ports videoR1]
 set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports videoR0]
@@ -73,6 +77,6 @@ set_property CFGBVS VCCO [current_design]
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 
 # Clock definition
-set_property PACKAGE_PIN N18 [get_ports sys_clock]
-set_property IOSTANDARD LVCMOS33 [get_ports sys_clock]
-create_clock -name sys_clk -period 30.00 [get_ports {sys_clock}];                          # 33.333 MHz
+#set_property PACKAGE_PIN N18 [get_ports sys_clock]
+#set_property IOSTANDARD LVCMOS33 [get_ports sys_clock]
+#create_clock -name sys_clk -period 30.00 [get_ports {sys_clock}];                          # 33.333 MHz

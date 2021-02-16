@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-//Date        : Sat Feb 13 13:13:24 2021
+//Date        : Tue Feb 16 10:56:37 2021
 //Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -39,6 +39,7 @@ module design_1_wrapper
     GPIO_O_0,
     MDIO_ETHERNET_0_0_mdc,
     MDIO_ETHERNET_0_0_mdio_io,
+    MULTICOMP_CLOCK,
     enet0_gmii_rxd,
     enet_gmii_txd,
     led_b,
@@ -72,6 +73,7 @@ module design_1_wrapper
   output [1:0]GPIO_O_0;
   output MDIO_ETHERNET_0_0_mdc;
   inout MDIO_ETHERNET_0_0_mdio_io;
+  output MULTICOMP_CLOCK;
   input [3:0]enet0_gmii_rxd;
   output [3:0]enet_gmii_txd;
   output [0:0]led_b;
@@ -109,6 +111,7 @@ module design_1_wrapper
   wire MDIO_ETHERNET_0_0_mdio_io;
   wire MDIO_ETHERNET_0_0_mdio_o;
   wire MDIO_ETHERNET_0_0_mdio_t;
+  wire MULTICOMP_CLOCK;
   wire [3:0]enet0_gmii_rxd;
   wire [3:0]enet_gmii_txd;
   wire [0:0]led_b;
@@ -151,6 +154,7 @@ module design_1_wrapper
         .MDIO_ETHERNET_0_0_mdio_i(MDIO_ETHERNET_0_0_mdio_i),
         .MDIO_ETHERNET_0_0_mdio_o(MDIO_ETHERNET_0_0_mdio_o),
         .MDIO_ETHERNET_0_0_mdio_t(MDIO_ETHERNET_0_0_mdio_t),
+        .MULTICOMP_CLOCK(MULTICOMP_CLOCK),
         .enet0_gmii_rxd(enet0_gmii_rxd),
         .enet_gmii_txd(enet_gmii_txd),
         .led_b(led_b),

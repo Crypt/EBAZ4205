@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x792E3A009EC9B6B8",
+      "boundary_crc": "0xD16909C8FD172889",
       "device": "xc7z010clg400-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -222,6 +222,32 @@
         "direction": "O",
         "left": "1",
         "right": "0"
+      },
+      "MULTICOMP_CLOCK": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_processing_system7_0_0_FCLK_CLK2",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "33333336",
+            "value_src": "user_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -251,7 +277,7 @@
             "value": "25.000000"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "33.333336"
           },
           "PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -305,7 +331,7 @@
             "value": "25000000"
           },
           "PCW_CLK2_FREQ": {
-            "value": "10000000"
+            "value": "33333336"
           },
           "PCW_CLK3_FREQ": {
             "value": "10000000"
@@ -338,7 +364,7 @@
             "value": "1"
           },
           "PCW_EN_CLK2_PORT": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_CLK3_PORT": {
             "value": "0"
@@ -382,6 +408,9 @@
           "PCW_FCLK_CLK1_BUF": {
             "value": "TRUE"
           },
+          "PCW_FCLK_CLK2_BUF": {
+            "value": "TRUE"
+          },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
             "value": "125"
           },
@@ -389,7 +418,7 @@
             "value": "25"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
-            "value": "25"
+            "value": "33.3"
           },
           "PCW_FPGA3_PERIPHERAL_FREQMHZ": {
             "value": "25"
@@ -398,6 +427,9 @@
             "value": "1"
           },
           "PCW_FPGA_FCLK1_ENABLE": {
+            "value": "1"
+          },
+          "PCW_FPGA_FCLK2_ENABLE": {
             "value": "1"
           },
           "PCW_GPIO_EMIO_GPIO_ENABLE": {
@@ -1413,6 +1445,12 @@
           "processing_system7_0/GPIO_O",
           "GPIO_O_0",
           "system_ila_0/probe3"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK2": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK2",
+          "MULTICOMP_CLOCK"
         ]
       }
     }

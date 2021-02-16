@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-| Date             : Mon Feb 15 16:38:10 2021
+| Date             : Tue Feb 16 10:58:29 2021
 | Host             : I7MINT running 64-bit Linux Mint 20.1
 | Command          : report_power -file multicomp_wrapper_power_routed.rpt -pb multicomp_wrapper_power_summary_routed.pb -rpx multicomp_wrapper_power_routed.rpx
 | Design           : multicomp_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.826        |
+| Total On-Chip Power (W)  | 1.830        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.697        |
+| Dynamic (W)              | 1.700        |
 | Device Static (W)        | 0.130        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 63.9         |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.003 |        9 |       --- |             --- |
+| Clocks                   |     0.003 |        8 |       --- |             --- |
 | Slice Logic              |     0.005 |     4428 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2569 |     17600 |           14.60 |
+|   LUT as Logic           |     0.004 |     2572 |     17600 |           14.61 |
 |   CARRY4                 |    <0.001 |      191 |      4400 |            4.34 |
 |   Register               |    <0.001 |      923 |     35200 |            2.62 |
 |   LUT as Distributed RAM |    <0.001 |       48 |      6000 |            0.80 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes            |    <0.001 |       19 |     17600 |            0.11 |
 |   Others                 |     0.000 |      166 |       --- |             --- |
-| Signals                  |     0.005 |     3748 |       --- |             --- |
+| Signals                  |     0.006 |     3751 |       --- |             --- |
 | Block RAM                |     0.016 |     20.5 |        60 |           34.17 |
 | MMCM                     |     0.125 |        1 |         2 |           50.00 |
 | DSPs                     |    <0.001 |        4 |        80 |            5.00 |
-| I/O                      |     0.014 |       36 |       100 |           36.00 |
+| I/O                      |     0.018 |       36 |       100 |           36.00 |
 | PS7                      |     1.528 |        1 |       --- |             --- |
 | Static Power             |     0.130 |          |           |                 |
-| Total                    |     1.826 |          |           |                 |
+| Total                    |     1.830 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,9 +78,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.037 |       0.029 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.037 |       0.028 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.078 |       0.070 |      0.008 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.006 |       0.005 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,11 +141,11 @@ Table of Contents
 +--------------------+-------------------------------------------------------------+-----------------+
 | Clock              | Domain                                                      | Constraint (ns) |
 +--------------------+-------------------------------------------------------------+-----------------+
-| clk_fpga_0         | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |             8.0 |
-| clk_fpga_1         | design_1_i/processing_system7_0/inst/FCLK_CLK1              |            40.0 |
+| clk_fpga_0         | design_1_i/processing_system7_0/inst/FCLK_CLK0              |             8.0 |
+| clk_fpga_1         | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1] |            40.0 |
+| clk_fpga_2         | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2] |            30.0 |
 | clkfbout_clk_wiz_0 | clk_inst/clkfbout_clk_wiz_0                                 |            30.0 |
 | eth_clk_wiz_0      | clk_inst/eth_clk_wiz_0                                      |            20.0 |
-| sys_clk            | sys_clock                                                   |            30.0 |
 | vga_clk_wiz_0      | clk_inst/vga_clk_wiz_0                                      |            40.0 |
 +--------------------+-------------------------------------------------------------+-----------------+
 
@@ -159,7 +159,7 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| multicomp_wrapper             |     1.697 |
+| multicomp_wrapper             |     1.700 |
 |   clk_inst                    |     0.125 |
 |   computer                    |     0.026 |
 |     cpu1                      |     0.003 |

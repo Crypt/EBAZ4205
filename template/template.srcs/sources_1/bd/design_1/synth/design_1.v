@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-//Date        : Sat Feb 13 13:13:24 2021
+//Date        : Tue Feb 16 10:56:37 2021
 //Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -42,6 +42,7 @@ module design_1
     MDIO_ETHERNET_0_0_mdio_i,
     MDIO_ETHERNET_0_0_mdio_o,
     MDIO_ETHERNET_0_0_mdio_t,
+    MULTICOMP_CLOCK,
     enet0_gmii_rxd,
     enet_gmii_txd,
     led_b,
@@ -77,6 +78,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_ETHERNET_0_0 MDIO_I" *) input MDIO_ETHERNET_0_0_mdio_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_ETHERNET_0_0 MDIO_O" *) output MDIO_ETHERNET_0_0_mdio_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_ETHERNET_0_0 MDIO_T" *) output MDIO_ETHERNET_0_0_mdio_t;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.MULTICOMP_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.MULTICOMP_CLOCK, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK2, FREQ_HZ 33333336, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) output MULTICOMP_CLOCK;
   input [3:0]enet0_gmii_rxd;
   output [3:0]enet_gmii_txd;
   output [0:0]led_b;
@@ -107,6 +109,7 @@ module design_1
   wire [0:0]processing_system7_0_ENET0_GMII_TX_EN;
   wire processing_system7_0_FCLK_CLK0;
   wire processing_system7_0_FCLK_CLK1;
+  wire processing_system7_0_FCLK_CLK2;
   wire processing_system7_0_FCLK_RESET0_N;
   wire processing_system7_0_FIXED_IO_DDR_VRN;
   wire processing_system7_0_FIXED_IO_DDR_VRP;
@@ -136,6 +139,7 @@ module design_1
   assign MDIO_ETHERNET_0_0_mdc = processing_system7_0_MDIO_ETHERNET_0_MDC;
   assign MDIO_ETHERNET_0_0_mdio_o = processing_system7_0_MDIO_ETHERNET_0_MDIO_O;
   assign MDIO_ETHERNET_0_0_mdio_t = processing_system7_0_MDIO_ETHERNET_0_MDIO_T;
+  assign MULTICOMP_CLOCK = processing_system7_0_FCLK_CLK2;
   assign enet_gmii_txd[3:0] = xlslice_0_Dout;
   assign led_b[0] = led_flasher_0_led_g;
   assign processing_system7_0_MDIO_ETHERNET_0_MDIO_I = MDIO_ETHERNET_0_0_mdio_i;
@@ -182,6 +186,7 @@ module design_1
         .ENET0_MDIO_T(processing_system7_0_MDIO_ETHERNET_0_MDIO_T),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK1),
         .FCLK_CLK1(processing_system7_0_FCLK_CLK0),
+        .FCLK_CLK2(processing_system7_0_FCLK_CLK2),
         .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
         .GPIO_I({1'b0,1'b0}),
         .GPIO_O(processing_system7_0_GPIO_O),

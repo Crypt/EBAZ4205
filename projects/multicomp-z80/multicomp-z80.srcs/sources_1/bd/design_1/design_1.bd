@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x59900ABE8AB79970",
+      "boundary_crc": "0x9713F8E49CD44620",
       "device": "xc7z010clg400-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -186,6 +186,32 @@
         "direction": "I",
         "left": "3",
         "right": "0"
+      },
+      "MULTICOMP_CLOCK": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_processing_system7_0_0_FCLK_CLK2",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "33333336",
+            "value_src": "user_prop"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -215,7 +241,7 @@
             "value": "25.000000"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "33.333336"
           },
           "PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -269,7 +295,7 @@
             "value": "25000000"
           },
           "PCW_CLK2_FREQ": {
-            "value": "100000000"
+            "value": "33333336"
           },
           "PCW_CLK3_FREQ": {
             "value": "10000000"
@@ -300,6 +326,9 @@
           },
           "PCW_ENET_RESET_SELECT": {
             "value": "Share reset pin"
+          },
+          "PCW_EN_CLK0_PORT": {
+            "value": "1"
           },
           "PCW_EN_CLK1_PORT": {
             "value": "1"
@@ -337,11 +366,14 @@
           "PCW_EN_UART1": {
             "value": "1"
           },
-          "PCW_FCLK_CLK1_BUF": {
+          "PCW_FCLK_CLK0_BUF": {
             "value": "FALSE"
           },
+          "PCW_FCLK_CLK1_BUF": {
+            "value": "TRUE"
+          },
           "PCW_FCLK_CLK2_BUF": {
-            "value": "FALSE"
+            "value": "TRUE"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
             "value": "125"
@@ -350,7 +382,7 @@
             "value": "25"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
-            "value": "100"
+            "value": "33.3333333333"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
@@ -1105,18 +1137,6 @@
       }
     },
     "nets": {
-      "processing_system7_0_FCLK_CLK0": {
-        "ports": [
-          "processing_system7_0/FCLK_CLK0",
-          "processing_system7_0/M_AXI_GP0_ACLK"
-        ]
-      },
-      "processing_system7_0_FCLK_CLK1": {
-        "ports": [
-          "processing_system7_0/FCLK_CLK1",
-          "ETHERNET_CLOCK"
-        ]
-      },
       "xlconstant_0_dout": {
         "ports": [
           "xlconstant_0/dout",
@@ -1169,6 +1189,24 @@
         "ports": [
           "enet0_gmii_rxd",
           "xlconcat_0/In0"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK1": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK1",
+          "ETHERNET_CLOCK"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK0": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK0",
+          "processing_system7_0/M_AXI_GP0_ACLK"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK2": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK2",
+          "MULTICOMP_CLOCK"
         ]
       }
     }

@@ -30,6 +30,9 @@ set_property PACKAGE_PIN Y14 [get_ports MDIO_ETHERNET_0_0_mdio_io]
 # 25 MHz
 set_property IOSTANDARD LVCMOS33 [get_ports ETHERNET_CLOCK]
 set_property PACKAGE_PIN U18 [get_ports ETHERNET_CLOCK]
+# 33.3 Mhz MHz
+set_property IOSTANDARD LVCMOS33 [get_ports MULTICOMP_CLOCK]
+set_property PACKAGE_PIN U19 [get_ports MULTICOMP_CLOCK]
 # blue led
 set_property PACKAGE_PIN A20 [get_ports {led_b[0]}] 
 set_property IOSTANDARD LVCMOS33 [get_ports {led_b[0]}]

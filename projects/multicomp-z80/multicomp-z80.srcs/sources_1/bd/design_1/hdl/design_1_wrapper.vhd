@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
---Date        : Mon Feb 15 16:32:20 2021
+--Date        : Tue Feb 16 10:49:16 2021
 --Host        : I7MINT running 64-bit Linux Mint 20.1
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -41,6 +41,7 @@ entity design_1_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     MDIO_ETHERNET_0_0_mdc : out STD_LOGIC;
     MDIO_ETHERNET_0_0_mdio_io : inout STD_LOGIC;
+    MULTICOMP_CLOCK : out STD_LOGIC;
     enet0_gmii_rxd : in STD_LOGIC_VECTOR ( 3 downto 0 );
     enet_gmii_txd : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
@@ -49,6 +50,23 @@ end design_1_wrapper;
 architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
+    ETHERNET_CLOCK : out STD_LOGIC;
+    ENET0_GMII_TX_EN_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    enet_gmii_txd : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    ENET0_GMII_RX_CLK_0 : in STD_LOGIC;
+    ENET0_GMII_RX_DV_0 : in STD_LOGIC;
+    ENET0_GMII_TX_CLK_0 : in STD_LOGIC;
+    enet0_gmii_rxd : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    MDIO_ETHERNET_0_0_mdc : out STD_LOGIC;
+    MDIO_ETHERNET_0_0_mdio_o : out STD_LOGIC;
+    MDIO_ETHERNET_0_0_mdio_t : out STD_LOGIC;
+    MDIO_ETHERNET_0_0_mdio_i : in STD_LOGIC;
+    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    FIXED_IO_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_ps_clk : inout STD_LOGIC;
+    FIXED_IO_ps_porb : inout STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -64,23 +82,7 @@ architecture STRUCTURE of design_1_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    FIXED_IO_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    ETHERNET_CLOCK : out STD_LOGIC;
-    ENET0_GMII_TX_EN_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    enet_gmii_txd : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    ENET0_GMII_RX_CLK_0 : in STD_LOGIC;
-    ENET0_GMII_RX_DV_0 : in STD_LOGIC;
-    ENET0_GMII_TX_CLK_0 : in STD_LOGIC;
-    enet0_gmii_rxd : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    MDIO_ETHERNET_0_0_mdc : out STD_LOGIC;
-    MDIO_ETHERNET_0_0_mdio_o : out STD_LOGIC;
-    MDIO_ETHERNET_0_0_mdio_t : out STD_LOGIC;
-    MDIO_ETHERNET_0_0_mdio_i : in STD_LOGIC
+    MULTICOMP_CLOCK : out STD_LOGIC
   );
   end component design_1;
   component IOBUF is
@@ -134,6 +136,7 @@ design_1_i: component design_1
       MDIO_ETHERNET_0_0_mdio_i => MDIO_ETHERNET_0_0_mdio_i,
       MDIO_ETHERNET_0_0_mdio_o => MDIO_ETHERNET_0_0_mdio_o,
       MDIO_ETHERNET_0_0_mdio_t => MDIO_ETHERNET_0_0_mdio_t,
+      MULTICOMP_CLOCK => MULTICOMP_CLOCK,
       enet0_gmii_rxd(3 downto 0) => enet0_gmii_rxd(3 downto 0),
       enet_gmii_txd(3 downto 0) => enet_gmii_txd(3 downto 0)
     );

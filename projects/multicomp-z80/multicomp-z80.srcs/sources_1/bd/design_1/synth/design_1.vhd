@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
---Date        : Mon Feb 15 16:32:20 2021
+--Date        : Tue Feb 16 10:49:15 2021
 --Host        : I7MINT running 64-bit Linux Mint 20.1
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -43,6 +43,7 @@ entity design_1 is
     MDIO_ETHERNET_0_0_mdio_i : in STD_LOGIC;
     MDIO_ETHERNET_0_0_mdio_o : out STD_LOGIC;
     MDIO_ETHERNET_0_0_mdio_t : out STD_LOGIC;
+    MULTICOMP_CLOCK : out STD_LOGIC;
     enet0_gmii_rxd : in STD_LOGIC_VECTOR ( 3 downto 0 );
     enet_gmii_txd : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
@@ -183,6 +184,7 @@ architecture STRUCTURE of design_1 is
   signal processing_system7_0_ENET0_GMII_TX_EN : STD_LOGIC_VECTOR ( 0 to 0 );
   signal processing_system7_0_FCLK_CLK0 : STD_LOGIC;
   signal processing_system7_0_FCLK_CLK1 : STD_LOGIC;
+  signal processing_system7_0_FCLK_CLK2 : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRN : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRP : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_MIO : STD_LOGIC_VECTOR ( 53 downto 0 );
@@ -196,7 +198,6 @@ architecture STRUCTURE of design_1 is
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_processing_system7_0_FCLK_CLK2_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_M_AXI_GP0_ARVALID_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_M_AXI_GP0_AWVALID_UNCONNECTED : STD_LOGIC;
@@ -259,6 +260,8 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_INFO of MDIO_ETHERNET_0_0_mdio_i : signal is "xilinx.com:interface:mdio:1.0 MDIO_ETHERNET_0_0 MDIO_I";
   attribute X_INTERFACE_INFO of MDIO_ETHERNET_0_0_mdio_o : signal is "xilinx.com:interface:mdio:1.0 MDIO_ETHERNET_0_0 MDIO_O";
   attribute X_INTERFACE_INFO of MDIO_ETHERNET_0_0_mdio_t : signal is "xilinx.com:interface:mdio:1.0 MDIO_ETHERNET_0_0 MDIO_T";
+  attribute X_INTERFACE_INFO of MULTICOMP_CLOCK : signal is "xilinx.com:signal:clock:1.0 CLK.MULTICOMP_CLOCK CLK";
+  attribute X_INTERFACE_PARAMETER of MULTICOMP_CLOCK : signal is "XIL_INTERFACENAME CLK.MULTICOMP_CLOCK, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK2, FREQ_HZ 33333336, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -277,6 +280,7 @@ begin
   MDIO_ETHERNET_0_0_mdc <= processing_system7_0_MDIO_ETHERNET_0_MDC;
   MDIO_ETHERNET_0_0_mdio_o <= processing_system7_0_MDIO_ETHERNET_0_MDIO_O;
   MDIO_ETHERNET_0_0_mdio_t <= processing_system7_0_MDIO_ETHERNET_0_MDIO_T;
+  MULTICOMP_CLOCK <= processing_system7_0_FCLK_CLK2;
   enet_gmii_txd(3 downto 0) <= xlslice_0_Dout(3 downto 0);
   processing_system7_0_MDIO_ETHERNET_0_MDIO_I <= MDIO_ETHERNET_0_0_mdio_i;
 processing_system7_0: component design_1_processing_system7_0_0
@@ -315,7 +319,7 @@ processing_system7_0: component design_1_processing_system7_0_0
       ENET0_MDIO_T => processing_system7_0_MDIO_ETHERNET_0_MDIO_T,
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
       FCLK_CLK1 => processing_system7_0_FCLK_CLK1,
-      FCLK_CLK2 => NLW_processing_system7_0_FCLK_CLK2_UNCONNECTED,
+      FCLK_CLK2 => processing_system7_0_FCLK_CLK2,
       FCLK_RESET0_N => NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED,
       GPIO_I(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
       GPIO_O(63 downto 0) => NLW_processing_system7_0_GPIO_O_UNCONNECTED(63 downto 0),

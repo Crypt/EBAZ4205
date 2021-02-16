@@ -63,9 +63,10 @@ port(
     ENET0_GMII_TX_CLK_0 : in STD_LOGIC;
     MDIO_ETHERNET_0_0_mdc : out STD_LOGIC;
     MDIO_ETHERNET_0_0_mdio_io : inout STD_LOGIC;
+    MULTICOMP_CLOCK : out STD_LOGIC;
     ETHERNET_CLOCK : out std_logic;
 
-        sys_clock : in STD_LOGIC;
+        --sys_clock : in STD_LOGIC;
         reset : in STD_LOGIC;
 		videoR0		: out std_logic;
 		videoG0		: out std_logic;
@@ -128,11 +129,12 @@ architecture Behavioral of multicomp_wrapper is
     ENET0_GMII_RX_CLK_0 : in STD_LOGIC;
     ENET0_GMII_RX_DV_0 : in STD_LOGIC;
     ENET0_GMII_TX_CLK_0 : in STD_LOGIC;
+    MULTICOMP_CLOCK : out STD_LOGIC; -- comment this line to disable clock outpu
     ETHERNET_CLOCK : out STD_LOGIC
-  );
+   );
   end component design_1;
 
-
+--    signal MULTICOMP_CLOCK : std_logic; -- un-comment this if clock output not wanted
 
     signal clk50 : std_logic := '0';
     signal clk25 : std_logic := '0';
@@ -195,6 +197,7 @@ design_1_i: component design_1
       MDIO_ETHERNET_0_0_mdio_t => MDIO_ETHERNET_0_0_mdio_t,
       enet0_gmii_rxd(3 downto 0) => enet0_gmii_rxd(3 downto 0),
       enet_gmii_txd(3 downto 0) => enet_gmii_txd(3 downto 0),      
+      MULTICOMP_CLOCK => MULTICOMP_CLOCK,
       ETHERNET_CLOCK => ETHERNET_CLOCK
     );
 
@@ -204,8 +207,8 @@ design_1_i: component design_1
 
    clk_inst : entity work.clk_wiz_0_clk_wiz
    port map (
-      --clk_in1  => FCLK_CLK2,
-      clk_in1  => sys_clock,
+      clk_in1  => MULTICOMP_CLOCK,
+      --clk_in1  => sys_clock,
       eth_clk  => clk50, 
       vga_clk  => clk25,
       main_clk => open
