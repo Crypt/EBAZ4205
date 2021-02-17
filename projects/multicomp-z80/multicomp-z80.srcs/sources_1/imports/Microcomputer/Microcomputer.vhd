@@ -33,6 +33,7 @@ entity Microcomputer is
 		videoB1		: out std_logic;
 		hSync			: out std_logic;
 		vSync			: out std_logic;
+		vga_blank			: out std_logic;
 
 		ps2Clk		: inout std_logic;
 		ps2Data		: inout std_logic;

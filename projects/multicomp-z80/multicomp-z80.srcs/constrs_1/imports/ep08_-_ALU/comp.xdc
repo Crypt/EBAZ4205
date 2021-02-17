@@ -33,21 +33,60 @@ set_property IOSTANDARD LVCMOS33 [get_ports ETHERNET_CLOCK]
 set_property PACKAGE_PIN U18 [get_ports ETHERNET_CLOCK]
 
 # 33.3 Mhz MHz
-set_property IOSTANDARD LVCMOS33 [get_ports MULTICOMP_CLOCK]
-set_property PACKAGE_PIN U19 [get_ports MULTICOMP_CLOCK]
+#set_property IOSTANDARD LVCMOS33 [get_ports MULTICOMP_CLOCK]
+#set_property PACKAGE_PIN U19 [get_ports MULTICOMP_CLOCK]
+
+# VGA DAC
+set_property PACKAGE_PIN T19 [get_ports {vga_clk_0}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_clk_0}]
+set_property PACKAGE_PIN G20 [get_ports {vga_blank_0}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vga_blank_0}]
+#set_property PACKAGE_PIN U19 [get_ports {vga_hsync_0}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {vga_hsync_0}]
+#set_property PACKAGE_PIN V20 [get_ports {vga_vsync_0}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {vga_vsync_0}]
+
+
+
+
+
+
+
 
 # multicomp i/o below
-set_property -dict {PACKAGE_PIN P20 IOSTANDARD LVCMOS33} [get_ports videoR1]
-set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports videoR0]
-set_property -dict {PACKAGE_PIN M19 IOSTANDARD LVCMOS33} [get_ports videoG1]
-set_property -dict {PACKAGE_PIN P18 IOSTANDARD LVCMOS33} [get_ports videoG0]
-set_property -dict {PACKAGE_PIN R19 IOSTANDARD LVCMOS33} [get_ports videoB1]
-set_property -dict {PACKAGE_PIN R18 IOSTANDARD LVCMOS33} [get_ports videoB0]
-set_property -dict {PACKAGE_PIN U20 IOSTANDARD LVCMOS33} [get_ports hSync]
+set_property -dict {PACKAGE_PIN L16 IOSTANDARD LVCMOS33} [get_ports videoR1]
+set_property -dict {PACKAGE_PIN J20 IOSTANDARD LVCMOS33} [get_ports videoR0]
+set_property IOSTANDARD LVCMOS33 [get_ports {videoR1}]
+set_property IOSTANDARD LVCMOS33 [get_ports {videoR0}]
+
+set_property -dict {PACKAGE_PIN P18 IOSTANDARD LVCMOS33} [get_ports videoG1]
+set_property -dict {PACKAGE_PIN N20 IOSTANDARD LVCMOS33} [get_ports videoG0]
+set_property IOSTANDARD LVCMOS33 [get_ports {videoG1}]
+set_property IOSTANDARD LVCMOS33 [get_ports {videoG0}]
+
+set_property -dict {PACKAGE_PIN U20 IOSTANDARD LVCMOS33} [get_ports videoB1]
+set_property -dict {PACKAGE_PIN T20 IOSTANDARD LVCMOS33} [get_ports videoB0]
+set_property IOSTANDARD LVCMOS33 [get_ports {videoB1}]
+set_property IOSTANDARD LVCMOS33 [get_ports {videoB0}]
+
+set_property -dict {PACKAGE_PIN U19 IOSTANDARD LVCMOS33} [get_ports hSync]
 set_property -dict {PACKAGE_PIN V20 IOSTANDARD LVCMOS33} [get_ports vSync]
+set_property IOSTANDARD LVCMOS33 [get_ports {hSync}]
+set_property IOSTANDARD LVCMOS33 [get_ports {vSync}]
+
+
+#set_property -dict {PACKAGE_PIN P20 IOSTANDARD LVCMOS33} [get_ports videoR1]
+#set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports videoR0]
+#set_property -dict {PACKAGE_PIN M19 IOSTANDARD LVCMOS33} [get_ports videoG1]
+#set_property -dict {PACKAGE_PIN P18 IOSTANDARD LVCMOS33} [get_ports videoG0]
+#set_property -dict {PACKAGE_PIN R19 IOSTANDARD LVCMOS33} [get_ports videoB1]
+#set_property -dict {PACKAGE_PIN R18 IOSTANDARD LVCMOS33} [get_ports videoB0]
+#set_property -dict {PACKAGE_PIN U20 IOSTANDARD LVCMOS33} [get_ports hSync]
+#set_property -dict {PACKAGE_PIN V20 IOSTANDARD LVCMOS33} [get_ports vSync]
 
 # reset button
-set_property -dict {PACKAGE_PIN K18 IOSTANDARD LVCMOS33} [get_ports reset] 
+set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports reset] 
+#set_property -dict {PACKAGE_PIN K18 IOSTANDARD LVCMOS33} [get_ports reset] 
 set_property PULLUP true [get_ports reset]
 
 # ps2 keyboard
@@ -62,14 +101,22 @@ set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33 } [get_ports {txd1}]
 set_property -dict {PACKAGE_PIN J19 IOSTANDARD LVCMOS33 } [get_ports {rts1}]
 
 # sd card, drive led
-set_property -dict {PACKAGE_PIN J20 IOSTANDARD LVCMOS33 } [get_ports otherLED]
-set_property -dict {PACKAGE_PIN L19 IOSTANDARD LVCMOS33 } [get_ports driveLED]
+#set_property -dict {PACKAGE_PIN J20 IOSTANDARD LVCMOS33 } [get_ports otherLED]
+#set_property -dict {PACKAGE_PIN L19 IOSTANDARD LVCMOS33 } [get_ports driveLED]
+set_property -dict {PACKAGE_PIN W14 IOSTANDARD LVCMOS33 } [get_ports otherLED]
+set_property -dict {PACKAGE_PIN W13 IOSTANDARD LVCMOS33 } [get_ports driveLED]
 
-set_property -dict { PACKAGE_PIN M20 IOSTANDARD LVCMOS33 } [get_ports {sdMOSI}]
+# vga board sd-card on camera J7
+set_property -dict { PACKAGE_PIN E19 IOSTANDARD LVCMOS33 } [get_ports {sdMOSI}]
+set_property -dict { PACKAGE_PIN F19 IOSTANDARD LVCMOS33 } [get_ports {sdCS}]
+set_property -dict { PACKAGE_PIN K17 IOSTANDARD LVCMOS33 } [get_ports {sdSCLK}]
+set_property -dict { PACKAGE_PIN F20 IOSTANDARD LVCMOS33 } [get_ports {sdMISO}]
+# bare ratsnest on data2
+#set_property -dict { PACKAGE_PIN M20 IOSTANDARD LVCMOS33 } [get_ports {sdMOSI}]
+#set_property -dict { PACKAGE_PIN M18 IOSTANDARD LVCMOS33 } [get_ports {sdCS}]
+#set_property -dict { PACKAGE_PIN L16 IOSTANDARD LVCMOS33 } [get_ports {sdSCLK}]
+#set_property -dict { PACKAGE_PIN K19 IOSTANDARD LVCMOS33 } [get_ports {sdMISO}]
 set_property PULLUP true [get_ports sdMOSI]
-set_property -dict { PACKAGE_PIN M18 IOSTANDARD LVCMOS33 } [get_ports {sdCS}]
-set_property -dict { PACKAGE_PIN L16 IOSTANDARD LVCMOS33 } [get_ports {sdSCLK}]
-set_property -dict { PACKAGE_PIN K19 IOSTANDARD LVCMOS33 } [get_ports {sdMISO}]
 set_property PULLUP true [get_ports sdMISO]
 
 # Configuration Bank Voltage Select

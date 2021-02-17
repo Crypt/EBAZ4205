@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-| Date         : Tue Feb 16 10:57:47 2021
+| Date         : Wed Feb 17 15:21:08 2021
 | Host         : I7MINT running 64-bit Linux Mint 20.1
 | Command      : report_control_sets -verbose -file multicomp_wrapper_control_sets_placed.rpt
 | Design       : multicomp_wrapper
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    99 |
-|    Minimum number of control sets                        |    99 |
+| Total control sets                                       |    98 |
+|    Minimum number of control sets                        |    98 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |   269 |
@@ -39,9 +39,9 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    99 |
+| Total control sets |    98 |
 | >= 0 to < 4        |    14 |
-| >= 4 to < 6        |    23 |
+| >= 4 to < 6        |    22 |
 | >= 6 to < 8        |    18 |
 | >= 8 to < 10       |    23 |
 | >= 10 to < 12      |     1 |
@@ -58,120 +58,119 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             128 |           78 |
-| No           | No                    | Yes                    |              71 |           39 |
-| No           | Yes                   | No                     |              48 |           14 |
-| Yes          | No                    | No                     |             307 |          114 |
-| Yes          | No                    | Yes                    |             241 |           94 |
-| Yes          | Yes                   | No                     |             128 |           50 |
+| No           | No                    | No                     |             132 |           72 |
+| No           | No                    | Yes                    |              71 |           40 |
+| No           | Yes                   | No                     |              48 |           13 |
+| Yes          | No                    | No                     |             277 |           93 |
+| Yes          | No                    | Yes                    |             241 |           90 |
+| Yes          | Yes                   | No                     |             154 |           53 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------+-------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
-|         Clock Signal         |               Enable Signal               |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count | Bels / Slice |
-+------------------------------+-------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
-| ~serialClock                 | computer/io2/txd0                         |                                                          |                1 |              1 |         1.00 |
-|  computer/cpu1/n_ioWR5_out   |                                           | computer/cpu1/reset_0                                    |                1 |              1 |         1.00 |
-|  clk_inst/eth_clk            | computer/sd1/sdCS_i_1_n_0                 | computer/cpu1/reset_0                                    |                1 |              1 |         1.00 |
-|  computer/cpu1/u0/RD_n_reg_0 |                                           |                                                          |                1 |              1 |         1.00 |
-| ~clk_inst/eth_clk            | computer/io2/n_rts_i_2_n_0                | computer/io2/p_1_in                                      |                1 |              1 |         1.00 |
-|  clk_inst/eth_clk            |                                           | computer/cpu1/reset_0                                    |                1 |              1 |         1.00 |
-|  clk_inst/eth_clk            |                                           | computer/sd1/led_on_count0                               |                1 |              1 |         1.00 |
-| ~clk_inst/eth_clk            | computer/io1/charHoriz[5]_i_2_n_0         |                                                          |                2 |              2 |         1.00 |
-|  n_wr0                       |                                           | computer/sd1/block_write_i_2_n_0                         |                1 |              2 |         2.00 |
-| ~clk_inst/eth_clk            | computer/io1/startAddr0                   |                                                          |                2 |              2 |         1.00 |
-| ~clk_inst/eth_clk            | computer/videoR0_i_2_n_0                  | computer/io1/GEN_2KATTRAM.dispAttRam/videoR037_out       |                2 |              3 |         1.50 |
-| ~computer/cpu1/u0/CLK        |                                           |                                                          |                1 |              3 |         3.00 |
-|  n_wr0                       |                                           |                                                          |                1 |              3 |         3.00 |
-| ~clk_inst/eth_clk            | computer/io1/videoR1_i_2_n_0              | computer/io1/GEN_REDUCED_CHARS.fontRom/pixelCount_reg[2] |                1 |              3 |         3.00 |
-| ~computer/cpu1/u0/CLK        | computer/io2/rxReadPointer__0             |                                                          |                2 |              4 |         2.00 |
-| ~clk_inst/eth_clk            | computer/io1/E[0]                         | computer/io1/pixelClockCount[3]_i_1_n_0                  |                2 |              4 |         2.00 |
-| ~clk_inst/eth_clk            | computer/io1/dispAttWRData[7]_i_1_n_0     | computer/cpu1/reset_0                                    |                3 |              4 |         1.33 |
-| ~clk_inst/eth_clk            | computer/io1/charHoriz[5]_i_2_n_0         | computer/io1/charHoriz[5]_i_1_n_0                        |                3 |              4 |         1.33 |
-| ~clk_inst/eth_clk            | computer/io1/ps2WriteClkCount_reg[1]_0[0] | computer/io1/ps2WriteClkCount0                           |                1 |              4 |         4.00 |
-| ~clk_inst/eth_clk            | computer/io1/charScanLine                 | computer/io1/charScanLine[3]_i_1_n_0                     |                1 |              4 |         4.00 |
-| ~clk_inst/eth_clk            | computer/io1/startAddr0                   | computer/io1/startAddr[9]_i_1_n_0                        |                1 |              4 |         4.00 |
-|  computer/cpu1/u0/WR_n_reg   |                                           |                                                          |                3 |              4 |         1.33 |
-| ~clk_inst/eth_clk            |                                           | computer/cpu1/reset_0                                    |                2 |              4 |         2.00 |
-|  computer/cpu1/u0/n_wr07_out |                                           |                                                          |                2 |              4 |         2.00 |
-| ~serialClock                 | computer/io2/txBuffer                     | computer/cpu1/u0/reset                                   |                1 |              4 |         4.00 |
-| ~serialClock                 | computer/io2/rxBitCount                   | computer/cpu1/u0/reset                                   |                1 |              4 |         4.00 |
-| ~clk_inst/eth_clk            | computer/io1/dispState0                   |                                                          |                4 |              4 |         1.00 |
-| ~clk_inst/eth_clk            | computer/io1/ps2ClkFiltered_reg_0         | computer/io1/ps2ClkCount[3]_i_1_n_0                      |                1 |              4 |         4.00 |
-|  clk_inst/eth_clk            | computer/sd1/return_state0                |                                                          |                2 |              5 |         2.50 |
-| ~clk_inst/eth_clk            | computer/io1/charVert                     | computer/io1/b_addr_i4_i_2_n_0                           |                3 |              5 |         1.67 |
-| ~clk_inst/eth_clk            | computer/io1/ps2WriteByte                 | computer/io1/ps2WriteByte[4]_i_1_n_0                     |                2 |              5 |         2.50 |
-|  clk_inst/eth_clk            | computer/sd1/state_reg[4]_i_1_n_0         | computer/cpu1/reset_0                                    |                3 |              5 |         1.67 |
-| ~computer/cpu1/u0/CLK        |                                           | computer/cpu1/u0/A_reg[0]_rep__0_1                       |                2 |              5 |         2.50 |
-| ~clk_inst/eth_clk            | computer/io1/cursorVert0                  |                                                          |                3 |              5 |         1.67 |
-| ~clk_inst/eth_clk            | computer/io1/cursorVertRestore0           | computer/io1/cursorVertRestore[4]_i_1_n_0                |                2 |              5 |         2.50 |
-| ~computer/cpu1/u0/RD_n_reg   |                                           | computer/cpu1/u0/A_reg[0]_rep__0_1                       |                2 |              5 |         2.50 |
-|  ENET0_GMII_TX_CLK_0_IBUF    |                                           |                                                          |                2 |              5 |         2.50 |
-| ~clk_inst/eth_clk            | computer/io1/ps2ClkFilter[5]_i_1_n_0      |                                                          |                3 |              6 |         2.00 |
-| ~clk_inst/eth_clk            | computer/io2/rxFilter[5]_i_1_n_0          |                                                          |                3 |              6 |         2.00 |
-|  ENET0_GMII_RX_CLK_0_IBUF    |                                           |                                                          |                4 |              6 |         1.50 |
-| ~computer/cpu1/u0/RD_n_reg   |                                           |                                                          |                2 |              6 |         3.00 |
-| ~serialClock                 | computer/io2/txClockCount                 | computer/cpu1/u0/reset                                   |                2 |              6 |         3.00 |
-| ~clk_inst/eth_clk            | computer/io1/param20__0                   |                                                          |                2 |              7 |         3.50 |
-| ~clk_inst/eth_clk            | computer/io1/cursorVertRestore0           | computer/io1/cursorHorizRestore[6]_i_1_n_0               |                4 |              7 |         1.75 |
-| ~clk_inst/eth_clk            | computer/io1/cursorHoriz[6]_i_1_n_0       |                                                          |                4 |              7 |         1.75 |
-| ~clk_inst/eth_clk            | computer/io1/dispCharWRData0              |                                                          |                3 |              7 |         2.33 |
-|  clk_inst/eth_clk            | computer/sd1/byte_counter0                | computer/sd1/byte_counter[8]_i_1_n_0                     |                3 |              7 |         2.33 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/R[6]_i_1_n_0             | computer/cpu1/reset_0                                    |                4 |              7 |         1.75 |
-| ~clk_inst/eth_clk            | computer/io1/param10__0                   |                                                          |                3 |              7 |         2.33 |
-|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_1[1]        |                                                          |                2 |              7 |         3.50 |
-|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_1[2]        |                                                          |                1 |              7 |         7.00 |
-|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_1[3]        |                                                          |                3 |              7 |         2.33 |
-| ~clk_inst/eth_clk            | computer/io1/param40__0                   | computer/io1/param4[6]_i_1_n_0                           |                4 |              7 |         1.75 |
-| ~clk_inst/eth_clk            | computer/io1/param30__0                   |                                                          |                2 |              7 |         3.50 |
-| ~clk_inst/eth_clk            | computer/io1/ps2ConvertedByte             |                                                          |                4 |              7 |         1.75 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/SP[7]_i_1_n_0            | computer/cpu1/reset_0                                    |                3 |              8 |         2.67 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/TmpAddr[15]_i_1_n_0      | computer/cpu1/reset_0                                    |                3 |              8 |         2.67 |
-| ~clk_inst/eth_clk            | computer/io1/ps2Byte                      | computer/io1/ps2Byte[7]_i_1_n_0                          |                2 |              8 |         4.00 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/SP[15]_i_1_n_0           | computer/cpu1/reset_0                                    |                4 |              8 |         2.00 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/ACC[7]_i_1_n_0           | computer/cpu1/reset_0                                    |                4 |              8 |         2.00 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/IR[7]_i_1_n_0            | computer/cpu1/reset_0                                    |                3 |              8 |         2.67 |
-|  computer/cpu1/u0/WR_n_reg   | computer/cpu1/u0/A_reg[2]_0[0]            |                                                          |                2 |              8 |         4.00 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/BusA[7]_i_1_n_0          |                                                          |                6 |              8 |         1.33 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/E[0]                     | computer/cpu1/reset_0                                    |                3 |              8 |         2.67 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/DO[7]_i_1_n_0            | computer/cpu1/reset_0                                    |                1 |              8 |         8.00 |
-|  computer/cpu1/u0/n_wr07_out | computer/io1/dispByteLatch                |                                                          |                3 |              8 |         2.67 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/I[7]_i_1_n_0             | computer/cpu1/reset_0                                    |                4 |              8 |         2.00 |
-| ~serialClock                 | computer/io2/rxCurrentByteBuffer0         |                                                          |                2 |              8 |         4.00 |
-|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_1[0]        |                                                          |                1 |              8 |         8.00 |
-| ~serialClock                 | computer/io2/txBuffer0                    |                                                          |                2 |              8 |         4.00 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/TmpAddr[7]_i_1_n_0       | computer/cpu1/reset_0                                    |                4 |              8 |         2.00 |
-|  clk_inst/eth_clk            | computer/sd1/dout0                        | computer/sd1/dout[7]_i_1_n_0                             |                5 |              8 |         1.60 |
-| ~clk_inst/eth_clk            | computer/io1/ps2PreviousByte              |                                                          |                2 |              8 |         4.00 |
-|  clk_inst/eth_clk            | computer/sd1/recv_data0                   |                                                          |                2 |              8 |         4.00 |
-|  clk_inst/eth_clk            | computer/sd1/bit_counter0                 |                                                          |                5 |              8 |         1.60 |
-|  clk_inst/eth_clk            | computer/sd1/data_sig0                    |                                                          |                3 |              8 |         2.67 |
-|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_2[0]        |                                                          |                2 |              9 |         4.50 |
-|  clk_inst/eth_clk            | computer/sd1/cmd_out0                     | computer/sd1/cmd_out[55]_i_1_n_0                         |                2 |              9 |         4.50 |
-| ~clk_inst/eth_clk            | computer/io1/p_83_in                      | computer/io1/vertLineCount                               |                3 |             10 |         3.33 |
-| ~clk_inst/eth_clk            | computer/io1/savedCursorHoriz0            |                                                          |                8 |             12 |         1.50 |
-| ~clk_inst/eth_clk            |                                           | computer/io1/p_83_in                                     |                3 |             12 |         4.00 |
-| ~serialClock                 |                                           | computer/cpu1/u0/reset                                   |                4 |             13 |         3.25 |
-|  clk_inst/eth_clk            | computer/sd1/sel                          | computer/sd1/led_on_count0                               |                4 |             14 |         3.50 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/PC[0]_i_1_n_0            | computer/cpu1/reset_0                                    |                4 |             16 |         4.00 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/Ap                       | computer/cpu1/reset_0                                    |                8 |             16 |         2.00 |
-| ~clk_inst/eth_clk            | computer/io1/p_0_in0_in                   |                                                          |                2 |             16 |         8.00 |
-| ~serialClock                 | computer/io2/p_0_in                       |                                                          |                3 |             20 |         6.67 |
-|  clk_inst/eth_clk            |                                           |                                                          |               12 |             24 |         2.00 |
-| ~clk_inst/eth_clk            | computer/io1/kbWatchdogTimer              | computer/io1/kbWatchdogTimer[0]_i_1_n_0                  |                7 |             26 |         3.71 |
-| ~clk_inst/eth_clk            | computer/io1/kbWriteTimer[0]_i_1_n_0      |                                                          |                7 |             26 |         3.71 |
-|  clk_inst/eth_clk            |                                           | computer/io1/clear                                       |                7 |             26 |         3.71 |
-|  clk_inst/eth_clk            | computer/sd1/ocr_data0                    |                                                          |                7 |             32 |         4.57 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/Regs/WEL                 |                                                          |                4 |             32 |         8.00 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/Regs/WEH                 |                                                          |                4 |             32 |         8.00 |
-|  clk_inst/vga_clk            |                                           |                                                          |               25 |             34 |         1.36 |
-| ~clk_inst/eth_clk            |                                           |                                                          |               25 |             38 |         1.52 |
-|  clk_inst/eth_clk            | computer/sd1/cmd_out0                     |                                                          |               15 |             46 |         3.07 |
-|  clk_inst/vga_clk            |                                           | computer/cpu1/reset_0                                    |               29 |             49 |         1.69 |
-|  clk_inst/vga_clk            | computer/cpu1/u0/A[15]_i_1_n_0            | computer/cpu1/reset_0                                    |               34 |             92 |         2.71 |
-+------------------------------+-------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
++------------------------------+---------------------------------------+----------------------------------------------------+------------------+----------------+--------------+
+|         Clock Signal         |             Enable Signal             |                  Set/Reset Signal                  | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------+---------------------------------------+----------------------------------------------------+------------------+----------------+--------------+
+|  clk_inst/eth_clk            | computer/sd1/sdCS_i_1_n_0             | computer/cpu1/reset_0                              |                1 |              1 |         1.00 |
+| ~serialClock                 | computer/io2/txd0                     |                                                    |                1 |              1 |         1.00 |
+|  clk_inst/eth_clk            |                                       | computer/cpu1/reset_0                              |                1 |              1 |         1.00 |
+| ~clk_inst/eth_clk            | computer/io2/n_rts_i_2_n_0            | computer/io2/p_1_in                                |                1 |              1 |         1.00 |
+|  clk_inst/eth_clk            |                                       | computer/sd1/led_on_count0                         |                1 |              1 |         1.00 |
+|  computer/cpu1/u0/RD_n_reg_0 |                                       |                                                    |                1 |              1 |         1.00 |
+|  computer/cpu1/n_ioWR5_out   |                                       | computer/cpu1/reset_0                              |                1 |              1 |         1.00 |
+| ~clk_inst/eth_clk            | computer/io1/startAddr0               | computer/io1/startAddr[9]_i_1_n_0                  |                2 |              2 |         1.00 |
+| ~clk_inst/eth_clk            | computer/io1/startAddr0               |                                                    |                2 |              2 |         1.00 |
+|  n_wr0                       |                                       | computer/sd1/block_write_i_2_n_0                   |                1 |              2 |         2.00 |
+|  n_wr0                       |                                       |                                                    |                1 |              3 |         3.00 |
+| ~clk_inst/eth_clk            | computer/io1/videoR1_i_2_n_0          | computer/io1/GEN_2KATTRAM.dispAttRam/mem_reg_4     |                1 |              3 |         3.00 |
+| ~clk_inst/eth_clk            | computer/videoR0_i_2_n_0              | computer/io1/GEN_2KATTRAM.dispAttRam/videoR037_out |                1 |              3 |         3.00 |
+| ~computer/cpu1/u0/CLK        |                                       |                                                    |                2 |              3 |         1.50 |
+| ~clk_inst/eth_clk            | computer/io1/pixelClockCount0         | computer/io1/pixelClockCount[3]_i_1_n_0            |                1 |              4 |         4.00 |
+| ~clk_inst/eth_clk            | computer/io1/charHoriz[3]_i_2_n_0     | computer/io1/charHoriz[3]_i_1_n_0                  |                2 |              4 |         2.00 |
+| ~clk_inst/eth_clk            | computer/io1/ps2ClkCount              | computer/io1/ps2ClkCount[3]_i_1_n_0                |                1 |              4 |         4.00 |
+| ~clk_inst/eth_clk            | computer/io1/dispState0               |                                                    |                4 |              4 |         1.00 |
+| ~clk_inst/eth_clk            | computer/io1/charScanLine             | computer/io1/charScanLine[3]_i_1_n_0               |                2 |              4 |         2.00 |
+| ~clk_inst/eth_clk            |                                       | computer/cpu1/reset_0                              |                3 |              4 |         1.33 |
+| ~clk_inst/eth_clk            | computer/io1/dispAttWRData[7]_i_1_n_0 | computer/cpu1/reset_0                              |                3 |              4 |         1.33 |
+| ~clk_inst/eth_clk            | computer/io1/E[0]                     | computer/io1/ps2WriteClkCount0                     |                1 |              4 |         4.00 |
+|  computer/cpu1/u0/n_wr07_out |                                       |                                                    |                2 |              4 |         2.00 |
+| ~serialClock                 | computer/io2/rxBitCount               | computer/cpu1/u0/reset                             |                1 |              4 |         4.00 |
+| ~serialClock                 | computer/io2/txBuffer                 | computer/cpu1/u0/reset                             |                1 |              4 |         4.00 |
+|  computer/cpu1/u0/WR_n_reg   |                                       |                                                    |                1 |              4 |         4.00 |
+| ~computer/cpu1/u0/CLK        | computer/io2/rxReadPointer__0         |                                                    |                1 |              4 |         4.00 |
+| ~clk_inst/eth_clk            | computer/io1/cursorVertRestore0       | computer/io1/cursorVertRestore[4]_i_1_n_0          |                2 |              5 |         2.50 |
+| ~clk_inst/eth_clk            | computer/io1/cursorVert0              |                                                    |                2 |              5 |         2.50 |
+| ~clk_inst/eth_clk            | computer/io1/charVert                 | computer/io1/b_addr_i4_i_2_n_0                     |                2 |              5 |         2.50 |
+| ~clk_inst/eth_clk            | computer/io1/ps2WriteByte             | computer/io1/ps2WriteByte[4]_i_1_n_0               |                3 |              5 |         1.67 |
+| ~computer/cpu1/u0/RD_n_reg   |                                       | computer/cpu1/u0/A_reg[0]_rep__0_1                 |                1 |              5 |         5.00 |
+|  ENET0_GMII_TX_CLK_0_IBUF    |                                       |                                                    |                2 |              5 |         2.50 |
+| ~computer/cpu1/u0/CLK        |                                       | computer/cpu1/u0/A_reg[0]_rep__0_1                 |                2 |              5 |         2.50 |
+|  clk_inst/eth_clk            | computer/sd1/return_state0            |                                                    |                3 |              5 |         1.67 |
+|  clk_inst/eth_clk            | computer/sd1/state_reg[4]_i_1_n_0     | computer/cpu1/reset_0                              |                3 |              5 |         1.67 |
+|  ENET0_GMII_RX_CLK_0_IBUF    |                                       |                                                    |                3 |              6 |         2.00 |
+| ~computer/cpu1/u0/RD_n_reg   |                                       |                                                    |                2 |              6 |         3.00 |
+| ~clk_inst/eth_clk            | computer/io1/ps2ClkFilter[5]_i_1_n_0  |                                                    |                2 |              6 |         3.00 |
+| ~clk_inst/eth_clk            | computer/io2/rxFilter[5]_i_1_n_0      |                                                    |                3 |              6 |         2.00 |
+| ~serialClock                 | computer/io2/txClockCount             | computer/cpu1/u0/reset                             |                2 |              6 |         3.00 |
+|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_1[3]    |                                                    |                1 |              7 |         7.00 |
+|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_1[1]    |                                                    |                2 |              7 |         3.50 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/R[6]_i_1_n_0         | computer/cpu1/reset_0                              |                2 |              7 |         3.50 |
+| ~clk_inst/eth_clk            | computer/io1/param30__0               | computer/io1/param3[6]_i_1_n_0                     |                1 |              7 |         7.00 |
+|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_1[2]    |                                                    |                3 |              7 |         2.33 |
+|  clk_inst/eth_clk            | computer/sd1/byte_counter0            | computer/sd1/byte_counter[8]_i_1_n_0               |                3 |              7 |         2.33 |
+| ~clk_inst/eth_clk            | computer/io1/cursorVertRestore0       | computer/io1/cursorHorizRestore[6]_i_1_n_0         |                4 |              7 |         1.75 |
+| ~clk_inst/eth_clk            | computer/io1/cursorHoriz[6]_i_1_n_0   |                                                    |                3 |              7 |         2.33 |
+| ~clk_inst/eth_clk            | computer/io1/param20__0               | computer/io1/param2[6]_i_1_n_0                     |                2 |              7 |         3.50 |
+| ~clk_inst/eth_clk            | computer/io1/ps2ConvertedByte         | computer/io1/ps2ConvertedByte[6]_i_1_n_0           |                2 |              7 |         3.50 |
+| ~clk_inst/eth_clk            | computer/io1/dispCharWRData0          |                                                    |                4 |              7 |         1.75 |
+| ~clk_inst/eth_clk            | computer/io1/param10__0               | computer/io1/param1[6]_i_1_n_0                     |                2 |              7 |         3.50 |
+| ~clk_inst/eth_clk            | computer/io1/param40__0               | computer/io1/param4[6]_i_1_n_0                     |                3 |              7 |         2.33 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/SP[15]_i_1_n_0       | computer/cpu1/reset_0                              |                2 |              8 |         4.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/E[0]                 | computer/cpu1/reset_0                              |                2 |              8 |         4.00 |
+| ~clk_inst/eth_clk            | computer/io1/ps2PreviousByte          |                                                    |                2 |              8 |         4.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/BusA[7]_i_1_n_0      |                                                    |                6 |              8 |         1.33 |
+|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_1[0]    |                                                    |                1 |              8 |         8.00 |
+|  clk_inst/eth_clk            | computer/sd1/dout0                    | computer/sd1/dout[7]_i_1_n_0                       |                2 |              8 |         4.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/I[7]_i_1_n_0         | computer/cpu1/reset_0                              |                5 |              8 |         1.60 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/SP[7]_i_1_n_0        | computer/cpu1/reset_0                              |                2 |              8 |         4.00 |
+|  clk_inst/eth_clk            | computer/sd1/recv_data0               |                                                    |                2 |              8 |         4.00 |
+|  computer/cpu1/u0/n_wr07_out | computer/io1/dispByteLatch            |                                                    |                2 |              8 |         4.00 |
+|  clk_inst/eth_clk            | computer/sd1/bit_counter0             |                                                    |                4 |              8 |         2.00 |
+| ~serialClock                 | computer/io2/rxCurrentByteBuffer0     |                                                    |                1 |              8 |         8.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/ACC[7]_i_1_n_0       | computer/cpu1/reset_0                              |                6 |              8 |         1.33 |
+| ~serialClock                 | computer/io2/txBuffer0                |                                                    |                2 |              8 |         4.00 |
+|  clk_inst/eth_clk            | computer/sd1/data_sig0                |                                                    |                2 |              8 |         4.00 |
+| ~clk_inst/eth_clk            | computer/io1/ps2Byte                  | computer/io1/ps2Byte[7]_i_1_n_0                    |                2 |              8 |         4.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/IR[7]_i_1_n_0        | computer/cpu1/reset_0                              |                2 |              8 |         4.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/TmpAddr[7]_i_1_n_0   | computer/cpu1/reset_0                              |                4 |              8 |         2.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/TmpAddr[15]_i_1_n_0  | computer/cpu1/reset_0                              |                4 |              8 |         2.00 |
+|  computer/cpu1/u0/WR_n_reg   | computer/cpu1/u0/A_reg[2]_0[0]        |                                                    |                2 |              8 |         4.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/DO[7]_i_1_n_0        | computer/cpu1/reset_0                              |                2 |              8 |         4.00 |
+|  n_wr0                       | computer/cpu1/u0/A_reg[0]_rep_2[0]    |                                                    |                2 |              9 |         4.50 |
+|  clk_inst/eth_clk            | computer/sd1/cmd_out0                 | computer/sd1/cmd_out[55]_i_1_n_0                   |                2 |              9 |         4.50 |
+| ~clk_inst/eth_clk            | computer/io1/p_83_in                  | computer/io1/vertLineCount                         |                4 |             10 |         2.50 |
+| ~clk_inst/eth_clk            | computer/io1/savedCursorHoriz0        |                                                    |                7 |             12 |         1.71 |
+| ~clk_inst/eth_clk            |                                       | computer/io1/p_83_in                               |                3 |             12 |         4.00 |
+| ~serialClock                 |                                       | computer/cpu1/u0/reset                             |                6 |             13 |         2.17 |
+|  clk_inst/eth_clk            | computer/sd1/sel                      | computer/sd1/led_on_count0                         |                4 |             14 |         3.50 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/PC[0]_i_1_n_0        | computer/cpu1/reset_0                              |                4 |             16 |         4.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/Ap                   | computer/cpu1/reset_0                              |                9 |             16 |         1.78 |
+| ~clk_inst/eth_clk            | computer/io1/p_0_in0_in               |                                                    |                2 |             16 |         8.00 |
+| ~serialClock                 | computer/io2/p_0_in                   |                                                    |                4 |             20 |         5.00 |
+|  clk_inst/eth_clk            |                                       |                                                    |               12 |             24 |         2.00 |
+| ~clk_inst/eth_clk            | computer/io1/kbWatchdogTimer          | computer/io1/kbWatchdogTimer[0]_i_1_n_0            |                7 |             26 |         3.71 |
+|  clk_inst/eth_clk            |                                       | computer/io1/clear                                 |                7 |             26 |         3.71 |
+| ~clk_inst/eth_clk            | computer/io1/kbWriteTimer[0]_i_1_n_0  |                                                    |                7 |             26 |         3.71 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/Regs/WEH             |                                                    |                4 |             32 |         8.00 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/Regs/WEL             |                                                    |                4 |             32 |         8.00 |
+|  clk_inst/eth_clk            | computer/sd1/ocr_data0                |                                                    |                6 |             32 |         5.33 |
+|  clk_inst/vga_clk            |                                       |                                                    |               20 |             34 |         1.70 |
+| ~clk_inst/eth_clk            |                                       |                                                    |               26 |             42 |         1.62 |
+|  clk_inst/eth_clk            | computer/sd1/cmd_out0                 |                                                    |               14 |             46 |         3.29 |
+|  clk_inst/vga_clk            |                                       | computer/cpu1/reset_0                              |               27 |             49 |         1.81 |
+|  clk_inst/vga_clk            | computer/cpu1/u0/A[15]_i_1_n_0        | computer/cpu1/reset_0                              |               31 |             92 |         2.97 |
++------------------------------+---------------------------------------+----------------------------------------------------+------------------+----------------+--------------+
 
 

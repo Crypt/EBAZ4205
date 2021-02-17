@@ -32,7 +32,7 @@ entity SBCTextDisplayRGB is
 		
 		constant DISPLAY_TOP_SCANLINE : integer := 35+40;
 		constant VERT_SCANLINES : integer := 525; -- NTSC=262, PAL=312
-		constant VSYNC_SCANLINES : integer := 4; -- NTSC/PAL = 4
+		constant VSYNC_SCANLINES : integer := 2; --djrm 4; -- NTSC/PAL = 4
 		constant VERT_PIXEL_SCANLINES : integer := 2;
 
 		
@@ -42,8 +42,10 @@ entity SBCTextDisplayRGB is
 		constant VERT_CHARS : integer := 25;
 		constant HORIZ_CHARS : integer := 80;
 		
-		constant DEFAULT_ATT : std_logic_vector(7 downto 0) := "00001111"; -- background iBGR | foreground iBGR (i=intensity)
-		constant ANSI_DEFAULT_ATT : std_logic_vector(7 downto 0) := "00000111" -- background iBGR | foreground iBGR (i=intensity)
+--		constant DEFAULT_ATT : std_logic_vector(7 downto 0) := "00001111"; -- background iBGR | foreground iBGR (i=intensity)
+		constant DEFAULT_ATT : std_logic_vector(7 downto 0) := "00001011"; -- background iBGR | foreground iBGR (i=intensity)
+--		constant ANSI_DEFAULT_ATT : std_logic_vector(7 downto 0) := "00000111" -- background iBGR | foreground iBGR (i=intensity)
+		constant ANSI_DEFAULT_ATT : std_logic_vector(7 downto 0) := "00000011" -- background iBGR | foreground iBGR (i=intensity)
 	);
 	port (
 		n_reset	: in std_logic;
@@ -65,6 +67,7 @@ entity SBCTextDisplayRGB is
 		videoB1	: out std_logic;
 		hSync  	: buffer  std_logic;
 		vSync  	: buffer  std_logic;
+		vga_blank  	: out  std_logic;
 		
 		-- Monochrome video signals
 		video		: buffer std_logic;
@@ -271,7 +274,7 @@ begin
 	fontRom : entity work.rom -- 1KB FONT ROM
 	generic map (
 	   G_ADDR_BITS => 10,
-	   G_INIT_FILE => "/home/david/Documents/GitHub/zed-multicomp/Components/TERMINAL/CGAFontBoldReduced-x.hex"
+	   G_INIT_FILE => "~/Documents/GitHub/zed-multicomp/Components/TERMINAL/CGAFontBoldReduced-x.hex"
 	)
     port map(
         addr_i => charAddr(9 downto 0),
@@ -508,7 +511,9 @@ end generate GEN_NO_ATTRAM;
 					end if;
 					pixelCount <= pixelCount+1;
 				end if;
+				vga_blank <= '1';
 			else
+			    vga_blank <= '0';
 				videoR0 <= '0';
 				videoG0 <= '0';
 				videoB0 <= '0';

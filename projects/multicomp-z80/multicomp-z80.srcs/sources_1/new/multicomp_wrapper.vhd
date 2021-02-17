@@ -63,32 +63,35 @@ port(
     ENET0_GMII_TX_CLK_0 : in STD_LOGIC;
     MDIO_ETHERNET_0_0_mdc : out STD_LOGIC;
     MDIO_ETHERNET_0_0_mdio_io : inout STD_LOGIC;
-    MULTICOMP_CLOCK : out STD_LOGIC;
+--    MULTICOMP_CLOCK : out STD_LOGIC;  -- comment this line to disable clock output on pin
     ETHERNET_CLOCK : out std_logic;
+    
+    --sys_clock : in STD_LOGIC;
+    reset       : in STD_LOGIC;
 
-        --sys_clock : in STD_LOGIC;
-        reset : in STD_LOGIC;
-		videoR0		: out std_logic;
-		videoG0		: out std_logic;
-		videoB0		: out std_logic;
-		videoR1		: out std_logic;
-		videoG1		: out std_logic;
-		videoB1		: out std_logic;
-		hSync			: out std_logic;
-		vSync			: out std_logic;
+    vga_clk_0   : out std_logic; -- := '0';
+    vga_blank_0 : out std_logic; -- := '1';    
+    videoR0		: out std_logic;
+    videoG0		: out std_logic;
+    videoB0		: out std_logic;
+    videoR1		: out std_logic;
+    videoG1		: out std_logic;
+    videoB1		: out std_logic;
+    hSync		: out std_logic;
+    vSync		: out std_logic;
 
-		ps2Clk		: inout std_logic;
-		ps2Data		: inout std_logic;
-		sdCS			: out std_logic;
-		sdMOSI		: out std_logic;
-		sdMISO		: in std_logic;
-		sdSCLK		: out std_logic;
-		driveLED		: out std_logic :='1';
-		otherLED        : out std_logic;
-		
-		rxd1			: in std_logic;
-		txd1			: out std_logic;
-		rts1			: out std_logic	
+    ps2Clk		: inout std_logic;
+    ps2Data		: inout std_logic;
+    sdCS		: out std_logic;
+    sdMOSI		: out std_logic;
+    sdMISO		: in std_logic;
+    sdSCLK		: out std_logic;
+    driveLED	: out std_logic :='1';
+    otherLED    : out std_logic;
+    
+    rxd1		: in std_logic;
+    txd1		: out std_logic;
+    rts1		: out std_logic	
 
 	);
 end multicomp_wrapper;
@@ -129,13 +132,12 @@ architecture Behavioral of multicomp_wrapper is
     ENET0_GMII_RX_CLK_0 : in STD_LOGIC;
     ENET0_GMII_RX_DV_0 : in STD_LOGIC;
     ENET0_GMII_TX_CLK_0 : in STD_LOGIC;
-    MULTICOMP_CLOCK : out STD_LOGIC; -- comment this line to disable clock outpu
+    MULTICOMP_CLOCK : out STD_LOGIC;
     ETHERNET_CLOCK : out STD_LOGIC
    );
   end component design_1;
 
---    signal MULTICOMP_CLOCK : std_logic; -- un-comment this if clock output not wanted
-
+    signal MULTICOMP_CLOCK : std_logic; -- un-comment this if clock output not wanted
     signal clk50 : std_logic := '0';
     signal clk25 : std_logic := '0';
 
@@ -151,7 +153,6 @@ architecture Behavioral of multicomp_wrapper is
   signal MDIO_ETHERNET_0_0_mdio_i : STD_LOGIC;
   signal MDIO_ETHERNET_0_0_mdio_o : STD_LOGIC;
   signal MDIO_ETHERNET_0_0_mdio_t : STD_LOGIC;
-
 
 begin
 
@@ -228,6 +229,7 @@ design_1_i: component design_1
 		videoB1	=> videoB1,
 		hSync	=> hSync,
 		vSync	=> vSync,
+		vga_blank => vga_blank_0,
 
 		ps2Clk => ps2Clk,
 		ps2Data	=> ps2Data,
@@ -243,6 +245,10 @@ design_1_i: component design_1
 		txd1 => txd1,
 		rts1 => rts1
     );
+
+vga_clk_0 <= clk25;
+--vga_blank_0 <= vga_blank;
+
 
 
 end Behavioral;
