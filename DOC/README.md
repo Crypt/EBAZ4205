@@ -1,5 +1,11 @@
 ## Links to external information
 
+Using Digilent Pmod IPs in Vivado and Vitis
+https://reference.digilentinc.com/reference/programmable-logic/guides/getting-started-with-pmod-ips
+
+An FPGA Tutorial using the ZedBoard
+https://www.beyond-circuits.com/wordpress/tutorial/
+
 Petalinux toolchain 2019.1 Walkthrough
 https://webuiltawallwebuiltthepyramids.blogspot.com/2021/01/ebaz4205-petalinux-installation.html
 
