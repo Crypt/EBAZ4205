@@ -127,6 +127,8 @@ template/**
 /template/template.runs/**
 !/ELLC/**
 !*.md
+!/board**
+*.*~
 
 
 
