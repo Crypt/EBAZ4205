@@ -1,5 +1,8 @@
 ## Links to external information
 
+Hamsterworks FPGA articles
+https://web.archive.org/web/20191020204100/http://www.hamsterworks.co.nz/mediawiki/index.php/FPGA_Projects
+
 Using Digilent Pmod IPs in Vivado and Vitis
 https://reference.digilentinc.com/reference/programmable-logic/guides/getting-started-with-pmod-ips
 

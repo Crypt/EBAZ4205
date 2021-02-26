@@ -128,6 +128,14 @@ copy these files onto an SD card formatted as FAT32 to boot the ebaz board - the
 
 ![Boot links](../image/ebaz4205-boot-links.png)
 
+The meaning of these options is shown in the table below
+
+![Boot options](../image/Zynq-boot-selection.png)
+
+A simple modification to enable switching between nand boot and sd-card boot is to wire a switch and 3k3 resistor in series between IO0 (MIO5) and Vcc (3v3) with R2585 left in place.
+
+![Boot select switch](../image/boot-switch.jpg)
+
 ## use SD partition for root FS
 
 An SD partition formatted as ext4 may be used for the root FS, the neccessary files are created during the petalinux-build process. A modification to the boot command is needed to change the location of the rootfs, example:
