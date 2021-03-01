@@ -156,10 +156,10 @@ CONFIG_haveged=y
 #
 # i2c-tools 
 #
-# CONFIG_i2c-tools is not set
-# CONFIG_i2c-tools-dev is not set
-# CONFIG_i2c-tools-dbg is not set
-# CONFIG_i2c-tools-misc is not set
+CONFIG_i2c-tools=y
+CONFIG_i2c-tools-dev=y
+CONFIG_i2c-tools-dbg=y
+CONFIG_i2c-tools-misc=y
 
 #
 # init-ifupdown 
@@ -2360,10 +2360,10 @@ CONFIG_udev-extraconf=y
 #
 # glibc 
 #
-# CONFIG_glibc is not set
+CONFIG_glibc=y
 # CONFIG_glibc-dev is not set
 # CONFIG_glibc-dbg is not set
-# CONFIG_ldd is not set
+CONFIG_ldd=y
 
 #
 # gnome-desktop-testing 

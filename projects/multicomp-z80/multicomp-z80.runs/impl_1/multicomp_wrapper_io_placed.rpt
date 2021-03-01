@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-| Date                      : Wed Feb 17 15:21:07 2021
+| Date                      : Fri Feb 19 12:51:50 2021
 | Host                      : I7MINT running 64-bit Linux Mint 20.1
 | Command                   : report_io -file multicomp_wrapper_io_placed.rpt
 | Design                    : multicomp_wrapper

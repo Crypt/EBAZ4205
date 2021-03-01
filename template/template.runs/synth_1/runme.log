@@ -13,7 +13,7 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/david/Documents/GitHub/djrm-EBAZ4205/ip_repo/myip_interrupt_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/david/Documents/GitHub/vivado-library'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2471.180 ; gain = 112.055 ; free physical = 515 ; free virtual = 7608
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2482.316 ; gain = 128.066 ; free physical = 1096 ; free virtual = 2698
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
@@ -21,9 +21,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 221688
+INFO: [Synth 8-7075] Helper process launched with PID 1199677
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 165 ; free virtual = 6161
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 163 ; free virtual = 1406
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:55237]
@@ -33,14 +33,14 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2020.2/scri
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:55237]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (2#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (2#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_clk_wiz_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'clk_out1' of module 'design_1_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:147]
 WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 4 connections declared, but only 3 given [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:147]
-INFO: [Synth 8-6157] synthesizing module 'design_1_led_flasher_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_led_flasher_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_led_flasher_0_0' (3#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_led_flasher_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (4#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_led_flasher_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_led_flasher_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_led_flasher_0_0' (3#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_led_flasher_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (4#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:155]
 WARNING: [Synth 8-7071] port 'GPIO_T' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:155]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:155]
@@ -75,10 +75,10 @@ WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWQOS' of module 'design_1_processing_sy
 WARNING: [Synth 8-7071] port 'M_AXI_GP0_WSTRB' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:155]
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 85 connections declared, but only 53 given [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:155]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:209]
-INFO: [Synth 8-6157] synthesizing module 'design_1_system_ila_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_system_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_system_ila_0_0' (5#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_system_ila_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_util_vector_logic_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_util_vector_logic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_util_vector_logic_0_0' (6#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-221530-I7MINT/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_system_ila_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_system_ila_0_0' (5#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_vector_logic_0_0' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_vector_logic_0_0' (6#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/.Xil/Vivado-1199590-I7MINT/realtime/design_1_util_vector_logic_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_2' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_2/synth/design_1_xlconcat_0_2.v:60]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -363,18 +363,18 @@ INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (13#1) [/ho
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (14#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (15#1) [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 898 ; free virtual = 6701
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 938 ; free virtual = 2196
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 855 ; free virtual = 6648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 930 ; free virtual = 2190
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 855 ; free virtual = 6648
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 930 ; free virtual = 2190
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 826 ; free virtual = 6619
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 919 ; free virtual = 2186
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -392,28 +392,35 @@ Finished Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/template/t
 Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_in_context.xdc] for cell 'design_1_i/util_vector_logic_0'
 Finished Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_in_context.xdc] for cell 'design_1_i/util_vector_logic_0'
 Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led_b[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'led_b[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'led_r[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'led_r[0]'. [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc:48]
+CRITICAL WARNING: [Designutils 20-1307] Command '.' is not supported in the xdc constraint file. [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc:58]
+CRITICAL WARNING: [Designutils 20-1307] Command '.' is not supported in the xdc constraint file. [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc:67]
 Finished Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/constrs_1/new/ebaz.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 520 ; free virtual = 6313
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 818 ; free virtual = 2102
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 520 ; free virtual = 6313
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 818 ; free virtual = 2102
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 723 ; free virtual = 6514
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 873 ; free virtual = 2162
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 722 ; free virtual = 6513
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 873 ; free virtual = 2162
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -689,10 +696,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0. (constraint
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/util_vector_logic_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 727 ; free virtual = 6518
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 873 ; free virtual = 2163
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 728 ; free virtual = 6520
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 872 ; free virtual = 2163
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -714,25 +721,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 734 ; free virtual = 6529
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 861 ; free virtual = 2158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 602 ; free virtual = 6397
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 721 ; free virtual = 2034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 602 ; free virtual = 6397
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 721 ; free virtual = 2033
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 600 ; free virtual = 6395
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 719 ; free virtual = 2032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -750,37 +757,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 586 ; free virtual = 6381
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 717 ; free virtual = 2033
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 586 ; free virtual = 6381
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 717 ; free virtual = 2033
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 586 ; free virtual = 6381
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 717 ; free virtual = 2033
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 586 ; free virtual = 6381
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 717 ; free virtual = 2033
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 586 ; free virtual = 6381
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 717 ; free virtual = 2033
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 586 ; free virtual = 6381
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 717 ; free virtual = 2033
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -808,29 +815,32 @@ Report Cell Usage:
 |5     |design_1_util_vector_logic_0  |     1|
 |6     |IBUF                          |     8|
 |7     |IOBUF                         |     1|
-|8     |OBUF                          |    11|
+|8     |OBUF                          |    17|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 586 ; free virtual = 6381
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 717 ; free virtual = 2033
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 643 ; free virtual = 6438
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 643 ; free virtual = 6438
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 775 ; free virtual = 2091
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 775 ; free virtual = 2091
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 637 ; free virtual = 6432
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 768 ; free virtual = 2085
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 666 ; free virtual = 6461
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 797 ; free virtual = 2114
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
 
 INFO: [Common 17-83] Releasing license: Synthesis
-53 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+53 Infos, 41 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:29 . Memory (MB): peak = 2471.180 ; gain = 0.000 ; free physical = 800 ; free virtual = 6595
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 2482.316 ; gain = 0.000 ; free physical = 930 ; free virtual = 2247
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/home/david/Documents/GitHub/djrm-EBAZ4205/template/template.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Feb 16 10:57:38 2021...
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 27 22:56:41 2021...

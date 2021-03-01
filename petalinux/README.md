@@ -167,12 +167,51 @@ Afterwards the new option to install mc appeared in the menu 'petalinux-config -
 
 Then save the configuration < Save > and rebuild the binaries using 'petalinux-build' to make the new FS.
 
-note: when using mc from the serial terminal there is a problem with the line drawing characters, a workaround is to start mc withthe command line option --stickchars, or -a This is not needed when using ssh, the full colour display with proper line drawing is then seen.
+note: when using mc from the serial terminal there is a problem with the line drawing characters, a workaround is to start mc with the command line option --stickchars, or -a This is not needed when using ssh, the full colour display with proper line drawing is then seen.
 
+Latest version when used with tio serial terminal displays line drawing characters without any problems.
 
+## Enviorenment variables
 
+changes to the default enviorenment with script to source at startup.
 
+```
+root@ebaz-4205-djrm:~# cat set-env
+#!/bin/bash
+echo setting LS_OPTS
+export LS_OPTS='--color=auto'
+alias ls='ls ${LS_OPTS}'
+echo setting colour terminal
+export TERM=xterm-color
+echo setting library path
+export LD_LIBRARY_PATH=/ellcc/libecc/lib/arm32v6-linux
 
+root@ebaz-4205-djrm:~# source ./set-env
+setting LS_OPTS
+setting colour terminal
+setting library path
+root@ebaz-4205-djrm:~# 
+```
+
+## rtc commands
+Havn't managed to get the clock device created automatically, something needed in the device tree I expect. The parts are all working though, 1) setup the clock from internet time. 2) read system time from clock chip
+
+```
+# initial setup
+# create rtc device
+echo pcf8563 0x51 > /sys/class/i2c-adapter/i2c-0/new_device
+# get time from time server
+rdate  -s  time.nist.gov
+# update clock chip
+hwclock -w
+```
+```
+# subsequent setup
+# create rtc device
+echo pcf8563 0x51 > /sys/class/i2c-adapter/i2c-0/new_device
+# set system time from clock chip
+hwclock -s
+```
 
 
 

@@ -1,0 +1,53 @@
+petalinux-template Tuesday 23 February 2021
+Zynq> clk dump
+clk             frequency
+    armpll          1333333320
+    ddrpll          1066666656
+     iopll           999999990
+ cpu_6or4x           666666660
+ cpu_3or2x           333333330
+    cpu_2x           222222220
+    cpu_1x           111111110
+     ddr2x           355555552
+     ddr3x           533333328
+       dci            10158730
+     lqspi            33333333
+       smc            99999999
+      pcap           199999998
+      gem0             unknown
+      gem1            16666667
+     fclk0           124999999
+     fclk1            25000000
+     fclk2            33333333
+     fclk3            41666666
+      can0             8000000
+      can1             8000000
+     sdio0            99999999
+     sdio1            99999999
+     uart0            99999999
+     uart1            99999999
+      spi0            15873016
+      spi1            15873016
+       dma           222222220
+ usb0_aper           111111110
+ usb1_aper           111111110
+ gem0_aper           111111110
+ gem1_aper           111111110
+sdio0_aper           111111110
+sdio1_aper           111111110
+ spi0_aper           111111110
+ spi1_aper           111111110
+ can0_aper           111111110
+ can1_aper           111111110
+ i2c0_aper           111111110
+ i2c1_aper           111111110
+uart0_aper           111111110
+uart1_aper           111111110
+ gpio_aper           111111110
+lqspi_aper           111111110
+  smc_aper           111111110
+      swdt           111111110
+   dbg_trc            66666666
+   dbg_apb            66666666
+Zynq> 
+

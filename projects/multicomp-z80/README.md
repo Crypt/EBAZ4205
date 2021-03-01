@@ -1,4 +1,14 @@
-# EBAZ4205 version of multicomp
+# Multicomp
+
+This design is an adaption of an original conversion to zynq described here:
+https://forum.digilentinc.com/topic/20268-zedboard-version-of-multicomp/
+and dowmloaded from here:
+https://github.com/mattuna15/zed-multicomp
+The CP/M version uses a demo disk image from here:
+https://obsolescence.wixsite.com/obsolescence/multicomp-fpga-cpm-demo-disk
+see below for original zed-multicomp readme ...
+
+## EBAZ4205 version of multicomp
 
 This version has 33.3 MHz fabric clock driving clock wizard to generate the clocks needed by multicomp at 50, 25, and 42MHz
 The present design outputs the multicomp clock on pin U19, this can be disabled by editing the top level wrapper.

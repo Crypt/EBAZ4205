@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-| Date         : Wed Feb 17 15:21:50 2021
+| Date         : Fri Feb 19 12:52:36 2021
 | Host         : I7MINT running 64-bit Linux Mint 20.1
 | Command      : report_drc -file multicomp_wrapper_drc_routed.rpt -pb multicomp_wrapper_drc_routed.pb -rpx multicomp_wrapper_drc_routed.rpx
 | Design       : multicomp_wrapper

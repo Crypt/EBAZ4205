@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-// Date        : Sat Feb 13 12:51:29 2021
+// Date        : Sat Feb 27 22:49:07 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
 // Command     : write_verilog -force -mode synth_stub -rename_top design_1_system_ila_0_0 -prefix
 //               design_1_system_ila_0_0_ design_1_system_ila_0_0_stub.v
@@ -15,10 +15,10 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "bd_f60c,Vivado 2020.2.1" *)
 module design_1_system_ila_0_0(clk, probe0, probe1, probe2, probe3)
-/* synthesis syn_black_box black_box_pad_pin="clk,probe0[0:0],probe1[0:0],probe2[1:0],probe3[1:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,probe0[0:0],probe1[0:0],probe2[1:0],probe3[7:0]" */;
   input clk;
   input [0:0]probe0;
   input [0:0]probe1;
   input [1:0]probe2;
-  input [1:0]probe3;
+  input [7:0]probe3;
 endmodule

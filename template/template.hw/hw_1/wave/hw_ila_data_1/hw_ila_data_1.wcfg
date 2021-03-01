@@ -10,21 +10,19 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1025fs"></ZoomEndTime>
+      <ZoomEndTime time="28fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="502"></NameColumnWidth>
-      <ValueColumnWidth column_width="167"></ValueColumnWidth>
+      <ValueColumnWidth column_width="163"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
-   <wave_markers>
-   </wave_markers>
+   <WVObjectSize size="9" />
    <wvobject type="logic" fp_name="design_1_i/system_ila_0/inst/probe0_1">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/probe0_1</obj_property>
       <obj_property name="ObjectShortName">probe0_1</obj_property>
-      <obj_property name="label">led_b</obj_property>
+      <obj_property name="label">led_g</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -49,10 +47,10 @@
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/system_ila_0/inst/probe3_1">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/probe3_1[1:0]</obj_property>
-      <obj_property name="ObjectShortName">probe3_1[1:0]</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/probe3_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="label">GPIO_O_0</obj_property>
+      <obj_property name="label">pmod</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       <obj_property name="isExpanded"></obj_property>
@@ -61,7 +59,7 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/probe0_1</obj_property>
       <obj_property name="ObjectShortName">probe0_1</obj_property>
-      <obj_property name="label">led_b</obj_property>
+      <obj_property name="label">led_g</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -84,10 +82,19 @@
    </wvobject>
    <wvobject type="array" fp_name="design_1_i/system_ila_0/inst/probe3_1">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/probe3_1[1:0]</obj_property>
-      <obj_property name="ObjectShortName">probe3_1[1:0]</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/probe3_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="label">GPIO_O_0</obj_property>
+      <obj_property name="label">pmod</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="design_1_i/system_ila_0/inst/probe3_1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">design_1_i/system_ila_0/inst/probe3_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">probe3_1[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">pmod</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

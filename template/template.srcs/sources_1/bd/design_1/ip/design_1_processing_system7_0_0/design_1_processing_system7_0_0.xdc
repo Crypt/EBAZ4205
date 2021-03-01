@@ -17,11 +17,11 @@
 ############################################################################
 # Clock constraints                                                        #
 ############################################################################
-create_clock -name clk_fpga_0 -period "8" [get_pins "PS7_i/FCLKCLK[0]"]
-set_input_jitter clk_fpga_0 0.24
-#The clocks are asynchronous, user should constrain them appropriately.#
 create_clock -name clk_fpga_1 -period "40" [get_pins "PS7_i/FCLKCLK[1]"]
 set_input_jitter clk_fpga_1 1.2
+#The clocks are asynchronous, user should constrain them appropriately.#
+create_clock -name clk_fpga_0 -period "8" [get_pins "PS7_i/FCLKCLK[0]"]
+set_input_jitter clk_fpga_0 0.24
 #The clocks are asynchronous, user should constrain them appropriately.#
 create_clock -name clk_fpga_2 -period "29.999" [get_pins "PS7_i/FCLKCLK[2]"]
 set_input_jitter clk_fpga_2 0.89997
@@ -214,14 +214,14 @@ set_property slew "slow" [get_ports "MIO[28]"]
 set_property drive "8" [get_ports "MIO[28]"]
 set_property pullup "TRUE" [get_ports "MIO[28]"]
 set_property PIO_DIRECTION "BIDIR" [get_ports "MIO[28]"]
-#  GPIO / gpio[27] / MIO[27]
+#  I2C 0 / sda / MIO[27]
 set_property iostandard "LVCMOS33" [get_ports "MIO[27]"]
 set_property PACKAGE_PIN "D13" [get_ports "MIO[27]"]
 set_property slew "slow" [get_ports "MIO[27]"]
 set_property drive "8" [get_ports "MIO[27]"]
 set_property pullup "TRUE" [get_ports "MIO[27]"]
 set_property PIO_DIRECTION "BIDIR" [get_ports "MIO[27]"]
-#  GPIO / gpio[26] / MIO[26]
+#  I2C 0 / scl / MIO[26]
 set_property iostandard "LVCMOS33" [get_ports "MIO[26]"]
 set_property PACKAGE_PIN "A15" [get_ports "MIO[26]"]
 set_property slew "slow" [get_ports "MIO[26]"]

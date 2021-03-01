@@ -110,10 +110,8 @@ template/**
 !/projects/VGA_COLBAR/README.md
 !/projects/VGA_COLBAR/VGA_COLBAR.png
 /projects/VGA_COLBAR/**
-!/projects/multicomp-z80/**
-/projects/multicomp/**
 /projects/template2/**
-#/projects/
+/projects/
 /workspace/**
 /projects/ADV7123_VGA/**
 !/workspace/ADV7123_VGA_application**
@@ -129,8 +127,11 @@ template/**
 !*.md
 !/board**
 *.*~
-
-
+/projects/multicomp-z80/**
+/projects/multicomp/**
+/projects/multicomp**
+/projects**
+/hidden/**
 
 
 

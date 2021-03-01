@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
 // Date        : Thu Feb 11 16:23:05 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
-// Command     : write_verilog -force -mode funcsim
-//               /home/david/Documents/GitHub/djrm-EBAZ4205/template/template.srcs/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_util_vector_logic_0_0 -prefix
+//               design_1_util_vector_logic_0_0_ design_1_util_vector_logic_0_0_sim_netlist.v
 // Design      : design_1_util_vector_logic_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

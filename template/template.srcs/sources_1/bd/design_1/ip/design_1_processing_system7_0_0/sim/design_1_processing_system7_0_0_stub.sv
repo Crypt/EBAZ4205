@@ -82,9 +82,9 @@ module design_1_processing_system7_0_0 (
   input bit_as_bool ENET0_MDIO_I,
   input bit_as_bool ENET0_EXT_INTIN,
   input bit [7 : 0] ENET0_GMII_RXD,
-  input bit [1 : 0] GPIO_I,
-  output bit [1 : 0] GPIO_O,
-  output bit [1 : 0] GPIO_T,
+  input bit [7 : 0] GPIO_I,
+  output bit [7 : 0] GPIO_O,
+  output bit [7 : 0] GPIO_T,
   output bit_as_bool TTC0_WAVE0_OUT,
   output bit_as_bool TTC0_WAVE1_OUT,
   output bit_as_bool TTC0_WAVE2_OUT,
@@ -176,9 +176,9 @@ module design_1_processing_system7_0_0 (ENET0_GMII_TX_EN,ENET0_GMII_TX_ER,ENET0_
   input bit ENET0_MDIO_I;
   input bit ENET0_EXT_INTIN;
   input bit [7 : 0] ENET0_GMII_RXD;
-  input bit [1 : 0] GPIO_I;
-  output wire [1 : 0] GPIO_O;
-  output wire [1 : 0] GPIO_T;
+  input bit [7 : 0] GPIO_I;
+  output wire [7 : 0] GPIO_O;
+  output wire [7 : 0] GPIO_T;
   output wire TTC0_WAVE0_OUT;
   output wire TTC0_WAVE1_OUT;
   output wire TTC0_WAVE2_OUT;
@@ -267,9 +267,9 @@ module design_1_processing_system7_0_0 (ENET0_GMII_TX_EN,ENET0_GMII_TX_ER,ENET0_
   input bit ENET0_MDIO_I;
   input bit ENET0_EXT_INTIN;
   input bit [7 : 0] ENET0_GMII_RXD;
-  input bit [1 : 0] GPIO_I;
-  output wire [1 : 0] GPIO_O;
-  output wire [1 : 0] GPIO_T;
+  input bit [7 : 0] GPIO_I;
+  output wire [7 : 0] GPIO_O;
+  output wire [7 : 0] GPIO_T;
   output wire TTC0_WAVE0_OUT;
   output wire TTC0_WAVE1_OUT;
   output wire TTC0_WAVE2_OUT;

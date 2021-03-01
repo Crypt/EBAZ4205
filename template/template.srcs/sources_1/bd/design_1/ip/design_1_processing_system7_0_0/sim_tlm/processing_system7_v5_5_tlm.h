@@ -149,9 +149,9 @@ class processing_system7_v5_5_tlm : public sc_core::sc_module   {
     sc_core::sc_in<bool> ENET0_MDIO_I;
     sc_core::sc_in<bool> ENET0_EXT_INTIN;
     sc_core::sc_in<sc_dt::sc_bv<8> >  ENET0_GMII_RXD;
-    sc_core::sc_in<sc_dt::sc_bv<2> >  GPIO_I;
-    sc_core::sc_out<sc_dt::sc_bv<2> >  GPIO_O;
-    sc_core::sc_out<sc_dt::sc_bv<2> >  GPIO_T;
+    sc_core::sc_in<sc_dt::sc_bv<8> >  GPIO_I;
+    sc_core::sc_out<sc_dt::sc_bv<8> >  GPIO_O;
+    sc_core::sc_out<sc_dt::sc_bv<8> >  GPIO_T;
     sc_core::sc_out<bool> TTC0_WAVE0_OUT;
     sc_core::sc_out<bool> TTC0_WAVE1_OUT;
     sc_core::sc_out<bool> TTC0_WAVE2_OUT;

@@ -48,6 +48,24 @@ all: $(PROGS)
 ```
 
 
+## Use of libraries
+
+A more complicated example program makes use of library functions, the libraries used need to be included in the build command. Library files can be statically lined into the executable or loaded at run time. The system ned to know where to find the run-time libraries, the enviorenment should be set to the library location, for example 'export LD_LIBRARY_PATH=/ellcc/libecc/lib/arm32v6-linux' or it can be set in a startup script.
+
+Console test appplication built with static linksge
+```
+/ellcc/bin/ecc -o console -Wall console.c -lcurses -static
+./console
+```
+
+Same example built with dynamic linkage
+```
+export LD_LIBRARY_PATH=/ellcc/libecc/lib/arm32v6-linux
+/ellcc/bin/ecc -o console -Wall console.c -lncurses 
+./console
+```
+
+
 ## Files
 
 [Makefile](./Makefile)
@@ -57,4 +75,6 @@ all: $(PROGS)
 [gpio-test.c](./gpio-test.c)
 
 [gpio-demo.c](./gpio-demo.c)
+
+[console.c](./console.c)
 
