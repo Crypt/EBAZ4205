@@ -1,0 +1,35 @@
+18:49:08 INFO  : Registering command handlers for SDK TCF services
+18:49:09 INFO  : Launching XSCT server: xsct.bat -interactive D:\ebaz\EBAZ4205-PRO-EXAMPLE\TEMP\Temp\Temp.sdk\temp_xsdb_launch_script.tcl
+18:49:11 INFO  : XSCT server has started successfully.
+18:49:11 INFO  : Successfully done setting XSCT server connection channel  
+18:49:11 INFO  : Successfully done setting SDK workspace  
+18:49:11 INFO  : Processing command line option -hwspec D:/ebaz/EBAZ4205-PRO-EXAMPLE/TEMP/Temp/Temp.sdk/design_1_wrapper.hdf.
+18:51:40 INFO  : Invoking Bootgen: bootgen -image helloword.bif -arch zynq -o D:\ebaz\EBAZ4205-PRO-EXAMPLE\TEMP\Temp\Temp.sdk\helloword\bootimage\BOOT.bin
+18:51:40 INFO  : Creating new bif file D:\ebaz\EBAZ4205-PRO-EXAMPLE\TEMP\Temp\Temp.sdk\helloword\bootimage\helloword.bif
+18:51:42 INFO  : Bootgen command execution is done.
+18:54:31 INFO  : Invoking Bootgen: bootgen -image helloword.bif -arch zynq -o D:\ebaz\EBAZ4205-PRO-EXAMPLE\TEMP\Temp\Temp.sdk\helloword\bootimage\BOOT.bin -w on
+18:54:33 INFO  : Bootgen command execution is done.
+18:58:28 INFO  : Invoking Bootgen: bootgen -image NET.bif -arch zynq -o D:\ebaz\EBAZ4205-PRO-EXAMPLE\TEMP\Temp\Temp.sdk\NET\bootimage\BOOT.bin
+18:58:28 INFO  : Creating new bif file D:\ebaz\EBAZ4205-PRO-EXAMPLE\TEMP\Temp\Temp.sdk\NET\bootimage\NET.bif
+18:58:30 INFO  : Bootgen command execution is done.
+19:19:02 INFO  : Registering command handlers for SDK TCF services
+19:19:02 INFO  : Launching XSCT server: xsct.bat -interactive D:\ebaz\EBAZ4205-PRO-EXAMPLE\TEMP\Temp\Temp.sdk\temp_xsdb_launch_script.tcl
+19:19:04 INFO  : XSCT server has started successfully.
+19:19:04 INFO  : Successfully done setting XSCT server connection channel  
+19:19:04 INFO  : Successfully done setting SDK workspace  
+19:19:04 INFO  : Processing command line option -hwspec D:/ebaz/EBAZ4205-PRO-EXAMPLE/TEMP/Temp/Temp.sdk/design_1_wrapper.hdf.
+19:19:04 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+19:19:06 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1588331878891,  Project:1588330116118
+19:19:06 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from D:/ebaz/EBAZ4205-PRO-EXAMPLE/TEMP/Temp/Temp.sdk/design_1_wrapper.hdf.
+19:19:07 INFO  : Copied contents of D:/ebaz/EBAZ4205-PRO-EXAMPLE/TEMP/Temp/Temp.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+19:19:10 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:19:12 INFO  : 
+19:19:13 INFO  : 
+19:19:14 INFO  : 
+19:19:15 INFO  : Updating hardware inferred compiler options for NET.
+19:19:16 INFO  : Updating hardware inferred compiler options for Zynq_FSBL.
+19:19:17 INFO  : Updating hardware inferred compiler options for helloword.
+19:19:17 INFO  : Clearing existing target manager status.
+19:23:20 INFO  : Invoking Bootgen: bootgen -image NetWork.bif -arch zynq -o D:\ebaz\EBAZ4205-PRO-EXAMPLE\TEMP\Temp\Temp.sdk\NetWork\bootimage\BOOT.bin
+19:23:20 INFO  : Creating new bif file D:\ebaz\EBAZ4205-PRO-EXAMPLE\TEMP\Temp\Temp.sdk\NetWork\bootimage\NetWork.bif
+19:23:21 INFO  : Bootgen command execution is done.

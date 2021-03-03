@@ -1,0 +1,14 @@
+verilog xil_defaultlib --include "/opt/Xilinx/Vivado/2020.2/data/xilinx_vip/include" --include "../../../../template.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../template.srcs/sources_1/bd/design_1/ipshared/34f8/hdl" --include "../../../../template.srcs/sources_1/bd/design_1/ipshared/1b7e/hdl/verilog" --include "../../../../template.srcs/sources_1/bd/design_1/ipshared/122e/hdl/verilog" --include "../../../../template.srcs/sources_1/bd/design_1/ipshared/b205/hdl/verilog" --include "../../../../template.srcs/sources_1/bd/design_1/ipshared/c968/hdl/verilog" \
+"../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlconcat_0_1/sim/design_1_xlconcat_0_1.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+"../../../bd/design_1/ip/design_1_led_flasher_0_0/sim/design_1_led_flasher_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlslice_0_0/sim/design_1_xlslice_0_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/sim/bd_f60c.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/bd_0/ip/ip_0/sim/bd_f60c_ila_lib_0.v" \
+"../../../bd/design_1/ip/design_1_system_ila_0_0/sim/design_1_system_ila_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
