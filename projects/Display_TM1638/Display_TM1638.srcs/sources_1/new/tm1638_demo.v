@@ -4,8 +4,6 @@ module tm1638_demo(
     output reg tm_cs,
     output tm_clk,
     output reg tm_rw,
-    //output dio_out,
-    //input dio_in
     inout  tm_dio
     );
 
@@ -30,7 +28,7 @@ module tm1638_demo(
         C_DISP  = 8'b10001111,
         C_ADDR  = 8'b11000000;
 
-    localparam CLK_DIV = 19; // speed of scanner
+    localparam CLK_DIV = 22; //19; // speed of scanner
 
     reg rst = HIGH;
 
@@ -47,26 +45,20 @@ module tm1638_demo(
     //   dio_out    for sending to display
     //   tm_rw      selects input or output
 
-//    reg tm_rw;    // now exposed as output to outside
+    wire tm_rw_;    // now exposed as output to outside
     wire dio_in, dio_out;
    
-// djrm n/a for xilinx
-//    SB_IO #(
-//        .PIN_TYPE(6'b101001),
-//        .PULLUP(1'b1)
-//    ) tm_dio_io (
-//        .PACKAGE_PIN(tm_dio),
-//        .OUTPUT_ENABLE(tm_rw),
-//        .D_IN_0(dio_in),
-//        .D_OUT_0(dio_out)
-//    );
-
-//IOBUF tm_dio_io(
-//    .I(dio_in),
-//    .IO(tm_dio), 
-//    .O(dio_out),
-//    .T(tm_rw) 
-// ); 
+IOBUF #(
+    .DRIVE(12), // Specify the output drive strength
+    .IBUF_LOW_PWR("TRUE"), // Low Power - "TRUE", High Performance = "FALSE"
+    .IOSTANDARD("LVCMOS33"), // Specify the I/O standard
+    .SLEW("SLOW") // Specify the output slew rate
+    ) sig_IOBUF (
+    .I(dio_out),
+    .IO(tm_dio), 
+    .O(dio_in),
+    .T(tm_rw_) 
+ ); 
 
     // setup tm1638 module with it's tristate IO
     //   tm_in      is read from module
@@ -85,13 +77,7 @@ module tm1638_demo(
     wire [7:0] tm_data, tm_in;
     reg [7:0] tm_out;
 
-
-    // IOBUF should have done this
-    assign dio_in = tm_dio;
-    assign tm_dio = tm_rw ? dio_out : 1'bz; // no receive (all 0), send ok
-//    assign tm_dio = tm_rw ? dio_out : 1'b1; // receive ok, partial send
-//    assign tm_dio = tm_rw ? dio_out : 1'b0; //  no receive (all 0), send ok
-    
+    assign tm_rw_ = ~tm_rw; // write is 0
     assign tm_in = tm_data;
     assign tm_data = tm_rw ? tm_out : 8'hZZ;
 

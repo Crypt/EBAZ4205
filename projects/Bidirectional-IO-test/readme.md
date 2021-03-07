@@ -1,8 +1,8 @@
 # Bidirectional I/O pin demo
 
-Bidirectional i/o pins are needed for some protocol drivers, implemetation details were not clear and much experimentation was needed to get a usable result.
+Bidirectional i/o pins are needed for some protocol drivers, implementation details were not clear and much experimentation was needed to get a usable result.
 
-The essesnce as a verilog example is as shown below:
+The essence as a verilog example is as shown below:
 
 ```
 // pin sig is the bidirectional input output pin
@@ -23,13 +23,13 @@ The essesnce as a verilog example is as shown below:
 
 ```
 module bidi_test(
-    inout sig,    
+    inout sig,
     output led_r,
     output led_g,
     input button,
     input clk
     );
-    
+
 wire sig_I;
 wire sig_O;
 reg sig_T;

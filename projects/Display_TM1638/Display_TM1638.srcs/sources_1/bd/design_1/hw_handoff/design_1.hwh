@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar  3 13:05:05 2021" VIVADOVERSION="2020.2.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar  7 00:58:12 2021" VIVADOVERSION="2020.2.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -60,24 +60,19 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="GPIO_O"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="MDIO_ETHERNET_0_0_mdc" SIGIS="clk" SIGNAME="processing_system7_0_ENET0_MDIO_MDC">
+    <PORT DIR="O" NAME="tm_cs_0" SIGIS="undef" SIGNAME="tm1638_demo_0_tm_cs">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="ENET0_MDIO_MDC"/>
+        <CONNECTION INSTANCE="tm1638_demo_0" PORT="tm_cs"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="MDIO_ETHERNET_0_0_mdio_o" SIGIS="undef" SIGNAME="processing_system7_0_ENET0_MDIO_O">
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="tm_clk_0" SIGIS="clk" SIGNAME="tm1638_demo_0_tm_clk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="ENET0_MDIO_O"/>
+        <CONNECTION INSTANCE="tm1638_demo_0" PORT="tm_clk"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="MDIO_ETHERNET_0_0_mdio_t" SIGIS="undef" SIGNAME="processing_system7_0_ENET0_MDIO_T">
+    <PORT DIR="IO" NAME="tm_dio_0" SIGIS="undef" SIGNAME="External_Ports_tm_dio_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="ENET0_MDIO_T"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="MDIO_ETHERNET_0_0_mdio_i" SIGIS="undef" SIGNAME="processing_system7_0_ENET0_MDIO_I">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="ENET0_MDIO_I"/>
+        <CONNECTION INSTANCE="tm1638_demo_0" PORT="tm_dio"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -185,24 +180,29 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="tm_cs_0" SIGIS="undef" SIGNAME="tm1638_demo_0_tm_cs">
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="MDIO_ETHERNET_0_0_mdc" SIGIS="clk" SIGNAME="processing_system7_0_ENET0_MDIO_MDC">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="tm1638_demo_0" PORT="tm_cs"/>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="ENET0_MDIO_MDC"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="tm_clk_0" SIGIS="clk" SIGNAME="tm1638_demo_0_tm_clk">
+    <PORT DIR="O" NAME="MDIO_ETHERNET_0_0_mdio_o" SIGIS="undef" SIGNAME="processing_system7_0_ENET0_MDIO_O">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="tm1638_demo_0" PORT="tm_clk"/>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="ENET0_MDIO_O"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="MDIO_ETHERNET_0_0_mdio_t" SIGIS="undef" SIGNAME="processing_system7_0_ENET0_MDIO_T">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="ENET0_MDIO_T"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="MDIO_ETHERNET_0_0_mdio_i" SIGIS="undef" SIGNAME="processing_system7_0_ENET0_MDIO_I">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="ENET0_MDIO_I"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="tm_rw_0" SIGIS="undef" SIGNAME="tm1638_demo_0_tm_rw">
       <CONNECTIONS>
         <CONNECTION INSTANCE="tm1638_demo_0" PORT="tm_rw"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="tm_dio_0" SIGIS="undef" SIGNAME="External_Ports_tm_dio_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="tm1638_demo_0" PORT="tm_dio"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1942,6 +1942,7 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="system_ila_0" PORT="clk"/>
+            <CONNECTION INSTANCE="tm1638_demo_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="25000000" DIR="O" NAME="FCLK_CLK1" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
@@ -1954,7 +1955,6 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="MULTICOMP_CLOCK"/>
             <CONNECTION INSTANCE="led_flasher_0" PORT="clk"/>
-            <CONNECTION INSTANCE="tm1638_demo_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -6092,9 +6092,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="33333336" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK2">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK2"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="tm_cs" SIGIS="undef" SIGNAME="tm1638_demo_0_tm_cs">

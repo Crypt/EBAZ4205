@@ -118,10 +118,6 @@
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:fedc6699</spirit:value>
           </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>sim_type</spirit:name>
-            <spirit:value>rtl</spirit:value>
-          </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
@@ -142,10 +138,6 @@
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:fedc6699</spirit:value>
           </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>sim_type</spirit:name>
-            <spirit:value>rtl</spirit:value>
-          </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
@@ -158,7 +150,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 03 13:05:10 UTC 2021</spirit:value>
+            <spirit:value>Sun Mar 07 00:58:17 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -176,7 +168,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 03 12:40:11 UTC 2021</spirit:value>
+            <spirit:value>Sun Mar 07 00:51:14 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -207,7 +199,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 03 13:05:04 UTC 2021</spirit:value>
+            <spirit:value>Sun Mar 07 00:58:11 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -227,7 +219,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 03 13:05:04 UTC 2021</spirit:value>
+            <spirit:value>Sun Mar 07 00:58:11 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>

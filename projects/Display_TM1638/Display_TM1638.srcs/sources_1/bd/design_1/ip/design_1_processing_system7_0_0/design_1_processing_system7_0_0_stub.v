@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-// Date        : Tue Mar  2 11:20:39 2021
+// Date        : Tue Mar  2 08:25:55 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
-// Command     : write_verilog -force -mode synth_stub
-//               /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_processing_system7_0_0 -prefix
+//               design_1_processing_system7_0_0_ design_1_processing_system7_0_0_stub.v
 // Design      : design_1_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

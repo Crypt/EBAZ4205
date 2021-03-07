@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-// Date        : Tue Mar  2 16:29:30 2021
+// Date        : Sat Mar  6 23:39:32 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
 // Command     : write_verilog -force -mode funcsim
 //               /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/ip/design_1_led_flasher_0_0/design_1_led_flasher_0_0_sim_netlist.v

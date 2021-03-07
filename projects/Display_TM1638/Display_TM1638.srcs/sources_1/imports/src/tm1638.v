@@ -13,7 +13,7 @@ module tm1638(
     output reg dio_out
     );
 
-    localparam CLK_DIV = 4; // seems happy at 12MHz with 3
+    localparam CLK_DIV = 7; // seems happy at 12MHz with 3
     localparam CLK_DIV1 = CLK_DIV - 1;
     localparam [1:0]
         S_IDLE      = 2'h0,

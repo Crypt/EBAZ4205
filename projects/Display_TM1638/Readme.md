@@ -1,9 +1,15 @@
 # TM1639 LED & Button driver
 
-This is a partrially working example program which is supposed to drive leds and read buttons, the button rading part cannot be got working at the same time as correct LED driving. WIP
+A test project was built to explore the requirements of the IOBUF component, the findings applied to this project and now input and output are working as expected.
 
-the variations of IP in file tm1638_demo.v around line 80 show the problem. [tm1638_demo.v](./Display_TM1638.srcs/sources_1/new/tm1638_demo.v)
+The demo PL application does successive reads and writes of all buttons and leds, If a button is pressed the corresponding number is replaced by a DP.
 
-The code is an adaption of a working example here: [tm1638-verilog](https://github.com/alangarf/tm1638-verilog)
+[TM1638-Demo.mp4](./TM1638-Demo.mp4)
 
-The switch from transmiting to receiving data isnt working properly. Smething went wrong withthe conversion to Vivado, I dont have the neccessary experience to fix the problem.
+The code is an adaption of an example here: [tm1638-verilog](https://github.com/alangarf/tm1638-verilog)
+
+A LA Frame showing all the input and output requests is shown below, in this example the first and last buttons is pressed, shown as the read sequence 0x80, 0x00, 0x00, 0x08.
+
+Although not needed for the protocol the read/write signal is also exposed in this demo - it was needed during development testing and may now be removed.
+
+![TM1638-LA-Frame.png](./TM1638-LA-Frame.png)

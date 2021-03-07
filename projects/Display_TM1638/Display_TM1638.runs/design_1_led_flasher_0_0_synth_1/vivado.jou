@@ -2,8 +2,8 @@
 # Vivado v2020.2.1 (64-bit)
 # SW Build 3080587 on Fri Dec 11 14:53:26 MST 2020
 # IP Build 3080454 on Sat Dec 12 02:19:03 MST 2020
-# Start of session at: Tue Mar  2 16:28:54 2021
-# Process ID: 542482
+# Start of session at: Sat Mar  6 23:38:28 2021
+# Process ID: 653662
 # Current directory: /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/design_1_led_flasher_0_0_synth_1
 # Command line: vivado -log design_1_led_flasher_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_led_flasher_0_0.tcl
 # Log file: /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/design_1_led_flasher_0_0_synth_1/design_1_led_flasher_0_0.vds

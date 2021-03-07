@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-//Date        : Wed Mar  3 13:05:04 2021
+//Date        : Sun Mar  7 00:58:11 2021
 //Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper

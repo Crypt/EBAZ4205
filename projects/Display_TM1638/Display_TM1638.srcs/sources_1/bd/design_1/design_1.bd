@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x337E9FDD4595FEE7",
+      "boundary_crc": "0x337E9FDD13386DF9",
       "device": "xc7z010clg400-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -104,13 +104,7 @@
       "enet_gmii_txd": {
         "direction": "O",
         "left": "3",
-        "right": "0",
-        "parameters": {
-          "PortWidth": {
-            "value": "4",
-            "value_src": "ip_prop"
-          }
-        }
+        "right": "0"
       },
       "ENET0_GMII_TX_EN_0": {
         "direction": "O",
@@ -180,21 +174,7 @@
       "switch": {
         "direction": "I",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "PortType": {
-            "value": "undef",
-            "value_src": "ip_prop"
-          },
-          "PortType.PROP_SRC": {
-            "value": "false",
-            "value_src": "ip_prop"
-          },
-          "PortWidth": {
-            "value": "2",
-            "value_src": "ip_prop"
-          }
-        }
+        "right": "0"
       },
       "ETHERNET_CLOCK": {
         "type": "clk",
@@ -281,11 +261,11 @@
           }
         }
       },
-      "tm_rw_0": {
-        "direction": "O"
-      },
       "tm_dio_0": {
         "direction": "IO"
+      },
+      "tm_rw_0": {
+        "direction": "O"
       }
     },
     "components": {
@@ -1322,21 +1302,7 @@
             "direction": "O"
           },
           "switch": {
-            "direction": "I",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              },
-              "PortWidth": {
-                "value": "2",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "clk": {
             "type": "clk",
@@ -1368,11 +1334,11 @@
             "direction": "I",
             "parameters": {
               "FREQ_HZ": {
-                "value": "33333336",
+                "value": "125000000",
                 "value_src": "user_prop"
               },
               "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK2",
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
                 "value_src": "default_prop"
               }
             }
@@ -1394,6 +1360,12 @@
       }
     },
     "interface_nets": {
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
       "processing_system7_0_MDIO_ETHERNET_0": {
         "interface_ports": [
           "MDIO_ETHERNET_0_0",
@@ -1404,12 +1376,6 @@
         "interface_ports": [
           "DDR",
           "processing_system7_0/DDR"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
         ]
       }
     },
@@ -1498,7 +1464,8 @@
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "system_ila_0/clk"
+          "system_ila_0/clk",
+          "tm1638_demo_0/clk"
         ]
       },
       "processing_system7_0_GPIO_O": {
@@ -1512,8 +1479,7 @@
         "ports": [
           "processing_system7_0/FCLK_CLK2",
           "MULTICOMP_CLOCK",
-          "led_flasher_0/clk",
-          "tm1638_demo_0/clk"
+          "led_flasher_0/clk"
         ]
       },
       "tm1638_demo_0_tm_cs": {
@@ -1528,12 +1494,6 @@
           "tm_clk_0"
         ]
       },
-      "tm1638_demo_0_tm_rw": {
-        "ports": [
-          "tm1638_demo_0/tm_rw",
-          "tm_rw_0"
-        ]
-      },
       "switch_1": {
         "ports": [
           "switch",
@@ -1545,6 +1505,12 @@
         "ports": [
           "tm_dio_0",
           "tm1638_demo_0/tm_dio"
+        ]
+      },
+      "tm1638_demo_0_tm_rw": {
+        "ports": [
+          "tm1638_demo_0/tm_rw",
+          "tm_rw_0"
         ]
       }
     }
