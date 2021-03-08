@@ -185,6 +185,9 @@ proc create_root_design { parentCell } {
   set pmod [ create_bd_port -dir O -from 7 -to 0 pmod ]
   set switch [ create_bd_port -dir I -from 0 -to 0 switch ]
   set tm_clk_0 [ create_bd_port -dir O -type clk tm_clk_0 ]
+  set_property -dict [ list \
+   CONFIG.ASSOCIATED_BUSIF {} \
+ ] $tm_clk_0
   set tm_cs_0 [ create_bd_port -dir O tm_cs_0 ]
   set tm_dio_0 [ create_bd_port -dir IO tm_dio_0 ]
   set tm_rw_0 [ create_bd_port -dir O tm_rw_0 ]
@@ -676,8 +679,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins system_ila_0/clk] [get_bd_pins tm1638_demo_0/clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK2 [get_bd_ports MULTICOMP_CLOCK] [get_bd_pins led_flasher_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK2]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins clk_wiz_0/resetn] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
-  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_ports pmod] [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins system_ila_0/probe3]
+  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins system_ila_0/probe3]
   connect_bd_net -net switch_1 [get_bd_ports switch] [get_bd_pins led_flasher_0/switch] [get_bd_pins system_ila_0/probe2]
+  connect_bd_net -net tm1638_demo_0_keys [get_bd_ports pmod] [get_bd_pins tm1638_demo_0/dots] [get_bd_pins tm1638_demo_0/keys] [get_bd_pins tm1638_demo_0/larson]
   connect_bd_net -net tm1638_demo_0_tm_clk [get_bd_ports tm_clk_0] [get_bd_pins tm1638_demo_0/tm_clk]
   connect_bd_net -net tm1638_demo_0_tm_cs [get_bd_ports tm_cs_0] [get_bd_pins tm1638_demo_0/tm_cs]
   connect_bd_net -net tm1638_demo_0_tm_rw [get_bd_ports tm_rw_0] [get_bd_pins tm1638_demo_0/tm_rw]

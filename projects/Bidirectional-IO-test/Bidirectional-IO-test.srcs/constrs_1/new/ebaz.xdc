@@ -74,9 +74,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports {tm_cs_0}]
 set_property PACKAGE_PIN F19 [get_ports {tm_clk_0}] 
 set_property IOSTANDARD LVCMOS33 [get_ports {tm_clk_0}]
 
-set_property PACKAGE_PIN E19 [get_ports {tm_dio_0}] 
-set_property IOSTANDARD LVCMOS33 [get_ports {tm_dio_0}]
-
 set_property PACKAGE_PIN F20 [get_ports {tm_rw_0}] 
 set_property IOSTANDARD LVCMOS33 [get_ports {tm_rw_0}]
+
+set_property PACKAGE_PIN E19 [get_ports {tm_dio_0}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {tm_dio_0}]
 set_property PULLUP true [get_ports {tm_dio_0}]
+

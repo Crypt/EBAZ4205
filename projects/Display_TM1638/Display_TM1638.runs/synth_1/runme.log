@@ -13,7 +13,7 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/david/Documents/GitHub/djrm-EBAZ4205/ip_repo/myip_interrupt_1.0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/david/Documents/GitHub/vivado-library'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2440.227 ; gain = 80.039 ; free physical = 1943 ; free virtual = 3843
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2458.301 ; gain = 104.051 ; free physical = 1192 ; free virtual = 2978
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
@@ -21,9 +21,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 750833
+INFO: [Synth 8-7075] Helper process launched with PID 1564286
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 619 ; free virtual = 2519
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 167 ; free virtual = 1651
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:55237]
@@ -33,52 +33,52 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2020.2/scri
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [/opt/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:55237]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (2#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_clk_wiz_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'clk_out1' of module 'design_1_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:160]
-WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 4 connections declared, but only 3 given [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:160]
-INFO: [Synth 8-6157] synthesizing module 'design_1_led_flasher_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_led_flasher_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_led_flasher_0_0' (3#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_led_flasher_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (4#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'GPIO_T' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_BREADY' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_RREADY' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WLAST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARBURST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLOCK' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARSIZE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWBURST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLOCK' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWSIZE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARPROT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWPROT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARADDR' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWADDR' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WDATA' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARCACHE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLEN' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARQOS' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWCACHE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLEN' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWQOS' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WSTRB' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 85 connections declared, but only 53 given [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:222]
-INFO: [Synth 8-6157] synthesizing module 'design_1_system_ila_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_system_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_system_ila_0_0' (5#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_system_ila_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_tm1638_demo_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_tm1638_demo_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_tm1638_demo_0_0' (6#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-750705-I7MINT/realtime/design_1_tm1638_demo_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (2#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_clk_wiz_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'clk_out1' of module 'design_1_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:161]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 4 connections declared, but only 3 given [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:161]
+INFO: [Synth 8-6157] synthesizing module 'design_1_led_flasher_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_led_flasher_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_led_flasher_0_0' (3#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_led_flasher_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (4#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'GPIO_T' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_BREADY' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_RREADY' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WLAST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WVALID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARBURST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLOCK' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARSIZE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWBURST' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLOCK' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWSIZE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARPROT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWPROT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARADDR' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWADDR' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WDATA' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARCACHE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLEN' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARQOS' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWCACHE' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLEN' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWQOS' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WSTRB' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 85 connections declared, but only 53 given [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:223]
+INFO: [Synth 8-6157] synthesizing module 'design_1_system_ila_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_system_ila_0_0' (5#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_tm1638_demo_0_0' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_tm1638_demo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_tm1638_demo_0_0' (6#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/.Xil/Vivado-1564157-I7MINT/realtime/design_1_tm1638_demo_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_1' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_1/synth/design_1_xlconcat_0_1.v:60]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 4 - type: integer 
@@ -229,18 +229,18 @@ INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (12#1) [/ho
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (13#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (14#1) [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1405 ; free virtual = 3306
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 936 ; free virtual = 2438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1400 ; free virtual = 3300
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 929 ; free virtual = 2432
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1400 ; free virtual = 3300
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 929 ; free virtual = 2432
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1395 ; free virtual = 3296
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 924 ; free virtual = 2428
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -270,21 +270,21 @@ Parsing XDC File [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/s
 Finished Parsing XDC File [/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1313 ; free virtual = 3214
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 826 ; free virtual = 2345
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1313 ; free virtual = 3214
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 826 ; free virtual = 2345
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1378 ; free virtual = 3280
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 888 ; free virtual = 2409
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1378 ; free virtual = 3280
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 888 ; free virtual = 2409
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -561,10 +561,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0. (constraint
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/tm1638_demo_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/led_flasher_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1378 ; free virtual = 3280
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 889 ; free virtual = 2410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1378 ; free virtual = 3280
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 888 ; free virtual = 2410
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -586,25 +586,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1366 ; free virtual = 3271
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 873 ; free virtual = 2402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1244 ; free virtual = 3149
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 739 ; free virtual = 2277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1244 ; free virtual = 3149
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 739 ; free virtual = 2277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1242 ; free virtual = 3148
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 737 ; free virtual = 2276
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -622,37 +622,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1242 ; free virtual = 3148
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 730 ; free virtual = 2276
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1242 ; free virtual = 3148
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 730 ; free virtual = 2276
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1242 ; free virtual = 3148
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 730 ; free virtual = 2276
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1242 ; free virtual = 3148
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 730 ; free virtual = 2276
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1242 ; free virtual = 3148
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 730 ; free virtual = 2276
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1242 ; free virtual = 3148
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 730 ; free virtual = 2276
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -683,18 +683,18 @@ Report Cell Usage:
 |8     |OBUF                          |    20|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1242 ; free virtual = 3148
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 730 ; free virtual = 2276
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1301 ; free virtual = 3206
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1301 ; free virtual = 3206
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 787 ; free virtual = 2334
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 787 ; free virtual = 2334
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1295 ; free virtual = 3200
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 780 ; free virtual = 2328
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1325 ; free virtual = 3231
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 810 ; free virtual = 2358
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
@@ -702,9 +702,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 49 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 2440.227 ; gain = 0.000 ; free physical = 1459 ; free virtual = 3365
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 2458.301 ; gain = 0.000 ; free physical = 941 ; free virtual = 2490
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint '/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar  7 00:59:51 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  8 14:36:04 2021...

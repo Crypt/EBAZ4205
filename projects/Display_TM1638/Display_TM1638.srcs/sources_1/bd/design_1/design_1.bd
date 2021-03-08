@@ -227,11 +227,6 @@
           }
         }
       },
-      "pmod": {
-        "direction": "O",
-        "left": "7",
-        "right": "0"
-      },
       "tm_cs_0": {
         "direction": "O"
       },
@@ -266,6 +261,11 @@
       },
       "tm_rw_0": {
         "direction": "O"
+      },
+      "pmod": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
       }
     },
     "components": {
@@ -1343,6 +1343,21 @@
               }
             }
           },
+          "larson": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "dots": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "keys": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
           "tm_cs": {
             "direction": "O"
           },
@@ -1471,8 +1486,7 @@
       "processing_system7_0_GPIO_O": {
         "ports": [
           "processing_system7_0/GPIO_O",
-          "system_ila_0/probe3",
-          "pmod"
+          "system_ila_0/probe3"
         ]
       },
       "processing_system7_0_FCLK_CLK2": {
@@ -1511,6 +1525,14 @@
         "ports": [
           "tm1638_demo_0/tm_rw",
           "tm_rw_0"
+        ]
+      },
+      "tm1638_demo_0_keys": {
+        "ports": [
+          "tm1638_demo_0/keys",
+          "pmod",
+          "tm1638_demo_0/larson",
+          "tm1638_demo_0/dots"
         ]
       }
     }

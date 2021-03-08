@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-//Date        : Sun Mar  7 00:58:11 2021
+//Date        : Mon Mar  8 14:34:16 2021
 //Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -132,6 +132,7 @@ module design_1
   wire processing_system7_0_MDIO_ETHERNET_0_MDIO_O;
   wire processing_system7_0_MDIO_ETHERNET_0_MDIO_T;
   wire [0:0]switch_1;
+  wire [7:0]tm1638_demo_0_keys;
   wire tm1638_demo_0_tm_clk;
   wire tm1638_demo_0_tm_cs;
   wire tm1638_demo_0_tm_rw;
@@ -151,7 +152,7 @@ module design_1
   assign MULTICOMP_CLOCK = processing_system7_0_FCLK_CLK2;
   assign enet_gmii_txd[3:0] = xlslice_0_Dout;
   assign led_g[0] = led_flasher_0_led_g;
-  assign pmod[7:0] = processing_system7_0_GPIO_O;
+  assign pmod[7:0] = tm1638_demo_0_keys;
   assign processing_system7_0_MDIO_ETHERNET_0_MDIO_I = MDIO_ETHERNET_0_0_mdio_i;
   assign switch_1 = switch[0];
   assign tm_clk_0 = tm1638_demo_0_tm_clk;
@@ -227,6 +228,9 @@ module design_1
         .probe3(processing_system7_0_GPIO_O));
   design_1_tm1638_demo_0_0 tm1638_demo_0
        (.clk(processing_system7_0_FCLK_CLK1),
+        .dots(tm1638_demo_0_keys),
+        .keys(tm1638_demo_0_keys),
+        .larson(tm1638_demo_0_keys),
         .tm_clk(tm1638_demo_0_tm_clk),
         .tm_cs(tm1638_demo_0_tm_cs),
         .tm_dio(tm_dio_0),

@@ -45,8 +45,9 @@ IOBUF #(
     .T(sig_T) // 3-state enable input, high=input, low=output
 );
 
-// output led is connected to bidirectional output to gnd via resistor
-// input switch is connected to bidirectional i/o using led/resistor as pullup
+// pin sig is the bidirectional input output pin
+// output led is connected from bidirectional output to gnd via resistor
+// input switch is connected to bidirectional input using led/resistor as pullup
 
 // test vectors:
 // assign sig_T = 0; // green led flashes as cnt[22] ok  (red led on)

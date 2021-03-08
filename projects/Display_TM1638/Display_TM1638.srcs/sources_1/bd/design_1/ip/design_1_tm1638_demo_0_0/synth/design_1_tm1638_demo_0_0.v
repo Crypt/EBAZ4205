@@ -57,6 +57,9 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_tm1638_demo_0_0 (
   clk,
+  larson,
+  dots,
+  keys,
   tm_cs,
   tm_clk,
   tm_rw,
@@ -66,6 +69,9 @@ module design_1_tm1638_demo_0_0 (
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
+input wire [7 : 0] larson;
+input wire [7 : 0] dots;
+output wire [7 : 0] keys;
 output wire tm_cs;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME tm_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_tm1638_demo_0_0_tm_clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 tm_clk CLK" *)
@@ -75,6 +81,9 @@ inout wire tm_dio;
 
   tm1638_demo inst (
     .clk(clk),
+    .larson(larson),
+    .dots(dots),
+    .keys(keys),
     .tm_cs(tm_cs),
     .tm_clk(tm_clk),
     .tm_rw(tm_rw),
