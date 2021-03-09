@@ -30,4 +30,25 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_tm
 # IP: bd/design_1/ip/design_1_led_flasher_0_0/design_1_led_flasher_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_led_flasher_0_0 || ORIG_REF_NAME==design_1_led_flasher_0_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_rst_ps7_0_125M_0/design_1_rst_ps7_0_125M_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rst_ps7_0_125M_0 || ORIG_REF_NAME==design_1_rst_ps7_0_125M_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlslice_1_0/design_1_xlslice_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlslice_1_0 || ORIG_REF_NAME==design_1_xlslice_1_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlslice_2_0/design_1_xlslice_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlslice_2_0 || ORIG_REF_NAME==design_1_xlslice_2_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlslice_3_0/design_1_xlslice_3_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlslice_3_0 || ORIG_REF_NAME==design_1_xlslice_3_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlslice_4_0/design_1_xlslice_4_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlslice_4_0 || ORIG_REF_NAME==design_1_xlslice_4_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_Binary_to_BCD_0_0/design_1_Binary_to_BCD_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_Binary_to_BCD_0_0 || ORIG_REF_NAME==design_1_Binary_to_BCD_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_quadrature_decoder_0_0/design_1_quadrature_decoder_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_quadrature_decoder_0_0 || ORIG_REF_NAME==design_1_quadrature_decoder_0_0} -quiet] -quiet
+
 # XDC: bd/design_1/design_1_ooc.xdc

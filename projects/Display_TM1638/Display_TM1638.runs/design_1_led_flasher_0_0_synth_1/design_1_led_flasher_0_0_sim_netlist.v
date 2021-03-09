@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-// Date        : Sat Mar  6 23:39:32 2021
+// Date        : Tue Mar  9 10:28:13 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_led_flasher_0_0_sim_netlist.v
@@ -17,33 +17,39 @@
 (* NotValidForBitStream *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (led,
+    pulse,
     switch,
     clk);
   output led;
+  output pulse;
   input switch;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 33333336, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK2, INSERT_VIP 0" *) input clk;
 
   wire clk;
   wire led;
+  wire pulse;
   wire switch;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher inst
        (.clk(clk),
         .led(led),
+        .pulse(pulse),
         .switch(switch));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher
-   (led,
+   (pulse,
+    led,
     clk,
     switch);
+  output pulse;
   output led;
   input clk;
   input switch;
 
   wire clk;
   wire \cnt[0]_i_2_n_0 ;
-  wire [23:20]cnt_reg;
+  wire [23:22]cnt_reg;
   wire \cnt_reg[0]_i_1_n_0 ;
   wire \cnt_reg[0]_i_1_n_1 ;
   wire \cnt_reg[0]_i_1_n_2 ;
@@ -113,6 +119,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher
   wire \cnt_reg_n_0_[8] ;
   wire \cnt_reg_n_0_[9] ;
   wire led;
+  wire pulse;
   wire switch;
   wire [3:3]\NLW_cnt_reg[20]_i_1_CO_UNCONNECTED ;
 
@@ -247,7 +254,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher
        (.C(clk),
         .CE(1'b1),
         .D(\cnt_reg[20]_i_1_n_7 ),
-        .Q(cnt_reg[20]),
+        .Q(pulse),
         .R(1'b0));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \cnt_reg[20]_i_1 
@@ -256,7 +263,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\cnt_reg[20]_i_1_n_4 ,\cnt_reg[20]_i_1_n_5 ,\cnt_reg[20]_i_1_n_6 ,\cnt_reg[20]_i_1_n_7 }),
-        .S({cnt_reg[23:22],\cnt_reg_n_0_[21] ,cnt_reg[20]}));
+        .S({cnt_reg,\cnt_reg_n_0_[21] ,pulse}));
   FDRE #(
     .INIT(1'b0)) 
     \cnt_reg[21] 
@@ -366,7 +373,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_led_flasher
     led__0
        (.I0(cnt_reg[23]),
         .I1(cnt_reg[22]),
-        .I2(cnt_reg[20]),
+        .I2(pulse),
         .I3(switch),
         .O(led));
 endmodule

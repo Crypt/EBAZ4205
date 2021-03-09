@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
--- Date        : Mon Mar  8 14:35:16 2021
+-- Date        : Tue Mar  9 14:54:12 2021
 -- Host        : I7MINT running 64-bit Linux Mint 20.1
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_tm1638_demo_0_0_stub.vhdl
@@ -17,6 +17,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     clk : in STD_LOGIC;
     larson : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dots : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    digits : in STD_LOGIC_VECTOR ( 31 downto 0 );
     keys : out STD_LOGIC_VECTOR ( 7 downto 0 );
     tm_cs : out STD_LOGIC;
     tm_clk : out STD_LOGIC;
@@ -30,7 +31,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,larson[7:0],dots[7:0],keys[7:0],tm_cs,tm_clk,tm_rw,tm_dio";
+attribute black_box_pad_pin of stub : architecture is "clk,larson[7:0],dots[7:0],digits[31:0],keys[7:0],tm_cs,tm_clk,tm_rw,tm_dio";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "tm1638_demo,Vivado 2020.2.1";
 begin

@@ -22,12 +22,14 @@
 
 module led_flasher(
     output led,
+    output pulse,
     input switch,
     input clk
     );
 reg [23:0] cnt;
 
 assign led =  (cnt[23]) || (cnt[22]) || (cnt[20] && switch); // led
+assign pulse = cnt[20];
 
 initial begin
 cnt = 0;

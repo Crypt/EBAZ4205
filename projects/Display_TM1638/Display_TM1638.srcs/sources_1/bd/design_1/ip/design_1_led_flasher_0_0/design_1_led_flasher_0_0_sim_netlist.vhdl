@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
--- Date        : Sat Mar  6 23:39:32 2021
+-- Date        : Tue Mar  9 10:28:14 2021
 -- Host        : I7MINT running 64-bit Linux Mint 20.1
 -- Command     : write_vhdl -force -mode funcsim
---               /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/ip/design_1_led_flasher_0_0/design_1_led_flasher_0_0_sim_netlist.vhdl
+--               /home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.srcs/sources_1/bd/design_1/ip/design_1_led_flasher_0_0/design_1_led_flasher_0_0_sim_netlist.vhdl
 -- Design      : design_1_led_flasher_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,6 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_led_flasher_0_0_led_flasher is
   port (
+    pulse : out STD_LOGIC;
     led : out STD_LOGIC;
     clk : in STD_LOGIC;
     switch : in STD_LOGIC
@@ -26,7 +27,7 @@ end design_1_led_flasher_0_0_led_flasher;
 
 architecture STRUCTURE of design_1_led_flasher_0_0_led_flasher is
   signal \cnt[0]_i_2_n_0\ : STD_LOGIC;
-  signal cnt_reg : STD_LOGIC_VECTOR ( 23 downto 20 );
+  signal cnt_reg : STD_LOGIC_VECTOR ( 23 downto 22 );
   signal \cnt_reg[0]_i_1_n_0\ : STD_LOGIC;
   signal \cnt_reg[0]_i_1_n_1\ : STD_LOGIC;
   signal \cnt_reg[0]_i_1_n_2\ : STD_LOGIC;
@@ -95,6 +96,7 @@ architecture STRUCTURE of design_1_led_flasher_0_0_led_flasher is
   signal \cnt_reg_n_0_[7]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[8]\ : STD_LOGIC;
   signal \cnt_reg_n_0_[9]\ : STD_LOGIC;
+  signal \^pulse\ : STD_LOGIC;
   signal \NLW_cnt_reg[20]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \cnt_reg[0]_i_1\ : label is 11;
@@ -104,6 +106,7 @@ architecture STRUCTURE of design_1_led_flasher_0_0_led_flasher is
   attribute ADDER_THRESHOLD of \cnt_reg[4]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \cnt_reg[8]_i_1\ : label is 11;
 begin
+  pulse <= \^pulse\;
 \cnt[0]_i_2\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -306,7 +309,7 @@ begin
       C => clk,
       CE => '1',
       D => \cnt_reg[20]_i_1_n_7\,
-      Q => cnt_reg(20),
+      Q => \^pulse\,
       R => '0'
     );
 \cnt_reg[20]_i_1\: unisim.vcomponents.CARRY4
@@ -324,7 +327,7 @@ begin
       O(0) => \cnt_reg[20]_i_1_n_7\,
       S(3 downto 2) => cnt_reg(23 downto 22),
       S(1) => \cnt_reg_n_0_[21]\,
-      S(0) => cnt_reg(20)
+      S(0) => \^pulse\
     );
 \cnt_reg[21]\: unisim.vcomponents.FDRE
     generic map(
@@ -490,7 +493,7 @@ begin
         port map (
       I0 => cnt_reg(23),
       I1 => cnt_reg(22),
-      I2 => cnt_reg(20),
+      I2 => \^pulse\,
       I3 => switch,
       O => led
     );
@@ -502,6 +505,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_led_flasher_0_0 is
   port (
     led : out STD_LOGIC;
+    pulse : out STD_LOGIC;
     switch : in STD_LOGIC;
     clk : in STD_LOGIC
   );
@@ -527,6 +531,7 @@ inst: entity work.design_1_led_flasher_0_0_led_flasher
      port map (
       clk => clk,
       led => led,
+      pulse => pulse,
       switch => switch
     );
 end STRUCTURE;

@@ -59,6 +59,7 @@ module design_1_tm1638_demo_0_0 (
   clk,
   larson,
   dots,
+  digits,
   keys,
   tm_cs,
   tm_clk,
@@ -71,6 +72,7 @@ module design_1_tm1638_demo_0_0 (
 input wire clk;
 input wire [7 : 0] larson;
 input wire [7 : 0] dots;
+input wire [31 : 0] digits;
 output wire [7 : 0] keys;
 output wire tm_cs;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME tm_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_tm1638_demo_0_0_tm_clk, INSERT_VIP 0" *)
@@ -83,6 +85,7 @@ inout wire tm_dio;
     .clk(clk),
     .larson(larson),
     .dots(dots),
+    .digits(digits),
     .keys(keys),
     .tm_cs(tm_cs),
     .tm_clk(tm_clk),

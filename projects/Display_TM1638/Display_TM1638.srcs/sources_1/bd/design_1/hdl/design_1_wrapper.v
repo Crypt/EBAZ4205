@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-//Date        : Mon Mar  8 14:34:16 2021
+//Date        : Tue Mar  9 20:55:01 2021
 //Host        : I7MINT running 64-bit Linux Mint 20.1
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -41,7 +41,9 @@ module design_1_wrapper
     MULTICOMP_CLOCK,
     enet0_gmii_rxd,
     enet_gmii_txd,
+    led_b,
     led_g,
+    led_r,
     pmod,
     switch,
     tm_clk_0,
@@ -79,8 +81,10 @@ module design_1_wrapper
   output MULTICOMP_CLOCK;
   input [3:0]enet0_gmii_rxd;
   output [3:0]enet_gmii_txd;
+  output led_b;
   output [0:0]led_g;
-  output [7:0]pmod;
+  output led_r;
+  input [7:0]pmod;
   input [0:0]switch;
   output tm_clk_0;
   output tm_cs_0;
@@ -121,7 +125,9 @@ module design_1_wrapper
   wire MULTICOMP_CLOCK;
   wire [3:0]enet0_gmii_rxd;
   wire [3:0]enet_gmii_txd;
+  wire led_b;
   wire [0:0]led_g;
+  wire led_r;
   wire [7:0]pmod;
   wire [0:0]switch;
   wire tm_clk_0;
@@ -168,7 +174,9 @@ module design_1_wrapper
         .MULTICOMP_CLOCK(MULTICOMP_CLOCK),
         .enet0_gmii_rxd(enet0_gmii_rxd),
         .enet_gmii_txd(enet_gmii_txd),
+        .led_b(led_b),
         .led_g(led_g),
+        .led_r(led_r),
         .pmod(pmod),
         .switch(switch),
         .tm_clk_0(tm_clk_0),

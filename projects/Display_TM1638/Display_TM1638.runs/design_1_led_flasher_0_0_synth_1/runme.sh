@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/design_1_led_flasher_0_0_synth_1'
+HD_PWD='/home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.runs/design_1_led_flasher_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

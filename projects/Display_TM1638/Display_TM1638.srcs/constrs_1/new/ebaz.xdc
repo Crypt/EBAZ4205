@@ -34,8 +34,8 @@ set_property PACKAGE_PIN U18 [get_ports ETHERNET_CLOCK]
 set_property IOSTANDARD LVCMOS33 [get_ports MULTICOMP_CLOCK]
 set_property PACKAGE_PIN U19 [get_ports MULTICOMP_CLOCK]
 # blue led
-set_property PACKAGE_PIN A20 [get_ports {led_b[0]}] 
-set_property IOSTANDARD LVCMOS33 [get_ports {led_b[0]}]
+set_property PACKAGE_PIN A20 [get_ports {led_b}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {led_b}]
 # switch
 set_property PACKAGE_PIN D19 [get_ports {switch[0]}]
 set_property PULLUP true [get_ports {switch[0]}]
@@ -44,8 +44,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {switch[0]}]
 set_property PACKAGE_PIN W13 [get_ports {led_g[0]}] 
 set_property IOSTANDARD LVCMOS33 [get_ports {led_g[0]}]
 # red led
-set_property PACKAGE_PIN W14 [get_ports {led_r[0]}] 
-set_property IOSTANDARD LVCMOS33 [get_ports {led_r[0]}]
+set_property PACKAGE_PIN W14 [get_ports {led_r}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {led_r}]
 #pmod a - gpios
 set_property PACKAGE_PIN H16 [get_ports {pmod[0]}] 
 set_property PACKAGE_PIN B19 [get_ports {pmod[1]}] 

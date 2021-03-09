@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1'
+HD_PWD='/home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

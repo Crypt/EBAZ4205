@@ -13,3 +13,11 @@ A LA Frame showing all the input and output requests is shown below, in this exa
 Although not needed for the protocol the read/write signal is also exposed in this demo - it was needed during development testing and may now be removed.
 
 ![TM1638-LA-Frame.png](./TM1638-LA-Frame.png)
+
+## Encoder
+
+The display is now driven from a binary to BCD decoder, fed from the output of a rotary encoder.
+
+[Encoder-Demo.mp4](./Encoder-Demo.mp4)
+
+![BCD blocks](./BCD-Blocks.png)

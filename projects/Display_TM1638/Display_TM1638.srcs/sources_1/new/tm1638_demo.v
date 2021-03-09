@@ -3,6 +3,7 @@ module tm1638_demo(
 //    [8:0] digits [8:0];
     input  [7:0] larson,
     input  [7:0] dots,
+    input  [31:0] digits,// [7:0], // only decimal digits 0 to 15
     output reg  [7:0] keys,
     output reg tm_cs,
     output tm_clk,
@@ -34,7 +35,7 @@ module tm1638_demo(
     localparam CLK_DIV = 22; //19; // speed of scanner
 
     reg [6:0] segdefs [16:0];   // segment definitions, index by digit value    
-    reg [8:0] digits [8:0];
+//    reg [3:0] digits [7:0];
 
     reg rst = HIGH;
 
@@ -74,7 +75,8 @@ segdefs[6] = 7'b1111101; // 6
 segdefs[7] = 7'b0000111; // 7
 segdefs[8] = 7'b1111111; // 8
 segdefs[9] = 7'b1100111; // 9
-segdefs[10]= 7'b1110111; // A
+segdefs[10]= 7'b1000000; // -
+//segdefs[10]= 7'b1110111; // A
 segdefs[11]= 7'b1111100; // b
 segdefs[12]= 7'b0111001; // C
 segdefs[13]= 7'b1011110; // d
@@ -85,15 +87,16 @@ segdefs[17]= 7'b1000000; // -
 
 // digit values for each display, values from table above
 // used by main loop below
-digits[0] = 16;  // LHS
-digits[1] = 17;
-digits[2] = 10;
-digits[3] = 11;
-digits[4] = 12;
-digits[5] = 13;
-digits[6] = 14;
-digits[7] = 15;  // RHS
-
+/*
+digits[0] = bcd_digits[3:0];  // LHS
+digits[1] = bcd_digits[7:4];
+digits[2] = bcd_digits[11:8];
+digits[3] = bcd_digits[15:12];
+digits[4] = bcd_digits[19:16];
+digits[5] = bcd_digits[23:20];
+digits[6] = bcd_digits[27:24];
+digits[7] = bcd_digits[31:28];  // RHS
+*/
 end
 
 
@@ -252,29 +255,54 @@ IOBUF #(
                     31: display_digit(3'd0, S_8); // Digit 8
                     32: display_led(3'd7);        // LED 8
 
-*/
-                    17: display_digit(3'd7, segdefs[digits[0]]); // Digit 1
+
+                    17: display_digit(3'd7, segdefs[digits[3:0]]); // Digit 1
                     18: display_led(3'd7);        // LED 1
 
-                    19: display_digit(3'd6, segdefs[digits[1]]); // Digit 2
+                    19: display_digit(3'd6, segdefs[digits[7:4]]); // Digit 2
                     20: display_led(3'd6);        // LED 2
 
-                    21: display_digit(3'd5, segdefs[digits[2]]); // Digit 3
+                    21: display_digit(3'd5, segdefs[digits[11:8]]); // Digit 3
                     22: display_led(3'd5);        // LED 3
 
-                    23: display_digit(3'd4, segdefs[digits[3]]); // Digit 4
+                    23: display_digit(3'd4, segdefs[digits[15:12]]); // Digit 4
                     24: display_led(3'd4);        // LED 4
 
-                    25: display_digit(3'd3, segdefs[digits[4]]); // Digit 5
+                    25: display_digit(3'd3, segdefs[digits[19:16]]); // Digit 5
                     26: display_led(3'd3);        // LED 5
 
-                    27: display_digit(3'd2, segdefs[digits[5]]); // Digit 6
+                    27: display_digit(3'd2, segdefs[digits[23:20]]); // Digit 6
                     28: display_led(3'd2);        // LED 6
 
-                    29: display_digit(3'd1, segdefs[digits[6]]); // Digit 7
+                    29: display_digit(3'd1, segdefs[digits[27:24]]); // Digit 7
                     30: display_led(3'd1);        // LED 7
 
-                    31: display_digit(3'd0, segdefs[digits[7]]); // Digit 8
+                    31: display_digit(3'd0, segdefs[digits[31:28]]); // Digit 8
+                    32: display_led(3'd0);        // LED 8
+*/
+
+                    17: display_digit(3'd7, segdefs[digits[31:28]]); // Digit 1
+                    18: display_led(3'd7);        // LED 1
+
+                    19: display_digit(3'd6, segdefs[digits[27:24]]); // Digit 2
+                    20: display_led(3'd6);        // LED 2
+
+                    21: display_digit(3'd5, segdefs[digits[23:20]]); // Digit 3
+                    22: display_led(3'd5);        // LED 3
+
+                    23: display_digit(3'd4, segdefs[digits[19:16]]); // Digit 4
+                    24: display_led(3'd4);        // LED 4
+
+                    25: display_digit(3'd3, segdefs[digits[15:12]]); // Digit 5
+                    26: display_led(3'd3);        // LED 5
+
+                    27: display_digit(3'd2, segdefs[digits[11:8]]); // Digit 6
+                    28: display_led(3'd2);        // LED 6
+
+                    29: display_digit(3'd1, segdefs[digits[7:4]]); // Digit 7
+                    30: display_led(3'd1);        // LED 7
+
+                    31: display_digit(3'd0, segdefs[digits[3:0]]); // Digit 8
                     32: display_led(3'd0);        // LED 8
 
                     33: {tm_cs}            <= {HIGH};

@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2.1 (lin64) Build 3080587 Fri Dec 11 14:53:26 MST 2020
-// Date        : Sat Mar  6 23:39:31 2021
+// Date        : Tue Mar  9 10:28:13 2021
 // Host        : I7MINT running 64-bit Linux Mint 20.1
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_led_flasher_0_0_stub.v
@@ -14,9 +14,10 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "led_flasher,Vivado 2020.2.1" *)
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(led, switch, clk)
-/* synthesis syn_black_box black_box_pad_pin="led,switch,clk" */;
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(led, pulse, switch, clk)
+/* synthesis syn_black_box black_box_pad_pin="led,pulse,switch,clk" */;
   output led;
+  output pulse;
   input switch;
   input clk;
 endmodule

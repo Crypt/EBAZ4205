@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/impl_1/design_1_wrapper.tcl"
+  variable script "/home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -133,25 +133,25 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.cache/wt [current_project]
-  set_property parent.project_path /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.xpr [current_project]
+  set_property webtalk.parent_dir /home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.cache/wt [current_project]
+  set_property parent.project_path /home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.xpr [current_project]
   set_property ip_repo_paths {
   /home/david/Documents/GitHub/djrm-EBAZ4205/ip_repo/myip_interrupt_1.0
   /home/david/Documents/GitHub/vivado-library
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.cache/ip [current_project]
+  set_property ip_output_repo /home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet /home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/sources_1/bd/design_1/design_1.bd
+  add_files /home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/david/ebaz4205/projects/Display_LEDs/Display_LEDs.srcs/constrs_1/new/ebaz.xdc
+  read_xdc /home/david/Documents/GitHub/djrm-EBAZ4205/projects/Display_TM1638/Display_TM1638.srcs/constrs_1/new/ebaz.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
