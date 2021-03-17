@@ -1,8 +1,16 @@
 /include/ "system-conf.dtsi"
 / {
-            rtc@51 {
-                compatible = "nxp,pcf8563";
-                reg = <0x00000051>;
-            };
+
+
+		i2c@e0004000 {
+         rtc@51 {
+             compatible = "nxp,pcf8563";
+             reg = <0x00000051>;
+         };
+		};
+
+
+
+
 
 };

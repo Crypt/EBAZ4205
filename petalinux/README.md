@@ -30,6 +30,17 @@ The contents of boot.cmd is compiled with mkimage to build boot.scr
 mkimage -c none -A arm -T script -d boot.cmd boot.scr
 ```
 
+## sample sd image
+A bootable sd card image is included, it included two partitions, the first SD_BOOT is msdos formatted and includes the boot files. The second SD_EBAZ is in linux ext4 format and contains the Petalinux file system.
+
+The image is created on an empty disk containing just these two names partitions using the shell script instal-sd.sh, if the ebaz4205 is configured to boot from sd card it should boot directly into linux. username root, password root.
+
+DHCP is enabled to get IP address.
+
+Various utilities are included including nano, mc, minicom, i2c-utils, locales (partial), make
+
+Best results have been obtained using the tio terminal emulator.
+
 ## buildlog
 
 ```
@@ -194,8 +205,9 @@ root@ebaz-4205-djrm:~#
 ```
 
 ## rtc commands
-Havn't managed to get the clock device created automatically, something needed in the device tree I expect. The parts are all working though, 1) setup the clock from internet time. 2) read system time from clock chip
+Havn't managed to get the clock device created automatically, something needed in the device tree I expect. The parts are all working though.  
 
+1) setup the clock from internet time.
 ```
 # initial setup
 # create rtc device
@@ -205,6 +217,8 @@ rdate  -s  time.nist.gov
 # update clock chip
 hwclock -w
 ```
+
+2) read system time from clock chip
 ```
 # subsequent setup
 # create rtc device
