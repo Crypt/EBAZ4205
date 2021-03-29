@@ -1,0 +1,67 @@
+# find the default values for 7007S
+# benyuan liu <byliu@fmmu.edu.cn>
+
+# 1. create an empty deisgn target parts : 7Z007S-CLG400-1
+
+# 2. create dummy block design, named $ps7
+set ps7 [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0]
+
+# 3. apply defaults
+set_property -dict [list CONFIG.preset {Default}] [get_bd_cells processing_system7_0]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable"$
+
+# 4. get default values and put them in a file
+set chan [open ./7007s_defaults.txt w]
+foreach prop [list_property $ps7] {
+  # set default_value [list_property_value -default $prop $ps7]
+  set default_value [get_property $prop $ps7]
+  puts $chan "$prop $default_value"
+}
+close $chan
+
+==========================================
+
+create_project project_25 /home/david/ebaz4205/projects/project_25 -part xc7z010clg400-1
+set_property board_part aliexpress:ebaz4205:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+
+#=========================== ebaz board preset settings
+
+create_bd_design "ps7"
+set ps7 [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0]
+
+set_property -dict [list CONFIG.preset {Default}] [get_bd_cells processing_system7_0]
+
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+
+set chan [open ./7007s_preset.txt w]
+
+foreach prop [list_property $ps7] {
+  # set default_value [list_property_value -default $prop $ps7]
+  set default_value [get_property $prop $ps7]
+  puts $chan "$prop $default_value"
+}
+
+close $chan
+
+======================================================= 
+create_bd_design "ps7"
+
+set ps7 [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0]
+
+set_property -dict [list CONFIG.preset {Default}] [get_bd_cells processing_system7_0]
+
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+
+set chan [open ./7007s_ebaz4205.txt w]
+
+foreach prop [list_property $ps7] {
+  # set default_value [list_property_value -default $prop $ps7]
+  set default_value [get_property $prop $ps7]
+  puts $chan "$prop $default_value"
+}
+
+close $chan
+
+=======================================================
+
