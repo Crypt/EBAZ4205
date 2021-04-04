@@ -41,6 +41,8 @@ Various utilities are included including nano, mc, minicom, i2c-utils, locales (
 
 Best results have been obtained using the tio terminal emulator.
 
+[ebaz-4205-djrm-petalinux](http://djrm.netmx.co.uk/ebaz4205/ebaz-4205-djrm%20(2021-03-17%201532).img.zip)
+
 ## buildlog
 
 ```
