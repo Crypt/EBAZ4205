@@ -1,5 +1,11 @@
 ## Links to external information
 
+The MicroZed Chronicles
+https://www.adiuvoengineering.com/microzed-chronicles-archive
+
+Creating_a_BSP_for_PetaLinux
+https://indico.cern.ch/event/952288/contributions/4033881/attachments/2116542/3561511/2020-10-06_Creating_a_BSP_for_PetaLinux.pdf
+
 Hamsterworks FPGA articles
 https://web.archive.org/web/20191020204100/http://www.hamsterworks.co.nz/mediawiki/index.php/FPGA_Projects
 

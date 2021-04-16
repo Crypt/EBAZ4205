@@ -206,6 +206,30 @@ setting library path
 root@ebaz-4205-djrm:~# 
 ```
 
+## i2c connections
+
+PS7 configuration for I2C driver
+
+![logic](i2c_logic.png)
+
+## rtc device tree additions (wip)
+
+/home/david/Documents/GitHub/djrm-EBAZ4205/petalinux/template/project-spec/meta-user/recipes-bsp/device-tree/files/system-conf.dtsi
+
+```
+/include/ "system-conf.dtsi"
+/ {
+
+		i2c@e0004000 {
+         rtc@51 {
+             compatible = "nxp,pcf8563";
+             reg = <0x00000051>;
+         };
+		};
+
+};
+```
+
 ## rtc commands
 Havn't managed to get the clock device created automatically, something needed in the device tree I expect. The parts are all working though.  
 
@@ -228,6 +252,111 @@ echo pcf8563 0x51 > /sys/class/i2c-adapter/i2c-0/new_device
 # set system time from clock chip
 hwclock -s
 ```
+RTC connections to PCB
 
+![connections](rtc_connections.jpg)
+
+# savenv to mmc
+
+changes to the u-boot configuration can be made to enable u-boot enviorenment to be saved and loaded form sd-card.
+
+the u-boot configuration is invoked and the menu items amended as shown below:
+
+![u-boot-mmc](u-boot-mmc.png)
+
+Commands to edit and rebuild an existing petalinux with new u-boot settings:
+
+```
+cd ~/Documents/GitHub/djrm-EBAZ4205/petalinux/template
+source /opt/petalinux/settings.sh 
+petalinux-config -c u-boot
+petalinux-build -c u-boot
+petalinux-build
+./install-sd.sh
+```
+
+saving environment:
+```
+Hit any key to stop autoboot:  0 
+Zynq> saveenv
+Saving Environment to FAT... OK
+```
+
+reload at next boot: 
+
+```
+U-Boot 2020.01 (Apr 11 2021 - 09:51:56 +0000)
+
+CPU:   Zynq 7z010
+Silicon: v3.1
+Model: Zynq Zed Development Board
+DRAM:  ECC disabled 256 MiB
+Flash: 0 Bytes
+NAND:  128 MiB
+MMC:   mmc@e0100000: 0
+Loading Environment from FAT... OK
+In:    serial@e0001000
+Out:   serial@e0001000
+Err:   serial@e0001000
+Net:   
+ZYNQ GEM: e000b000, mdio bus e000b000, phyaddr 0, interface gmii
+eth0: ethernet@e000b000
+Hit any key to stop autoboot:  0
+```
+
+
+rtc console session
+
+```
+PetaLinux 2020.2 ebaz-4205-djrm /dev/ttyPS0
+ebaz-4205-djrm login: root
+Password: 
+root@ebaz-4205-djrm:~# i2cdetect 0
+Warning: Can't use SMBus Quick Write command, will skip some addresses
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-0.
+I will probe address range 0x03-0x77.
+Continue? [Y/n] 
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                                                 
+10:                                                 
+20:                                                 
+30: -- -- -- -- -- -- -- --                         
+40:                                                 
+50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60:                                                 
+70:                                                 
+root@ebaz-4205-djrm:~# date
+Mon Mar  1 18:03:28 UTC 2021
+root@ebaz-4205-djrm:~# hwclock
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+root@ebaz-4205-djrm:~# echo pcf8563 0x51 > /sys/class/i2c-adapter/i2c-0/new_device
+rtc-pcf8563 0-0051: registered as rtc0
+i2c i2c-0: new_device: Instantiated device pcf8563 at 0x51
+root@ebaz-4205-djrm:~# hwclock
+Mon Apr 12 17:47:01 2021  0.000000 seconds
+root@ebaz-4205-djrm:~# hwclock -s
+root@ebaz-4205-djrm:~# date
+Mon Apr 12 17:47:55 UTC 2021
+root@ebaz-4205-djrm:~# 
+```
+
+### enable clock at boot
+
+Automatic execution of rtc device cretaion and clock setting at system boot
+(cludge shouldn't be neccessary)
+
+create file /etc/init.d/makertc.sh
+
+```
+echo --- running makkertc.sh from init.d ---
+echo pcf8563 0x51 > /sys/class/i2c-adapter/i2c-0/new_device
+```
+
+make file executable
+chmod +x /etc/init.d/makertc.sh
+
+create link to new file
+ln -s /etc/init.d/makertc.sh /etc/rc.5/S10makertc
 
 

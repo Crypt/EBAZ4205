@@ -65,3 +65,11 @@ close $chan
 
 =======================================================
 
+
+set chan [open ./dev_preset1.txt w]
+foreach prop [list_property $ps7] {
+  # set default_value [list_property_value -default $prop $ps7]
+  set default_value [get_property $prop $ps7]
+  puts $chan "$prop $default_value"
+}
+
