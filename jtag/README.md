@@ -1,6 +1,6 @@
 # EBAZ4205 jtag
 
-Using a clone Platform Cable USB Model DLC9LP bbased on FTDI 2323 device with openocd jtag communication software.
+Using a clone Platform Cable USB Model DLC9LP bbased on FTDI FT232H device with openocd jtag communication software.
 
 The configuration files are adapted from the ones in this Git repo [M-Labs/zynq-rs](https://git.m-labs.hk/M-Labs/zynq-rs)
 
@@ -8,10 +8,10 @@ Be sure to check the USB vid and pid in the config file, Ive had a bit of troubl
 
 |   downloads                      |
 |--------------------------------------|
-|[ebaz-4205.cfg](./ebaz-4205.cfgL)     |
-|[zynq-7000.cfg](./zynq-7000.cfg)       |
-|[digilent-hs2.cfg](./digilent-hs2.cfgL)|
-|[design_1_wrapper.bit](./design_1_wrapper.bit)|
+|[ebaz-4205.cfg](ebaz-4205.cfgL)     |
+|[zynq-7000.cfg](zynq-7000.cfg)       |
+|[digilent-hs2.cfg](digilent-hs2.cfgL)|
+|[design_1_wrapper.bit](design_1_wrapper.bit)|
 
 A basic connection to the USB  cable is made with the command 'openocd -f ebaz-4205.cfg' a connection to the zync will then be attempted and stus displayed at the console
 
